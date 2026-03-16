@@ -1,0 +1,71 @@
+aid: amazon-workspaces-web
+name: Amazon WorkSpaces Web
+description: >-
+  Amazon WorkSpaces Web is a purpose-built, low-cost, fully managed service
+  that enables secure browser access to internal websites and SaaS applications.
+  It provides persistent browser sessions with built-in security controls,
+  preventing users from downloading content to local devices while maintaining
+  a seamless browsing experience.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Secure Browser
+  - Virtual Desktop
+  - End User Computing
+  - AWS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: amazon-workspaces-web:amazon-workspaces-web-api
+    name: Amazon WorkSpaces Web API
+    description: >-
+      The Amazon WorkSpaces Web API provides programmatic access to create and
+      manage web portals, network settings, user access logging, user settings,
+      browser settings, and trust store configurations for secure browser
+      deployments.
+    humanURL: https://aws.amazon.com/workspaces/web/
+    baseURL: https://workspaces-web.amazonaws.com
+    tags:
+      - Secure Browser
+      - End User Computing
+      - AWS
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+      - type: Reference
+        url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+      - type: Getting Started
+        url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+      - type: Pricing
+        url: https://aws.amazon.com/workspaces/web/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/workspaces/web/faqs/
+common:
+  - type: Portal
+    url: https://aws.amazon.com/
+  - type: Website
+    url: https://aws.amazon.com/workspaces/web/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: Console
+    url: https://console.aws.amazon.com/workspaces-web/
+  - type: Terms of Service
+    url: https://aws.amazon.com/service-terms/
+  - type: Privacy Policy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Sign Up
+    url: https://signin.aws.amazon.com/signup?request_type=register
+  - type: Login
+    url: https://aws.amazon.com/console/
+  - type: Status
+    url: https://health.aws.amazon.com/health/status
+  - type: GitHub Organization
+    url: https://github.com/aws
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
