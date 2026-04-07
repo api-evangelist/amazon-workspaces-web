@@ -9,10 +9,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - AWS
+  - End User Computing
   - Secure Browser
   - Virtual Desktop
-  - End User Computing
-  - AWS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -29,9 +29,9 @@ apis:
     humanURL: https://aws.amazon.com/workspaces/web/
     baseURL: https://workspaces-web.amazonaws.com
     tags:
-      - Secure Browser
-      - End User Computing
       - AWS
+      - End User Computing
+      - Secure Browser
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
