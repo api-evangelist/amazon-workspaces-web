@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "browserSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BrowserSettingsList"
+        },
+        {
+          "description": "The browser settings."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-browser-settings-response-structure.json",
+  "description": "ListBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

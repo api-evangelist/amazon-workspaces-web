@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "GetPortalRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-portal-request-structure.json",
+  "description": "GetPortalRequest schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "string",
+  "enum": [
+    "SAML",
+    "Facebook",
+    "Google",
+    "LoginWithAmazon",
+    "SignInWithApple",
+    "OIDC"
+  ],
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IdentityProviderType",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-identity-provider-type-structure.json",
+  "description": "IdentityProviderType schema from Amazon WorkSpaces Web API"
+}

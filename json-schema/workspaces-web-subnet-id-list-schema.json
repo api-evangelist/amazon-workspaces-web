@@ -1,0 +1,12 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/SubnetId"
+  },
+  "minItems": 2,
+  "maxItems": 3,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SubnetIdList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-subnet-id-list-schema.json",
+  "description": "SubnetIdList schema from Amazon WorkSpaces Web API"
+}

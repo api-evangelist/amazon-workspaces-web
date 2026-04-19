@@ -1,0 +1,10 @@
+{
+  "clientToken": "example-value",
+  "copyAllowed": "example-value",
+  "disconnectTimeoutInMinutes": "example-value",
+  "downloadAllowed": "example-value",
+  "idleDisconnectTimeoutInMinutes": "abc123def456",
+  "pasteAllowed": "example-value",
+  "printAllowed": "example-value",
+  "uploadAllowed": "example-value"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "ipAccessSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAccessSettings"
+        },
+        {
+          "description": "The IP access settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetIpAccessSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-get-ip-access-settings-response-schema.json",
+  "description": "GetIpAccessSettingsResponse schema from Amazon WorkSpaces Web API"
+}

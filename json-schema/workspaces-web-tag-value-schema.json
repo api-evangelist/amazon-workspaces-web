@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-@]*)$",
+  "minLength": 0,
+  "maxLength": 256,
+  "format": "password",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TagValue",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-tag-value-schema.json",
+  "description": "TagValue schema from Amazon WorkSpaces Web API"
+}

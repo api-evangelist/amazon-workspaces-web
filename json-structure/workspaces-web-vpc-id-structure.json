@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^vpc-[0-9a-z]*$",
+  "minLength": 1,
+  "maxLength": 255,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "VpcId",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-vpc-id-structure.json",
+  "description": "VpcId schema from Amazon WorkSpaces Web API"
+}

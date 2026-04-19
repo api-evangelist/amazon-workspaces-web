@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "portalArn",
+    "userSettingsArn"
+  ],
+  "properties": {
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    },
+    "userSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the user settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AssociateUserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-associate-user-settings-response-schema.json",
+  "description": "AssociateUserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "trustStoreArn"
+  ],
+  "properties": {
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CreateTrustStoreResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-create-trust-store-response-structure.json",
+  "description": "CreateTrustStoreResponse schema from Amazon WorkSpaces Web API"
+}

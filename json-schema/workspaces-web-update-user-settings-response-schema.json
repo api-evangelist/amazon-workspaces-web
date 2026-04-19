@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "userSettings"
+  ],
+  "properties": {
+    "userSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserSettings"
+        },
+        {
+          "description": "The user settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UpdateUserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-update-user-settings-response-schema.json",
+  "description": "UpdateUserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

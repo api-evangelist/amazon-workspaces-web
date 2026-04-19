@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "kinesisStreamArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KinesisStreamArn"
+        },
+        {
+          "description": "The ARN of the Kinesis stream."
+        }
+      ]
+    },
+    "userAccessLoggingSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the user access logging settings."
+        }
+      ]
+    }
+  },
+  "description": "The summary of user access logging settings.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UserAccessLoggingSettingsSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-user-access-logging-settings-summary-schema.json"
+}

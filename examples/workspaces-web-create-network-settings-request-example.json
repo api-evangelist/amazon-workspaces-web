@@ -1,0 +1,7 @@
+{
+  "clientToken": "example-value",
+  "securityGroupIds": "abc123def456",
+  "subnetIds": "abc123def456",
+  "tags": "example-value",
+  "vpcId": "abc123def456"
+}

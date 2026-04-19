@@ -1,0 +1,11 @@
+{
+  "associatedPortalArns": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "copyAllowed": "example-value",
+  "disconnectTimeoutInMinutes": "example-value",
+  "downloadAllowed": "example-value",
+  "idleDisconnectTimeoutInMinutes": "abc123def456",
+  "pasteAllowed": "example-value",
+  "printAllowed": "example-value",
+  "uploadAllowed": "example-value",
+  "userSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123"
+}

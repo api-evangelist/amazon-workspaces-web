@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "enum": [
+    "AppStream"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RendererType",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-renderer-type-schema.json",
+  "description": "RendererType schema from Amazon WorkSpaces Web API"
+}

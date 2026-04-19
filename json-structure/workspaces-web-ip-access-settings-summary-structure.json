@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "creationDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The creation date timestamp of the IP access settings."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The description of the IP access settings."
+        }
+      ]
+    },
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DisplayName"
+        },
+        {
+          "description": "The display name of the IP access settings."
+        }
+      ]
+    },
+    "ipAccessSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of IP access settings."
+        }
+      ]
+    }
+  },
+  "description": "The summary of IP access settings.",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IpAccessSettingsSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-ip-access-settings-summary-structure.json"
+}

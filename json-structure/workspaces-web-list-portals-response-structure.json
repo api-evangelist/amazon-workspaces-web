@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation. "
+        }
+      ]
+    },
+    "portals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortalList"
+        },
+        {
+          "description": "The portals in the list."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListPortalsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-portals-response-structure.json",
+  "description": "ListPortalsResponse schema from Amazon WorkSpaces Web API"
+}

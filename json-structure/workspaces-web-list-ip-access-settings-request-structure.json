@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "ListIpAccessSettingsRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-ip-access-settings-request-structure.json",
+  "description": "ListIpAccessSettingsRequest schema from Amazon WorkSpaces Web API"
+}

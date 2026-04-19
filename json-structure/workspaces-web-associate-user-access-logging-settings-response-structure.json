@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "portalArn",
+    "userAccessLoggingSettingsArn"
+  ],
+  "properties": {
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    },
+    "userAccessLoggingSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the user access logging settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "AssociateUserAccessLoggingSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-associate-user-access-logging-settings-response-structure.json",
+  "description": "AssociateUserAccessLoggingSettingsResponse schema from Amazon WorkSpaces Web API"
+}

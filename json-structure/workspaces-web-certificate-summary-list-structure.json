@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/CertificateSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CertificateSummaryList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-certificate-summary-list-structure.json",
+  "description": "CertificateSummaryList schema from Amazon WorkSpaces Web API"
+}

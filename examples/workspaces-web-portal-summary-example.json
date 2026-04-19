@@ -1,0 +1,16 @@
+{
+  "authenticationType": "example-value",
+  "browserSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "browserType": "example-value",
+  "creationDate": "example-value",
+  "displayName": "Example Portal",
+  "ipAccessSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "networkSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "portalArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "portalEndpoint": "example-value",
+  "portalStatus": "Active",
+  "rendererType": "example-value",
+  "trustStoreArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "userAccessLoggingSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "userSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123"
+}

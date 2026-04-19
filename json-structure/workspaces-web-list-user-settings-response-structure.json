@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation. "
+        }
+      ]
+    },
+    "userSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserSettingsList"
+        },
+        {
+          "description": "The user settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListUserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-user-settings-response-structure.json",
+  "description": "ListUserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

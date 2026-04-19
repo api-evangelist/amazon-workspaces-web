@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/NetworkSettingsSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "NetworkSettingsList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-network-settings-list-structure.json",
+  "description": "NetworkSettingsList schema from Amazon WorkSpaces Web API"
+}

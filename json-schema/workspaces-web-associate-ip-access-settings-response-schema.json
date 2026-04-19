@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "ipAccessSettingsArn",
+    "portalArn"
+  ],
+  "properties": {
+    "ipAccessSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the IP access settings resource."
+        }
+      ]
+    },
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AssociateIpAccessSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-associate-ip-access-settings-response-schema.json",
+  "description": "AssociateIpAccessSettingsResponse schema from Amazon WorkSpaces Web API"
+}

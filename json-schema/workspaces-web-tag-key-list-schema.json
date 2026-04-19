@@ -1,0 +1,12 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/TagKey"
+  },
+  "minItems": 0,
+  "maxItems": 200,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TagKeyList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-tag-key-list-schema.json",
+  "description": "TagKeyList schema from Amazon WorkSpaces Web API"
+}

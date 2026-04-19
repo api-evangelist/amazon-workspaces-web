@@ -1,0 +1,7 @@
+{
+  "associatedPortalArns": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "networkSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "securityGroupIds": "abc123def456",
+  "subnetIds": "abc123def456",
+  "vpcId": "abc123def456"
+}

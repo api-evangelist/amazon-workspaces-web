@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/StringType"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EncryptionContextMap",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-encryption-context-map-schema.json",
+  "description": "EncryptionContextMap schema from Amazon WorkSpaces Web API"
+}

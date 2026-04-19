@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "identityProviders": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdentityProviderList"
+        },
+        {
+          "description": "The identity providers."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListIdentityProvidersResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-identity-providers-response-structure.json",
+  "description": "ListIdentityProvidersResponse schema from Amazon WorkSpaces Web API"
+}

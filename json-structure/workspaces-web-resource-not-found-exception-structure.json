@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ResourceNotFoundException",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-resource-not-found-exception-structure.json",
+  "description": "ResourceNotFoundException schema from Amazon WorkSpaces Web API"
+}

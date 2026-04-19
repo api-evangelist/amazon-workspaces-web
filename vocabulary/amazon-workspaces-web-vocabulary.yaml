@@ -1,0 +1,158 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Amazon WorkSpaces Web"
+  description: "Vocabulary for Amazon WorkSpaces Web secure browser portal management."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: workspaces-web
+      name: Amazon WorkSpaces Web API
+      version: "2020-07-08"
+      baseUrl: https://workspaces-web.amazonaws.com
+      status: active
+
+  resources:
+    - name: portals
+      api: workspaces-web
+      actions: [list, create, get, update, delete]
+    - name: user-settings
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+    - name: browser-settings
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+    - name: network-settings
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+    - name: trust-stores
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+    - name: ip-access-settings
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+    - name: user-access-logging-settings
+      api: workspaces-web
+      actions: [list, create, get, update, delete, associate, disassociate]
+
+  actions:
+    - name: list
+      httpMethods: [GET]
+      pattern: read
+    - name: get
+      httpMethods: [GET]
+      pattern: read
+    - name: create
+      httpMethods: [POST]
+      pattern: write
+    - name: update
+      httpMethods: [PATCH, PUT]
+      pattern: write
+    - name: delete
+      httpMethods: [DELETE]
+      pattern: destructive
+    - name: associate
+      httpMethods: [PUT]
+      pattern: write
+    - name: disassociate
+      httpMethods: [DELETE]
+      pattern: write
+
+  schemas:
+    core:
+      - name: Portal
+        description: A WorkSpaces Web portal
+        key_properties: [portalArn, displayName, portalStatus, browserSettingsArn, networkSettingsArn]
+      - name: UserSettings
+        description: User settings for browser sessions
+        key_properties: [userSettingsArn, downloadAllowed, uploadAllowed, printAllowed, copyAllowed, pasteAllowed]
+      - name: BrowserSettings
+        description: Browser policy settings
+        key_properties: [browserSettingsArn, browserPolicy]
+      - name: NetworkSettings
+        description: Network configuration for portal connectivity
+        key_properties: [networkSettingsArn, vpcId, subnetIds, securityGroupIds]
+
+  enums:
+    portal-status:
+      - Active
+      - Incomplete
+      - Pending
+    allowed-states:
+      - Enabled
+      - Disabled
+
+  authentication:
+    schemes:
+      - name: HMAC
+        type: hmac
+        description: AWS Signature Version 4 signing
+
+capability:
+  workflows:
+    - name: Secure Browser Management
+      file: capabilities/secure-browser-management.yaml
+      description: >-
+        Workflow for IT administrators to manage WorkSpaces Web portals
+        and their associated security and network configurations.
+      apis: [workspaces-web]
+      tool_count: 6
+      personas: [IT Administrator, Security Engineer]
+      domains: [End User Computing, Security, Administration]
+
+  personas:
+    - id: it-administrator
+      name: IT Administrator
+      description: Manages WorkSpaces Web portals and configurations.
+      workflows: [secure-browser-management]
+    - id: security-engineer
+      name: Security Engineer
+      description: Configures browser policies and access controls.
+      workflows: [secure-browser-management]
+
+  domains:
+    - name: End User Computing
+      description: Secure remote browser access infrastructure
+    - name: Security
+      description: Browser policy and access control enforcement
+    - name: Administration
+      description: Portal and resource provisioning
+
+  namespaces:
+    consumed:
+      - workspaces-web
+    rest:
+      - name: secure-browser-management-api
+        port: 8080
+    mcp:
+      - name: secure-browser-management-mcp
+        port: 9090
+
+  binds:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_REGION
+
+crossReference:
+  - resource: portals
+    operations: [list, create, get]
+    workflows: [secure-browser-management]
+    personas: [IT Administrator]
+  - resource: user-settings
+    operations: [list]
+    workflows: [secure-browser-management]
+    personas: [IT Administrator, Security Engineer]
+  - resource: browser-settings
+    operations: [list]
+    workflows: [secure-browser-management]
+    personas: [Security Engineer]
+  - resource: network-settings
+    operations: [list]
+    workflows: [secure-browser-management]
+    personas: [IT Administrator]
+  - resource: trust-stores
+    operations: [list]
+    workflows: [secure-browser-management]
+    personas: [Security Engineer]

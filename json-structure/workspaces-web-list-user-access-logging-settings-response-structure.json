@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    },
+    "userAccessLoggingSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserAccessLoggingSettingsList"
+        },
+        {
+          "description": "The user access logging settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListUserAccessLoggingSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-user-access-logging-settings-response-structure.json",
+  "description": "ListUserAccessLoggingSettingsResponse schema from Amazon WorkSpaces Web API"
+}

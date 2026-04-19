@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "^.+$",
+  "minLength": 1,
+  "maxLength": 256,
+  "format": "password",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Description",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-description-schema.json",
+  "description": "Description schema from Amazon WorkSpaces Web API"
+}

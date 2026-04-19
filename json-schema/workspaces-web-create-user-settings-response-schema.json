@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "userSettingsArn"
+  ],
+  "properties": {
+    "userSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the user settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateUserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-create-user-settings-response-schema.json",
+  "description": "CreateUserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

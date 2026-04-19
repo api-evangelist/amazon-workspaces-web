@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "portalArn"
+  ],
+  "properties": {
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    },
+    "serviceProviderSamlMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SamlMetadata"
+        },
+        {
+          "description": "The service provider SAML metadata."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "GetPortalServiceProviderMetadataResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-portal-service-provider-metadata-response-structure.json",
+  "description": "GetPortalServiceProviderMetadataResponse schema from Amazon WorkSpaces Web API"
+}

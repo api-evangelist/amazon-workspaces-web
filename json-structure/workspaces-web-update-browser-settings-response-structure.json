@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "browserSettings"
+  ],
+  "properties": {
+    "browserSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BrowserSettings"
+        },
+        {
+          "description": "The browser settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "UpdateBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-update-browser-settings-response-structure.json",
+  "description": "UpdateBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

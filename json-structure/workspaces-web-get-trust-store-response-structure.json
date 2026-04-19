@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "trustStore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TrustStore"
+        },
+        {
+          "description": "The trust store."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "GetTrustStoreResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-trust-store-response-structure.json",
+  "description": "GetTrustStoreResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "DeleteUserAccessLoggingSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-delete-user-access-logging-settings-response-structure.json",
+  "description": "DeleteUserAccessLoggingSettingsResponse schema from Amazon WorkSpaces Web API"
+}

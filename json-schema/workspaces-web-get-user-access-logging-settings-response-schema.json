@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "userAccessLoggingSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserAccessLoggingSettings"
+        },
+        {
+          "description": "The user access logging settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetUserAccessLoggingSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-get-user-access-logging-settings-response-schema.json",
+  "description": "GetUserAccessLoggingSettingsResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 600,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "DisconnectTimeoutInMinutes",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-disconnect-timeout-in-minutes-structure.json",
+  "description": "DisconnectTimeoutInMinutes schema from Amazon WorkSpaces Web API"
+}

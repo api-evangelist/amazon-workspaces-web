@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": ".*",
+  "minLength": 1,
+  "maxLength": 1024,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "StatusReason",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-status-reason-structure.json",
+  "description": "StatusReason schema from Amazon WorkSpaces Web API"
+}

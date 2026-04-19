@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^\\S+$",
+  "minLength": 1,
+  "maxLength": 2048,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "PaginationToken",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-pagination-token-structure.json",
+  "description": "PaginationToken schema from Amazon WorkSpaces Web API"
+}

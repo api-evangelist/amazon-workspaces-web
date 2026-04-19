@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": [
+    "browserSettingsArn"
+  ],
+  "properties": {
+    "associatedPortalArns": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArnList"
+        },
+        {
+          "description": "A list of web portal ARNs that this browser settings is associated with."
+        }
+      ]
+    },
+    "browserPolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BrowserPolicy"
+        },
+        {
+          "description": "A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions."
+        }
+      ]
+    },
+    "browserSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the browser settings."
+        }
+      ]
+    }
+  },
+  "description": "The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. ",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "BrowserSettings",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-browser-settings-structure.json"
+}

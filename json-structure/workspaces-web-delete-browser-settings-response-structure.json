@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "DeleteBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-delete-browser-settings-response-structure.json",
+  "description": "DeleteBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

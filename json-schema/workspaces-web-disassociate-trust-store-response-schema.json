@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DisassociateTrustStoreResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-disassociate-trust-store-response-schema.json",
+  "description": "DisassociateTrustStoreResponse schema from Amazon WorkSpaces Web API"
+}

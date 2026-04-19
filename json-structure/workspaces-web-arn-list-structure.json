@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/ARN"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ArnList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-arn-list-structure.json",
+  "description": "ArnList schema from Amazon WorkSpaces Web API"
+}

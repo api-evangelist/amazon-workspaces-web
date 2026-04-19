@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeleteNetworkSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-delete-network-settings-response-schema.json",
+  "description": "DeleteNetworkSettingsResponse schema from Amazon WorkSpaces Web API"
+}

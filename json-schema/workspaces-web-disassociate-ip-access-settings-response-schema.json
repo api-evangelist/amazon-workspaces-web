@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DisassociateIpAccessSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-disassociate-ip-access-settings-response-schema.json",
+  "description": "DisassociateIpAccessSettingsResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "portalArn",
+    "trustStoreArn"
+  ],
+  "properties": {
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    },
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AssociateTrustStoreResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-associate-trust-store-response-schema.json",
+  "description": "AssociateTrustStoreResponse schema from Amazon WorkSpaces Web API"
+}

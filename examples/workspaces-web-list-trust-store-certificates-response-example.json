@@ -1,0 +1,5 @@
+{
+  "certificateList": "example-value",
+  "nextToken": "example-value",
+  "trustStoreArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123"
+}

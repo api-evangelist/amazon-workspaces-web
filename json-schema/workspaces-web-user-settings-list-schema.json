@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/UserSettingsSummary"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UserSettingsList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-user-settings-list-schema.json",
+  "description": "UserSettingsList schema from Amazon WorkSpaces Web API"
+}

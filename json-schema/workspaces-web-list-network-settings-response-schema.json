@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "networkSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkSettingsList"
+        },
+        {
+          "description": "The network settings."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ListNetworkSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-list-network-settings-response-schema.json",
+  "description": "ListNetworkSettingsResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/TrustStoreSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "TrustStoreSummaryList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-trust-store-summary-list-structure.json",
+  "description": "TrustStoreSummaryList schema from Amazon WorkSpaces Web API"
+}

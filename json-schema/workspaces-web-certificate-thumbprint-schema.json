@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^[A-Fa-f0-9]{64}$",
+  "minLength": 64,
+  "maxLength": 64,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CertificateThumbprint",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-certificate-thumbprint-schema.json",
+  "description": "CertificateThumbprint schema from Amazon WorkSpaces Web API"
+}

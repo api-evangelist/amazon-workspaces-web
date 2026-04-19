@@ -1,0 +1,400 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "amz": "https://amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AssociateBrowserSettingsResponse": "amz:AssociateBrowserSettingsResponse",
+    "browserSettingsArn": {
+      "@id": "amz:browserSettingsArn",
+      "@type": "xsd:string"
+    },
+    "portalArn": {
+      "@id": "amz:portalArn",
+      "@type": "xsd:string"
+    },
+    "AssociateIpAccessSettingsResponse": "amz:AssociateIpAccessSettingsResponse",
+    "ipAccessSettingsArn": {
+      "@id": "amz:ipAccessSettingsArn",
+      "@type": "xsd:string"
+    },
+    "AssociateNetworkSettingsResponse": "amz:AssociateNetworkSettingsResponse",
+    "networkSettingsArn": {
+      "@id": "amz:networkSettingsArn",
+      "@type": "xsd:string"
+    },
+    "AssociateTrustStoreResponse": "amz:AssociateTrustStoreResponse",
+    "trustStoreArn": {
+      "@id": "amz:trustStoreArn",
+      "@type": "xsd:string"
+    },
+    "AssociateUserAccessLoggingSettingsResponse": "amz:AssociateUserAccessLoggingSettingsResponse",
+    "userAccessLoggingSettingsArn": {
+      "@id": "amz:userAccessLoggingSettingsArn",
+      "@type": "xsd:string"
+    },
+    "AssociateUserSettingsResponse": "amz:AssociateUserSettingsResponse",
+    "userSettingsArn": {
+      "@id": "amz:userSettingsArn",
+      "@type": "xsd:string"
+    },
+    "CreateBrowserSettingsResponse": "amz:CreateBrowserSettingsResponse",
+    "Tag": "amz:Tag",
+    "Key": {
+      "@id": "amz:Key",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "amz:Value",
+      "@type": "xsd:string"
+    },
+    "CreateIdentityProviderResponse": "amz:CreateIdentityProviderResponse",
+    "identityProviderArn": {
+      "@id": "amz:identityProviderArn",
+      "@type": "xsd:string"
+    },
+    "CreateIpAccessSettingsResponse": "amz:CreateIpAccessSettingsResponse",
+    "IpRule": "amz:IpRule",
+    "description": "schema:description",
+    "ipRange": {
+      "@id": "amz:ipRange",
+      "@type": "xsd:string"
+    },
+    "CreateNetworkSettingsResponse": "amz:CreateNetworkSettingsResponse",
+    "CreatePortalResponse": "amz:CreatePortalResponse",
+    "portalEndpoint": {
+      "@id": "amz:portalEndpoint",
+      "@type": "xsd:string"
+    },
+    "CreateTrustStoreResponse": "amz:CreateTrustStoreResponse",
+    "CreateUserAccessLoggingSettingsResponse": "amz:CreateUserAccessLoggingSettingsResponse",
+    "CreateUserSettingsResponse": "amz:CreateUserSettingsResponse",
+    "DeleteBrowserSettingsResponse": "amz:DeleteBrowserSettingsResponse",
+    "DeleteIdentityProviderResponse": "amz:DeleteIdentityProviderResponse",
+    "DeleteIpAccessSettingsResponse": "amz:DeleteIpAccessSettingsResponse",
+    "DeleteNetworkSettingsResponse": "amz:DeleteNetworkSettingsResponse",
+    "DeletePortalResponse": "amz:DeletePortalResponse",
+    "DeleteTrustStoreResponse": "amz:DeleteTrustStoreResponse",
+    "DeleteUserAccessLoggingSettingsResponse": "amz:DeleteUserAccessLoggingSettingsResponse",
+    "DeleteUserSettingsResponse": "amz:DeleteUserSettingsResponse",
+    "DisassociateBrowserSettingsResponse": "amz:DisassociateBrowserSettingsResponse",
+    "DisassociateIpAccessSettingsResponse": "amz:DisassociateIpAccessSettingsResponse",
+    "DisassociateNetworkSettingsResponse": "amz:DisassociateNetworkSettingsResponse",
+    "DisassociateTrustStoreResponse": "amz:DisassociateTrustStoreResponse",
+    "DisassociateUserAccessLoggingSettingsResponse": "amz:DisassociateUserAccessLoggingSettingsResponse",
+    "DisassociateUserSettingsResponse": "amz:DisassociateUserSettingsResponse",
+    "GetBrowserSettingsResponse": "amz:GetBrowserSettingsResponse",
+    "browserSettings": {
+      "@id": "amz:browserSettings",
+      "@type": "xsd:string"
+    },
+    "GetIdentityProviderResponse": "amz:GetIdentityProviderResponse",
+    "identityProvider": {
+      "@id": "amz:identityProvider",
+      "@type": "xsd:string"
+    },
+    "GetIpAccessSettingsResponse": "amz:GetIpAccessSettingsResponse",
+    "ipAccessSettings": {
+      "@id": "amz:ipAccessSettings",
+      "@type": "xsd:string"
+    },
+    "GetNetworkSettingsResponse": "amz:GetNetworkSettingsResponse",
+    "networkSettings": {
+      "@id": "amz:networkSettings",
+      "@type": "xsd:string"
+    },
+    "GetPortalResponse": "amz:GetPortalResponse",
+    "portal": {
+      "@id": "amz:portal",
+      "@type": "xsd:string"
+    },
+    "GetPortalServiceProviderMetadataResponse": "amz:GetPortalServiceProviderMetadataResponse",
+    "serviceProviderSamlMetadata": {
+      "@id": "amz:serviceProviderSamlMetadata",
+      "@type": "xsd:string"
+    },
+    "GetTrustStoreResponse": "amz:GetTrustStoreResponse",
+    "trustStore": {
+      "@id": "amz:trustStore",
+      "@type": "xsd:string"
+    },
+    "GetTrustStoreCertificateResponse": "amz:GetTrustStoreCertificateResponse",
+    "certificate": {
+      "@id": "amz:certificate",
+      "@type": "xsd:string"
+    },
+    "GetUserAccessLoggingSettingsResponse": "amz:GetUserAccessLoggingSettingsResponse",
+    "userAccessLoggingSettings": {
+      "@id": "amz:userAccessLoggingSettings",
+      "@type": "xsd:string"
+    },
+    "GetUserSettingsResponse": "amz:GetUserSettingsResponse",
+    "userSettings": {
+      "@id": "amz:userSettings",
+      "@type": "xsd:string"
+    },
+    "ListBrowserSettingsResponse": "amz:ListBrowserSettingsResponse",
+    "nextToken": {
+      "@id": "amz:nextToken",
+      "@type": "xsd:string"
+    },
+    "ListIdentityProvidersResponse": "amz:ListIdentityProvidersResponse",
+    "identityProviders": {
+      "@id": "amz:identityProviders",
+      "@type": "xsd:string"
+    },
+    "ListIpAccessSettingsResponse": "amz:ListIpAccessSettingsResponse",
+    "ListNetworkSettingsResponse": "amz:ListNetworkSettingsResponse",
+    "ListPortalsResponse": "amz:ListPortalsResponse",
+    "portals": {
+      "@id": "amz:portals",
+      "@type": "xsd:string"
+    },
+    "ListTagsForResourceResponse": "amz:ListTagsForResourceResponse",
+    "tags": {
+      "@id": "amz:tags",
+      "@type": "xsd:string"
+    },
+    "ListTrustStoreCertificatesResponse": "amz:ListTrustStoreCertificatesResponse",
+    "certificateList": {
+      "@id": "amz:certificateList",
+      "@type": "xsd:string"
+    },
+    "ListTrustStoresResponse": "amz:ListTrustStoresResponse",
+    "trustStores": {
+      "@id": "amz:trustStores",
+      "@type": "xsd:string"
+    },
+    "ListUserAccessLoggingSettingsResponse": "amz:ListUserAccessLoggingSettingsResponse",
+    "ListUserSettingsResponse": "amz:ListUserSettingsResponse",
+    "TagResourceResponse": "amz:TagResourceResponse",
+    "UntagResourceResponse": "amz:UntagResourceResponse",
+    "UpdateBrowserSettingsResponse": "amz:UpdateBrowserSettingsResponse",
+    "UpdateIdentityProviderResponse": "amz:UpdateIdentityProviderResponse",
+    "UpdateIpAccessSettingsResponse": "amz:UpdateIpAccessSettingsResponse",
+    "UpdateNetworkSettingsResponse": "amz:UpdateNetworkSettingsResponse",
+    "UpdatePortalResponse": "amz:UpdatePortalResponse",
+    "UpdateTrustStoreResponse": "amz:UpdateTrustStoreResponse",
+    "UpdateUserAccessLoggingSettingsResponse": "amz:UpdateUserAccessLoggingSettingsResponse",
+    "UpdateUserSettingsResponse": "amz:UpdateUserSettingsResponse",
+    "AssociateBrowserSettingsRequest": "amz:AssociateBrowserSettingsRequest",
+    "AssociateIpAccessSettingsRequest": "amz:AssociateIpAccessSettingsRequest",
+    "AssociateNetworkSettingsRequest": "amz:AssociateNetworkSettingsRequest",
+    "AssociateTrustStoreRequest": "amz:AssociateTrustStoreRequest",
+    "AssociateUserAccessLoggingSettingsRequest": "amz:AssociateUserAccessLoggingSettingsRequest",
+    "AssociateUserSettingsRequest": "amz:AssociateUserSettingsRequest",
+    "BrowserSettings": "amz:BrowserSettings",
+    "associatedPortalArns": {
+      "@id": "amz:associatedPortalArns",
+      "@type": "xsd:string"
+    },
+    "browserPolicy": {
+      "@id": "amz:browserPolicy",
+      "@type": "xsd:string"
+    },
+    "BrowserSettingsSummary": "amz:BrowserSettingsSummary",
+    "Certificate": "amz:Certificate",
+    "body": {
+      "@id": "amz:body",
+      "@type": "xsd:string"
+    },
+    "issuer": {
+      "@id": "amz:issuer",
+      "@type": "xsd:string"
+    },
+    "notValidAfter": {
+      "@id": "amz:notValidAfter",
+      "@type": "xsd:string"
+    },
+    "notValidBefore": {
+      "@id": "amz:notValidBefore",
+      "@type": "xsd:string"
+    },
+    "subject": {
+      "@id": "amz:subject",
+      "@type": "xsd:string"
+    },
+    "thumbprint": {
+      "@id": "amz:thumbprint",
+      "@type": "xsd:string"
+    },
+    "CertificateSummary": "amz:CertificateSummary",
+    "EncryptionContextMap": "amz:EncryptionContextMap",
+    "CreateBrowserSettingsRequest": "amz:CreateBrowserSettingsRequest",
+    "additionalEncryptionContext": {
+      "@id": "amz:additionalEncryptionContext",
+      "@type": "xsd:string"
+    },
+    "clientToken": {
+      "@id": "amz:clientToken",
+      "@type": "xsd:string"
+    },
+    "customerManagedKey": {
+      "@id": "amz:customerManagedKey",
+      "@type": "xsd:string"
+    },
+    "IdentityProviderDetails": "amz:IdentityProviderDetails",
+    "CreateIdentityProviderRequest": "amz:CreateIdentityProviderRequest",
+    "identityProviderDetails": {
+      "@id": "amz:identityProviderDetails",
+      "@type": "xsd:string"
+    },
+    "identityProviderName": {
+      "@id": "amz:identityProviderName",
+      "@type": "xsd:string"
+    },
+    "identityProviderType": {
+      "@id": "amz:identityProviderType",
+      "@type": "xsd:string"
+    },
+    "CreateIpAccessSettingsRequest": "amz:CreateIpAccessSettingsRequest",
+    "displayName": {
+      "@id": "amz:displayName",
+      "@type": "xsd:string"
+    },
+    "ipRules": {
+      "@id": "amz:ipRules",
+      "@type": "xsd:string"
+    },
+    "CreateNetworkSettingsRequest": "amz:CreateNetworkSettingsRequest",
+    "securityGroupIds": {
+      "@id": "amz:securityGroupIds",
+      "@type": "xsd:string"
+    },
+    "subnetIds": {
+      "@id": "amz:subnetIds",
+      "@type": "xsd:string"
+    },
+    "vpcId": {
+      "@id": "amz:vpcId",
+      "@type": "xsd:string"
+    },
+    "CreatePortalRequest": "amz:CreatePortalRequest",
+    "authenticationType": {
+      "@id": "amz:authenticationType",
+      "@type": "xsd:string"
+    },
+    "CreateTrustStoreRequest": "amz:CreateTrustStoreRequest",
+    "CreateUserAccessLoggingSettingsRequest": "amz:CreateUserAccessLoggingSettingsRequest",
+    "kinesisStreamArn": {
+      "@id": "amz:kinesisStreamArn",
+      "@type": "xsd:string"
+    },
+    "CreateUserSettingsRequest": "amz:CreateUserSettingsRequest",
+    "copyAllowed": {
+      "@id": "amz:copyAllowed",
+      "@type": "xsd:string"
+    },
+    "disconnectTimeoutInMinutes": {
+      "@id": "amz:disconnectTimeoutInMinutes",
+      "@type": "xsd:string"
+    },
+    "downloadAllowed": {
+      "@id": "amz:downloadAllowed",
+      "@type": "xsd:string"
+    },
+    "idleDisconnectTimeoutInMinutes": {
+      "@id": "amz:idleDisconnectTimeoutInMinutes",
+      "@type": "xsd:string"
+    },
+    "pasteAllowed": {
+      "@id": "amz:pasteAllowed",
+      "@type": "xsd:string"
+    },
+    "printAllowed": {
+      "@id": "amz:printAllowed",
+      "@type": "xsd:string"
+    },
+    "uploadAllowed": {
+      "@id": "amz:uploadAllowed",
+      "@type": "xsd:string"
+    },
+    "DeleteBrowserSettingsRequest": "amz:DeleteBrowserSettingsRequest",
+    "DeleteIdentityProviderRequest": "amz:DeleteIdentityProviderRequest",
+    "DeleteIpAccessSettingsRequest": "amz:DeleteIpAccessSettingsRequest",
+    "DeleteNetworkSettingsRequest": "amz:DeleteNetworkSettingsRequest",
+    "DeletePortalRequest": "amz:DeletePortalRequest",
+    "DeleteTrustStoreRequest": "amz:DeleteTrustStoreRequest",
+    "DeleteUserAccessLoggingSettingsRequest": "amz:DeleteUserAccessLoggingSettingsRequest",
+    "DeleteUserSettingsRequest": "amz:DeleteUserSettingsRequest",
+    "DisassociateBrowserSettingsRequest": "amz:DisassociateBrowserSettingsRequest",
+    "DisassociateIpAccessSettingsRequest": "amz:DisassociateIpAccessSettingsRequest",
+    "DisassociateNetworkSettingsRequest": "amz:DisassociateNetworkSettingsRequest",
+    "DisassociateTrustStoreRequest": "amz:DisassociateTrustStoreRequest",
+    "DisassociateUserAccessLoggingSettingsRequest": "amz:DisassociateUserAccessLoggingSettingsRequest",
+    "DisassociateUserSettingsRequest": "amz:DisassociateUserSettingsRequest",
+    "GetBrowserSettingsRequest": "amz:GetBrowserSettingsRequest",
+    "GetIdentityProviderRequest": "amz:GetIdentityProviderRequest",
+    "IdentityProvider": "amz:IdentityProvider",
+    "GetIpAccessSettingsRequest": "amz:GetIpAccessSettingsRequest",
+    "IpAccessSettings": "amz:IpAccessSettings",
+    "creationDate": {
+      "@id": "amz:creationDate",
+      "@type": "xsd:string"
+    },
+    "GetNetworkSettingsRequest": "amz:GetNetworkSettingsRequest",
+    "NetworkSettings": "amz:NetworkSettings",
+    "GetPortalRequest": "amz:GetPortalRequest",
+    "Portal": "amz:Portal",
+    "browserType": {
+      "@id": "amz:browserType",
+      "@type": "xsd:string"
+    },
+    "portalStatus": {
+      "@id": "amz:portalStatus",
+      "@type": "xsd:string"
+    },
+    "rendererType": {
+      "@id": "amz:rendererType",
+      "@type": "xsd:string"
+    },
+    "statusReason": {
+      "@id": "amz:statusReason",
+      "@type": "xsd:string"
+    },
+    "GetPortalServiceProviderMetadataRequest": "amz:GetPortalServiceProviderMetadataRequest",
+    "GetTrustStoreCertificateRequest": "amz:GetTrustStoreCertificateRequest",
+    "GetTrustStoreRequest": "amz:GetTrustStoreRequest",
+    "TrustStore": "amz:TrustStore",
+    "GetUserAccessLoggingSettingsRequest": "amz:GetUserAccessLoggingSettingsRequest",
+    "UserAccessLoggingSettings": "amz:UserAccessLoggingSettings",
+    "GetUserSettingsRequest": "amz:GetUserSettingsRequest",
+    "UserSettings": "amz:UserSettings",
+    "IdentityProviderSummary": "amz:IdentityProviderSummary",
+    "IpAccessSettingsSummary": "amz:IpAccessSettingsSummary",
+    "ListBrowserSettingsRequest": "amz:ListBrowserSettingsRequest",
+    "ListIdentityProvidersRequest": "amz:ListIdentityProvidersRequest",
+    "ListIpAccessSettingsRequest": "amz:ListIpAccessSettingsRequest",
+    "ListNetworkSettingsRequest": "amz:ListNetworkSettingsRequest",
+    "ListPortalsRequest": "amz:ListPortalsRequest",
+    "ListTagsForResourceRequest": "amz:ListTagsForResourceRequest",
+    "ListTrustStoreCertificatesRequest": "amz:ListTrustStoreCertificatesRequest",
+    "ListTrustStoresRequest": "amz:ListTrustStoresRequest",
+    "ListUserAccessLoggingSettingsRequest": "amz:ListUserAccessLoggingSettingsRequest",
+    "ListUserSettingsRequest": "amz:ListUserSettingsRequest",
+    "NetworkSettingsSummary": "amz:NetworkSettingsSummary",
+    "PortalSummary": "amz:PortalSummary",
+    "TagResourceRequest": "amz:TagResourceRequest",
+    "TrustStoreSummary": "amz:TrustStoreSummary",
+    "UntagResourceRequest": "amz:UntagResourceRequest",
+    "UpdateBrowserSettingsRequest": "amz:UpdateBrowserSettingsRequest",
+    "UpdateIdentityProviderRequest": "amz:UpdateIdentityProviderRequest",
+    "UpdateIpAccessSettingsRequest": "amz:UpdateIpAccessSettingsRequest",
+    "UpdateNetworkSettingsRequest": "amz:UpdateNetworkSettingsRequest",
+    "UpdatePortalRequest": "amz:UpdatePortalRequest",
+    "UpdateTrustStoreRequest": "amz:UpdateTrustStoreRequest",
+    "certificatesToAdd": {
+      "@id": "amz:certificatesToAdd",
+      "@type": "xsd:string"
+    },
+    "certificatesToDelete": {
+      "@id": "amz:certificatesToDelete",
+      "@type": "xsd:string"
+    },
+    "UpdateUserAccessLoggingSettingsRequest": "amz:UpdateUserAccessLoggingSettingsRequest",
+    "UpdateUserSettingsRequest": "amz:UpdateUserSettingsRequest",
+    "UserAccessLoggingSettingsSummary": "amz:UserAccessLoggingSettingsSummary",
+    "UserSettingsSummary": "amz:UserSettingsSummary"
+  }
+}

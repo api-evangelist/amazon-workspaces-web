@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "identityProviderArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the identity provider."
+        }
+      ]
+    },
+    "identityProviderName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdentityProviderName"
+        },
+        {
+          "description": "The identity provider name."
+        }
+      ]
+    },
+    "identityProviderType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdentityProviderType"
+        },
+        {
+          "description": "The identity provider type."
+        }
+      ]
+    }
+  },
+  "description": "The summary of the identity provider.",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IdentityProviderSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-identity-provider-summary-structure.json"
+}

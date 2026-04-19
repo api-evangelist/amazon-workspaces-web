@@ -1,0 +1,7 @@
+{
+  "clientToken": "example-value",
+  "identityProviderDetails": "abc123def456",
+  "identityProviderName": "abc123def456",
+  "identityProviderType": "abc123def456",
+  "portalArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123"
+}

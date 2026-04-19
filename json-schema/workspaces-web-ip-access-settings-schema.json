@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "required": [
+    "ipAccessSettingsArn"
+  ],
+  "properties": {
+    "associatedPortalArns": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArnList"
+        },
+        {
+          "description": "A list of web portal ARNs that this IP access settings resource is associated with."
+        }
+      ]
+    },
+    "creationDate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The creation date timestamp of the IP access settings."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The description of the IP access settings."
+        }
+      ]
+    },
+    "displayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DisplayName"
+        },
+        {
+          "description": " The display name of the IP access settings."
+        }
+      ]
+    },
+    "ipAccessSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the IP access settings resource."
+        }
+      ]
+    },
+    "ipRules": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpRuleList"
+        },
+        {
+          "description": "The IP rules of the IP access settings."
+        }
+      ]
+    }
+  },
+  "description": "The IP access settings resource that can be associated with a web portal. ",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IpAccessSettings",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-ip-access-settings-schema.json"
+}

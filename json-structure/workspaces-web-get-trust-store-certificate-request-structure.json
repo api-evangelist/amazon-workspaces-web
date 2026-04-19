@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "GetTrustStoreCertificateRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-trust-store-certificate-request-structure.json",
+  "description": "GetTrustStoreCertificateRequest schema from Amazon WorkSpaces Web API"
+}

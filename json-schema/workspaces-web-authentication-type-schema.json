@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "enum": [
+    "Standard",
+    "IAM_Identity_Center"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AuthenticationType",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-authentication-type-schema.json",
+  "description": "AuthenticationType schema from Amazon WorkSpaces Web API"
+}

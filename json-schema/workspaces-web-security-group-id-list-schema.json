@@ -1,0 +1,12 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/SecurityGroupId"
+  },
+  "minItems": 1,
+  "maxItems": 5,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecurityGroupIdList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-security-group-id-list-schema.json",
+  "description": "SecurityGroupIdList schema from Amazon WorkSpaces Web API"
+}

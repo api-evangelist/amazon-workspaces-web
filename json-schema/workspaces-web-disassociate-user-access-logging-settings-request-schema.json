@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "title": "DisassociateUserAccessLoggingSettingsRequest",
+  "properties": {},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-disassociate-user-access-logging-settings-request-schema.json",
+  "description": "DisassociateUserAccessLoggingSettingsRequest schema from Amazon WorkSpaces Web API"
+}

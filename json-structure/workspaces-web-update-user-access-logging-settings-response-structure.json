@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "userAccessLoggingSettings"
+  ],
+  "properties": {
+    "userAccessLoggingSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserAccessLoggingSettings"
+        },
+        {
+          "description": "The user access logging settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "UpdateUserAccessLoggingSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-update-user-access-logging-settings-response-structure.json",
+  "description": "UpdateUserAccessLoggingSettingsResponse schema from Amazon WorkSpaces Web API"
+}

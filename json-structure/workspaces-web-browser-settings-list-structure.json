@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/BrowserSettingsSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "BrowserSettingsList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-browser-settings-list-structure.json",
+  "description": "BrowserSettingsList schema from Amazon WorkSpaces Web API"
+}

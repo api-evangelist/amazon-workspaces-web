@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "ipAccessSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpAccessSettingsList"
+        },
+        {
+          "description": "The IP access settings."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListIpAccessSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-ip-access-settings-response-structure.json",
+  "description": "ListIpAccessSettingsResponse schema from Amazon WorkSpaces Web API"
+}

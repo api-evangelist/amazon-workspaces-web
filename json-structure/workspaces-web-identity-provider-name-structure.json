@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "^[^_][\\p{L}\\p{M}\\p{S}\\p{N}\\p{P}][^_]+$",
+  "minLength": 1,
+  "maxLength": 32,
+  "format": "password",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IdentityProviderName",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-identity-provider-name-structure.json",
+  "description": "IdentityProviderName schema from Amazon WorkSpaces Web API"
+}

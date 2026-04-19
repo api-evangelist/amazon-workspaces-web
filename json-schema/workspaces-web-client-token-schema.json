@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 512,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClientToken",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-client-token-schema.json",
+  "description": "ClientToken schema from Amazon WorkSpaces Web API"
+}

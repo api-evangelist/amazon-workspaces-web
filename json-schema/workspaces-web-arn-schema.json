@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^arn:[\\w+=\\/,.@-]+:[a-zA-Z0-9\\-]+:[a-zA-Z0-9\\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\\/[a-fA-F0-9\\-]{36})+$",
+  "minLength": 20,
+  "maxLength": 2048,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ARN",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-arn-schema.json",
+  "description": "ARN schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "UntagResourceRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-untag-resource-request-structure.json",
+  "description": "UntagResourceRequest schema from Amazon WorkSpaces Web API"
+}

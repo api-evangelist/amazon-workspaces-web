@@ -1,0 +1,8 @@
+{
+  "type": "integer",
+  "minimum": 1,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "MaxResults",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-max-results-structure.json",
+  "description": "MaxResults schema from Amazon WorkSpaces Web API"
+}

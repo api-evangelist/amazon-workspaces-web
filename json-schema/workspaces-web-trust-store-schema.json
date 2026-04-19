@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "associatedPortalArns": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ArnList"
+        },
+        {
+          "description": "A list of web portal ARNs that this trust store is associated with."
+        }
+      ]
+    },
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store."
+        }
+      ]
+    }
+  },
+  "description": "A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. ",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrustStore",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-trust-store-schema.json"
+}

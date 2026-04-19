@@ -1,0 +1,7 @@
+{
+  "issuer": "example-value",
+  "notValidAfter": "abc123def456",
+  "notValidBefore": "abc123def456",
+  "subject": "example-value",
+  "thumbprint": "example-value"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/IpAccessSettingsSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IpAccessSettingsList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-ip-access-settings-list-structure.json",
+  "description": "IpAccessSettingsList schema from Amazon WorkSpaces Web API"
+}

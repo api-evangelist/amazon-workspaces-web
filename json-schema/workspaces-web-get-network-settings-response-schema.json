@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "networkSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkSettings"
+        },
+        {
+          "description": "The network settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetNetworkSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-get-network-settings-response-schema.json",
+  "description": "GetNetworkSettingsResponse schema from Amazon WorkSpaces Web API"
+}

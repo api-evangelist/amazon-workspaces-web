@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "browserSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the browser settings."
+        }
+      ]
+    }
+  },
+  "description": "The summary for browser settings.",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "BrowserSettingsSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-browser-settings-summary-structure.json"
+}

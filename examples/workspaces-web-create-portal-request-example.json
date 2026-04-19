@@ -1,0 +1,8 @@
+{
+  "additionalEncryptionContext": "example-value",
+  "authenticationType": "example-value",
+  "clientToken": "example-value",
+  "customerManagedKey": "example-value",
+  "displayName": "Example Portal",
+  "tags": "example-value"
+}

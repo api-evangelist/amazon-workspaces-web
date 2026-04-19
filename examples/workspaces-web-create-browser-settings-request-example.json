@@ -1,0 +1,7 @@
+{
+  "additionalEncryptionContext": "example-value",
+  "browserPolicy": "example-value",
+  "clientToken": "example-value",
+  "customerManagedKey": "example-value",
+  "tags": "example-value"
+}

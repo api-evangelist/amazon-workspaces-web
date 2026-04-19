@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "userSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UserSettings"
+        },
+        {
+          "description": "The user settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "GetUserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-user-settings-response-structure.json",
+  "description": "GetUserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

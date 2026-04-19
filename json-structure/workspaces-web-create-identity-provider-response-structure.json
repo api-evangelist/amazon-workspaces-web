@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "identityProviderArn"
+  ],
+  "properties": {
+    "identityProviderArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the identity provider."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CreateIdentityProviderResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-create-identity-provider-response-structure.json",
+  "description": "CreateIdentityProviderResponse schema from Amazon WorkSpaces Web API"
+}

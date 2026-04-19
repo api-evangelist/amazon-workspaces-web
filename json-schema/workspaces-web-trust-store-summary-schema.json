@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store."
+        }
+      ]
+    }
+  },
+  "description": "The summary of the trust store.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrustStoreSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-trust-store-summary-schema.json"
+}

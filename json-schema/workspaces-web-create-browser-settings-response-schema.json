@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "browserSettingsArn"
+  ],
+  "properties": {
+    "browserSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the browser settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-create-browser-settings-response-schema.json",
+  "description": "CreateBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

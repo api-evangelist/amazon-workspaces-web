@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "ListTrustStoresRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-trust-stores-request-structure.json",
+  "description": "ListTrustStoresRequest schema from Amazon WorkSpaces Web API"
+}

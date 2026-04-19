@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "pattern": "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}(?:/([0-9]|[12][0-9]|3[0-2])|)$",
+  "description": "A single IP address or an IP address range in CIDR notation",
+  "format": "password",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "IpRange",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-ip-range-structure.json"
+}

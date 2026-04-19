@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "browserSettings"
+  ],
+  "properties": {
+    "browserSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BrowserSettings"
+        },
+        {
+          "description": "The browser settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UpdateBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-update-browser-settings-response-schema.json",
+  "description": "UpdateBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

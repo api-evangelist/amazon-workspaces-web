@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "networkSettingsArn"
+  ],
+  "properties": {
+    "networkSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the network settings."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CreateNetworkSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-create-network-settings-response-structure.json",
+  "description": "CreateNetworkSettingsResponse schema from Amazon WorkSpaces Web API"
+}

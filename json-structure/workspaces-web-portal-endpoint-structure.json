@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9]?((?!-)([A-Za-z0-9-]*[A-Za-z0-9])\\.)+[a-zA-Z0-9]+$",
+  "minLength": 1,
+  "maxLength": 253,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "PortalEndpoint",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-portal-endpoint-structure.json",
+  "description": "PortalEndpoint schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "DisassociateBrowserSettingsRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-disassociate-browser-settings-request-structure.json",
+  "description": "DisassociateBrowserSettingsRequest schema from Amazon WorkSpaces Web API"
+}

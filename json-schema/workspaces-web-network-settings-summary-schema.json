@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "networkSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the network settings."
+        }
+      ]
+    },
+    "vpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VpcId"
+        },
+        {
+          "description": "The VPC ID of the network settings."
+        }
+      ]
+    }
+  },
+  "description": "The summary of network settings.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NetworkSettingsSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-network-settings-summary-schema.json"
+}

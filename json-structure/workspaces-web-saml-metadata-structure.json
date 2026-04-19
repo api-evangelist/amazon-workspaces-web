@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^.+$",
+  "minLength": 1,
+  "maxLength": 204800,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "SamlMetadata",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-saml-metadata-structure.json",
+  "description": "SamlMetadata schema from Amazon WorkSpaces Web API"
+}

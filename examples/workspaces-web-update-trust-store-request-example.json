@@ -1,0 +1,5 @@
+{
+  "certificatesToAdd": "example-value",
+  "certificatesToDelete": "example-value",
+  "clientToken": "example-value"
+}

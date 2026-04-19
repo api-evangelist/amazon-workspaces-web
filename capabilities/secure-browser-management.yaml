@@ -1,0 +1,158 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon WorkSpaces Web Secure Browser Management"
+  description: >-
+    Unified workflow for IT administrators to manage Amazon WorkSpaces Web
+    portals, user settings, browser policies, network configurations, and
+    trust stores for enterprise secure browser deployments.
+  tags:
+    - AWS
+    - Secure Browser
+    - End User Computing
+    - Administration
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: workspaces-web
+      location: ./shared/workspaces-web.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: secure-browser-management-api
+      description: "Unified REST API for Amazon WorkSpaces Web secure browser management."
+      resources:
+        - path: /v1/portals
+          name: portals
+          description: "Portal management."
+          operations:
+            - method: GET
+              name: list-portals
+              description: "List secure browser portals."
+              call: "workspaces-web.list-portals"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+            - method: POST
+              name: create-portal
+              description: "Create a portal."
+              call: "workspaces-web.create-portal"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/user-settings
+          name: user-settings
+          description: "User settings management."
+          operations:
+            - method: GET
+              name: list-user-settings
+              description: "List user settings."
+              call: "workspaces-web.list-user-settings"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/browser-settings
+          name: browser-settings
+          description: "Browser policy management."
+          operations:
+            - method: GET
+              name: list-browser-settings
+              description: "List browser settings."
+              call: "workspaces-web.list-browser-settings"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/network-settings
+          name: network-settings
+          description: "Network configuration management."
+          operations:
+            - method: GET
+              name: list-network-settings
+              description: "List network settings."
+              call: "workspaces-web.list-network-settings"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/trust-stores
+          name: trust-stores
+          description: "Trust store management."
+          operations:
+            - method: GET
+              name: list-trust-stores
+              description: "List trust stores."
+              call: "workspaces-web.list-trust-stores"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: secure-browser-management-mcp
+      transport: http
+      description: "MCP server for AI-assisted Amazon WorkSpaces Web management."
+      tools:
+        - name: list-portals
+          description: "List all WorkSpaces Web secure browser portals."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "workspaces-web.list-portals"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: create-portal
+          description: "Create a new secure browser portal."
+          hints:
+            readOnly: false
+            destructive: false
+            idempotent: false
+          call: "workspaces-web.create-portal"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: list-user-settings
+          description: "List user settings configurations for portals."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "workspaces-web.list-user-settings"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: list-browser-settings
+          description: "List browser policy settings for portals."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "workspaces-web.list-browser-settings"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: list-network-settings
+          description: "List network settings for portal connectivity."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "workspaces-web.list-network-settings"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: list-trust-stores
+          description: "List SSL certificate trust stores."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "workspaces-web.list-trust-stores"
+          outputParameters:
+            - type: object
+              mapping: "$."

@@ -1,0 +1,12 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/TagKey"
+  },
+  "minItems": 0,
+  "maxItems": 200,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "TagKeyList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-tag-key-list-structure.json",
+  "description": "TagKeyList schema from Amazon WorkSpaces Web API"
+}

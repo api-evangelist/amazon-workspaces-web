@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "\\{[\\S\\s]*\\}\\s*",
+  "minLength": 2,
+  "maxLength": 131072,
+  "format": "password",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "BrowserPolicy",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-browser-policy-structure.json",
+  "description": "BrowserPolicy schema from Amazon WorkSpaces Web API"
+}

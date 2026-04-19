@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^\\S+$",
+  "minLength": 1,
+  "maxLength": 256,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CertificatePrincipal",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-certificate-principal-structure.json",
+  "description": "CertificatePrincipal schema from Amazon WorkSpaces Web API"
+}

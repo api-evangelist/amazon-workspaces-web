@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ServiceQuotaExceededException",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-service-quota-exceeded-exception-schema.json",
+  "description": "ServiceQuotaExceededException schema from Amazon WorkSpaces Web API"
+}

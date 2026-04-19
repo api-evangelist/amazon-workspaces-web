@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "certificate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Certificate"
+        },
+        {
+          "description": "The certificate of the trust store certificate."
+        }
+      ]
+    },
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store certificate."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetTrustStoreCertificateResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-get-trust-store-certificate-response-schema.json",
+  "description": "GetTrustStoreCertificateResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,5 @@
+{
+  "clientToken": "example-value",
+  "kinesisStreamArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "tags": "example-value"
+}

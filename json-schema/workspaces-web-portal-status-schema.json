@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "enum": [
+    "Incomplete",
+    "Pending",
+    "Active"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PortalStatus",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-portal-status-schema.json",
+  "description": "PortalStatus schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,69 @@
+{
+  "type": "object",
+  "properties": {
+    "body": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateAuthorityBody"
+        },
+        {
+          "description": "The body of the certificate."
+        }
+      ]
+    },
+    "issuer": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificatePrincipal"
+        },
+        {
+          "description": "The entity that issued the certificate."
+        }
+      ]
+    },
+    "notValidAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The certificate is not valid after this date."
+        }
+      ]
+    },
+    "notValidBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The certificate is not valid before this date."
+        }
+      ]
+    },
+    "subject": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificatePrincipal"
+        },
+        {
+          "description": "The entity the certificate belongs to."
+        }
+      ]
+    },
+    "thumbprint": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateThumbprint"
+        },
+        {
+          "description": "A hexadecimal identifier for the certificate."
+        }
+      ]
+    }
+  },
+  "description": "The certificate.",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "Certificate",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-certificate-structure.json"
+}

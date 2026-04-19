@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "enum": [
+    "Chrome"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BrowserType",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-browser-type-schema.json",
+  "description": "BrowserType schema from Amazon WorkSpaces Web API"
+}

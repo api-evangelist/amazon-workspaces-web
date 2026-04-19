@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "arn:[\\w+=/,.@-]+:kinesis:[a-zA-Z0-9\\-]*:[a-zA-Z0-9]{1,12}:stream/.+",
+  "description": "Kinesis stream ARN to which log events are published.",
+  "minLength": 20,
+  "maxLength": 2048,
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "KinesisStreamArn",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-kinesis-stream-arn-structure.json"
+}

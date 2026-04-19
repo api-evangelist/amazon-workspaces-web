@@ -1,0 +1,4 @@
+{
+  "portalArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "portalEndpoint": "example-value"
+}

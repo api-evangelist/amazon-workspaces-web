@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-@]*)$",
+  "minLength": 1,
+  "maxLength": 128,
+  "format": "password",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "TagKey",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-tag-key-structure.json",
+  "description": "TagKey schema from Amazon WorkSpaces Web API"
+}

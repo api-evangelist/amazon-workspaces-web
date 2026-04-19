@@ -1,0 +1,5 @@
+{
+  "associatedPortalArns": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "kinesisStreamArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "userAccessLoggingSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123"
+}

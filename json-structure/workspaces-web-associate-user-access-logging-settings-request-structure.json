@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "AssociateUserAccessLoggingSettingsRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-associate-user-access-logging-settings-request-structure.json",
+  "description": "AssociateUserAccessLoggingSettingsRequest schema from Amazon WorkSpaces Web API"
+}

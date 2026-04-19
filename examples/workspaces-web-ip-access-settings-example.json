@@ -1,0 +1,8 @@
+{
+  "associatedPortalArns": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "creationDate": "example-value",
+  "description": "example-value",
+  "displayName": "Example Portal",
+  "ipAccessSettingsArn": "arn:aws:workspaces-web:us-east-1:123456789012:portal/abc123",
+  "ipRules": "example-value"
+}

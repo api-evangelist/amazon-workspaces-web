@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^arn:[\\w+=\\/,.@-]+:kms:[a-zA-Z0-9\\-]*:[a-zA-Z0-9]{1,12}:key\\/[a-zA-Z0-9-]+$",
+  "minLength": 20,
+  "maxLength": 2048,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "keyArn",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-key-arn-schema.json",
+  "description": "keyArn schema from Amazon WorkSpaces Web API"
+}

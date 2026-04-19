@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "Key",
+    "Value"
+  ],
+  "properties": {
+    "Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKey"
+        },
+        {
+          "description": "The key of the tag."
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagValue"
+        },
+        {
+          "description": "The value of the tag"
+        }
+      ]
+    }
+  },
+  "description": "The tag.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tag",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-tag-schema.json"
+}

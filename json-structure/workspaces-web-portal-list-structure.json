@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/PortalSummary"
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "PortalList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-portal-list-structure.json",
+  "description": "PortalList schema from Amazon WorkSpaces Web API"
+}

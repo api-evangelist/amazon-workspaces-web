@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "pattern": "^subnet-([0-9a-f]{8}|[0-9a-f]{17})$",
+  "minLength": 1,
+  "maxLength": 32,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SubnetId",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-subnet-id-schema.json",
+  "description": "SubnetId schema from Amazon WorkSpaces Web API"
+}

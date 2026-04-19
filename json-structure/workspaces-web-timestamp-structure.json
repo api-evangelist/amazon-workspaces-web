@@ -1,0 +1,7 @@
+{
+  "type": "datetime",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "Timestamp",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-timestamp-structure.json",
+  "description": "Timestamp schema from Amazon WorkSpaces Web API"
+}

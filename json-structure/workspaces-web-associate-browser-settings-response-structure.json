@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "browserSettingsArn",
+    "portalArn"
+  ],
+  "properties": {
+    "browserSettingsArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the browser settings."
+        }
+      ]
+    },
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "AssociateBrowserSettingsResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-associate-browser-settings-response-structure.json",
+  "description": "AssociateBrowserSettingsResponse schema from Amazon WorkSpaces Web API"
+}

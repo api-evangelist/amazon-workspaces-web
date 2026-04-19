@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "pattern": "\\{[\\S\\s]*\\}\\s*",
+  "minLength": 2,
+  "maxLength": 131072,
+  "format": "password",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BrowserPolicy",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-browser-policy-schema.json",
+  "description": "BrowserPolicy schema from Amazon WorkSpaces Web API"
+}

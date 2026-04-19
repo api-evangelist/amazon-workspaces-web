@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation."
+        }
+      ]
+    },
+    "trustStores": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TrustStoreSummaryList"
+        },
+        {
+          "description": "The trust stores."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListTrustStoresResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-trust-stores-response-structure.json",
+  "description": "ListTrustStoresResponse schema from Amazon WorkSpaces Web API"
+}

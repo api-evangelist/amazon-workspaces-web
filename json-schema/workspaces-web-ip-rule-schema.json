@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "ipRange"
+  ],
+  "properties": {
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The description of the IP rule."
+        }
+      ]
+    },
+    "ipRange": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpRange"
+        },
+        {
+          "description": "The IP range of the IP rule."
+        }
+      ]
+    }
+  },
+  "description": "The IP rules of the IP access settings.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IpRule",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-ip-rule-schema.json"
+}

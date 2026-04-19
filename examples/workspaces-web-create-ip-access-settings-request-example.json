@@ -1,0 +1,9 @@
+{
+  "additionalEncryptionContext": "example-value",
+  "clientToken": "example-value",
+  "customerManagedKey": "example-value",
+  "description": "example-value",
+  "displayName": "Example Portal",
+  "ipRules": "example-value",
+  "tags": "example-value"
+}

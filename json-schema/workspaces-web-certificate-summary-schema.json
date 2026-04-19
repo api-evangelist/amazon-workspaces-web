@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "issuer": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificatePrincipal"
+        },
+        {
+          "description": "The entity that issued the certificate."
+        }
+      ]
+    },
+    "notValidAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The certificate is not valid after this date."
+        }
+      ]
+    },
+    "notValidBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The certificate is not valid before this date."
+        }
+      ]
+    },
+    "subject": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificatePrincipal"
+        },
+        {
+          "description": "The entity the certificate belongs to."
+        }
+      ]
+    },
+    "thumbprint": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateThumbprint"
+        },
+        {
+          "description": "A hexadecimal identifier for the certificate."
+        }
+      ]
+    }
+  },
+  "description": "The summary of the certificate.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CertificateSummary",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-certificate-summary-schema.json"
+}

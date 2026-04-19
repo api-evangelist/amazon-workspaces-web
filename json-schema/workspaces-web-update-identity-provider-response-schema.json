@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "identityProvider"
+  ],
+  "properties": {
+    "identityProvider": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IdentityProvider"
+        },
+        {
+          "description": "The identity provider."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UpdateIdentityProviderResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-update-identity-provider-response-schema.json",
+  "description": "UpdateIdentityProviderResponse schema from Amazon WorkSpaces Web API"
+}

@@ -1,0 +1,139 @@
+# Amazon WorkSpaces Web API Spectral Ruleset
+rules:
+  info-title-format:
+    description: API title should reference Amazon WorkSpaces Web
+    severity: warn
+    given: $.info
+    then:
+      field: title
+      function: pattern
+      functionOptions:
+        match: "^Amazon WorkSpaces Web"
+  info-description-required:
+    description: API info must have a description
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy
+  info-version-required:
+    description: API info must have a version
+    severity: error
+    given: $.info
+    then:
+      field: version
+      function: truthy
+  openapi-version:
+    description: Must use OpenAPI 3.0.x
+    severity: error
+    given: $
+    then:
+      field: openapi
+      function: pattern
+      functionOptions:
+        match: "^3\\.0\\."
+  servers-defined:
+    description: At least one server must be defined
+    severity: error
+    given: $
+    then:
+      field: servers
+      function: truthy
+  servers-https:
+    description: All server URLs must use HTTPS
+    severity: error
+    given: $.servers[*]
+    then:
+      field: url
+      function: pattern
+      functionOptions:
+        match: "^https://"
+  paths-no-trailing-slash:
+    description: Paths must not have a trailing slash
+    severity: warn
+    given: $.paths
+    then:
+      field: "@key"
+      function: pattern
+      functionOptions:
+        notMatch: "/$"
+  operation-operationid-required:
+    description: Every operation must have an operationId
+    severity: error
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: operationId
+      function: truthy
+  operation-summary-required:
+    description: Every operation must have a summary
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: summary
+      function: truthy
+  operation-summary-prefix:
+    description: Operation summary should start with Amazon WorkSpaces Web
+    severity: info
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: summary
+      function: pattern
+      functionOptions:
+        match: "^Amazon WorkSpaces Web"
+  operation-tags-required:
+    description: Every operation must have at least one tag
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete]
+    then:
+      field: tags
+      function: truthy
+  parameter-description-required:
+    description: All parameters must have a description
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete].parameters[*]
+    then:
+      field: description
+      function: truthy
+  response-description-required:
+    description: All responses must have a description
+    severity: error
+    given: $.paths[*][get,post,put,patch,delete].responses[*]
+    then:
+      field: description
+      function: truthy
+  schema-description-recommended:
+    description: Top-level schemas should have a description
+    severity: info
+    given: $.components.schemas[*]
+    then:
+      field: description
+      function: truthy
+  get-no-request-body:
+    description: GET operations must not have a request body
+    severity: error
+    given: $.paths[*].get
+    then:
+      field: requestBody
+      function: falsy
+  no-empty-descriptions:
+    description: Descriptions must not be empty strings
+    severity: warn
+    given: $..description
+    then:
+      function: pattern
+      functionOptions:
+        match: ".+"
+  security-schemes-defined:
+    description: Security schemes should be defined in components
+    severity: warn
+    given: $.components
+    then:
+      field: securitySchemes
+      function: truthy
+  components-schemas-exist:
+    description: Components schemas should be defined for reuse
+    severity: info
+    given: $.components
+    then:
+      field: schemas
+      function: truthy

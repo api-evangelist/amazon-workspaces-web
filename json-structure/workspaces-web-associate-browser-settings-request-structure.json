@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "name": "AssociateBrowserSettingsRequest",
+  "properties": {},
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-associate-browser-settings-request-structure.json",
+  "description": "AssociateBrowserSettingsRequest schema from Amazon WorkSpaces Web API"
+}

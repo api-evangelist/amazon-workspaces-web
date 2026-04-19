@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "certificateList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CertificateSummaryList"
+        },
+        {
+          "description": "The certificate list."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PaginationToken"
+        },
+        {
+          "description": "The pagination token used to retrieve the next page of results for this operation.&gt;"
+        }
+      ]
+    },
+    "trustStoreArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the trust store."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "ListTrustStoreCertificatesResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-list-trust-store-certificates-response-structure.json",
+  "description": "ListTrustStoreCertificatesResponse schema from Amazon WorkSpaces Web API"
+}

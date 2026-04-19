@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "portalArn",
+    "portalEndpoint"
+  ],
+  "properties": {
+    "portalArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ARN"
+        },
+        {
+          "description": "The ARN of the web portal."
+        }
+      ]
+    },
+    "portalEndpoint": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortalEndpoint"
+        },
+        {
+          "description": "The endpoint URL of the web portal that users access in order to start streaming sessions."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "CreatePortalResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-create-portal-response-structure.json",
+  "description": "CreatePortalResponse schema from Amazon WorkSpaces Web API"
+}

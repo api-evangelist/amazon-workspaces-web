@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/IdentityProviderSummary"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IdentityProviderList",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-schema/workspaces-web-identity-provider-list-schema.json",
+  "description": "IdentityProviderList schema from Amazon WorkSpaces Web API"
+}

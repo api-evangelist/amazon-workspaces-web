@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "portal": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Portal"
+        },
+        {
+          "description": "The web portal."
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "name": "GetPortalResponse",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/json-structure/workspaces-web-get-portal-response-structure.json",
+  "description": "GetPortalResponse schema from Amazon WorkSpaces Web API"
+}
