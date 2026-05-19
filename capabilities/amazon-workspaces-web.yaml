@@ -1,0 +1,2486 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon WorkSpaces Web
+  description: 'Amazon WorkSpaces Web. 58 operations. Lead operation: Amazon WorkSpaces Web Create Browser Settings. Self-contained
+    Naftiko capability covering one Amazon Workspaces Web business surface.'
+  tags:
+  - Amazon Workspaces Web
+  - Amazon WorkSpaces Web
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_WORKSPACES_WEB_API_KEY: AMAZON_WORKSPACES_WEB_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-workspaces-web
+    baseUri: http://workspaces-web.{region}.amazonaws.com
+    description: Amazon WorkSpaces Web business capability. Self-contained, no shared references.
+    resources:
+    - name: browserSettings
+      path: /browserSettings
+      operations:
+      - name: createbrowsersettings
+        method: POST
+        description: Amazon WorkSpaces Web Create Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listbrowsersettings
+        method: GET
+        description: Amazon WorkSpaces Web List Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: browserSettings-browserSettingsArn
+      path: /browserSettings/{browserSettingsArn}
+      operations:
+      - name: deletebrowsersettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: browserSettingsArn
+          in: path
+          type: string
+          description: The ARN of the browser settings.
+          required: true
+      - name: getbrowsersettings
+        method: GET
+        description: Amazon WorkSpaces Web Get Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: browserSettingsArn
+          in: path
+          type: string
+          description: The ARN of the browser settings.
+          required: true
+      - name: updatebrowsersettings
+        method: PATCH
+        description: Amazon WorkSpaces Web Update Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: browserSettingsArn
+          in: path
+          type: string
+          description: The ARN of the browser settings.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: identityProviders
+      path: /identityProviders
+      operations:
+      - name: createidentityprovider
+        method: POST
+        description: Amazon WorkSpaces Web Create Identity Provider
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: identityProviders-identityProviderArn
+      path: /identityProviders/{identityProviderArn}
+      operations:
+      - name: deleteidentityprovider
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Identity Provider
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: identityProviderArn
+          in: path
+          type: string
+          description: The ARN of the identity provider.
+          required: true
+      - name: getidentityprovider
+        method: GET
+        description: Amazon WorkSpaces Web Get Identity Provider
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: identityProviderArn
+          in: path
+          type: string
+          description: The ARN of the identity provider.
+          required: true
+      - name: updateidentityprovider
+        method: PATCH
+        description: Amazon WorkSpaces Web Update Identity Provider
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: identityProviderArn
+          in: path
+          type: string
+          description: The ARN of the identity provider.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: ipAccessSettings
+      path: /ipAccessSettings
+      operations:
+      - name: createipaccesssettings
+        method: POST
+        description: Amazon WorkSpaces Web Create Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listipaccesssettings
+        method: GET
+        description: Amazon WorkSpaces Web List Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: ipAccessSettings-ipAccessSettingsArn
+      path: /ipAccessSettings/{ipAccessSettingsArn}
+      operations:
+      - name: deleteipaccesssettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ipAccessSettingsArn
+          in: path
+          type: string
+          description: The ARN of the IP access settings.
+          required: true
+      - name: getipaccesssettings
+        method: GET
+        description: Amazon WorkSpaces Web Get Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ipAccessSettingsArn
+          in: path
+          type: string
+          description: The ARN of the IP access settings.
+          required: true
+      - name: updateipaccesssettings
+        method: PATCH
+        description: Amazon WorkSpaces Web Update Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ipAccessSettingsArn
+          in: path
+          type: string
+          description: The ARN of the IP access settings.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: networkSettings
+      path: /networkSettings
+      operations:
+      - name: createnetworksettings
+        method: POST
+        description: Amazon WorkSpaces Web Create Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listnetworksettings
+        method: GET
+        description: Amazon WorkSpaces Web List Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: networkSettings-networkSettingsArn
+      path: /networkSettings/{networkSettingsArn}
+      operations:
+      - name: deletenetworksettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: networkSettingsArn
+          in: path
+          type: string
+          description: The ARN of the network settings.
+          required: true
+      - name: getnetworksettings
+        method: GET
+        description: Amazon WorkSpaces Web Get Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: networkSettingsArn
+          in: path
+          type: string
+          description: The ARN of the network settings.
+          required: true
+      - name: updatenetworksettings
+        method: PATCH
+        description: Amazon WorkSpaces Web Update Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: networkSettingsArn
+          in: path
+          type: string
+          description: The ARN of the network settings.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: portalIdp-portalArn
+      path: /portalIdp/{portalArn}
+      operations:
+      - name: getportalserviceprovidermetadata
+        method: GET
+        description: Amazon WorkSpaces Web Get Portal Service Provider Metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals
+      path: /portals
+      operations:
+      - name: createportal
+        method: POST
+        description: Amazon WorkSpaces Web Create Portal
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listportals
+        method: GET
+        description: Amazon WorkSpaces Web List Portals
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: portals-portalArn
+      path: /portals/{portalArn}
+      operations:
+      - name: deleteportal
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Portal
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+      - name: getportal
+        method: GET
+        description: Amazon WorkSpaces Web Get Portal
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+      - name: updateportal
+        method: PUT
+        description: Amazon WorkSpaces Web Update Portal
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: portals-portalArn-browserSettings
+      path: /portals/{portalArn}/browserSettings
+      operations:
+      - name: disassociatebrowsersettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-browserSettings#browserSettingsArn
+      path: /portals/{portalArn}/browserSettings#browserSettingsArn
+      operations:
+      - name: associatebrowsersettings
+        method: PUT
+        description: Amazon WorkSpaces Web Associate Browser Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: browserSettingsArn
+          in: query
+          type: string
+          description: The ARN of the browser settings.
+          required: true
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-identityProviders
+      path: /portals/{portalArn}/identityProviders
+      operations:
+      - name: listidentityproviders
+        method: GET
+        description: Amazon WorkSpaces Web List Identity Providers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-ipAccessSettings
+      path: /portals/{portalArn}/ipAccessSettings
+      operations:
+      - name: disassociateipaccesssettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-ipAccessSettings#ipAccessSettingsArn
+      path: /portals/{portalArn}/ipAccessSettings#ipAccessSettingsArn
+      operations:
+      - name: associateipaccesssettings
+        method: PUT
+        description: Amazon WorkSpaces Web Associate Ip Access Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: ipAccessSettingsArn
+          in: query
+          type: string
+          description: The ARN of the IP access settings.
+          required: true
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-networkSettings
+      path: /portals/{portalArn}/networkSettings
+      operations:
+      - name: disassociatenetworksettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-networkSettings#networkSettingsArn
+      path: /portals/{portalArn}/networkSettings#networkSettingsArn
+      operations:
+      - name: associatenetworksettings
+        method: PUT
+        description: Amazon WorkSpaces Web Associate Network Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: networkSettingsArn
+          in: query
+          type: string
+          description: The ARN of the network settings.
+          required: true
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-trustStores
+      path: /portals/{portalArn}/trustStores
+      operations:
+      - name: disassociatetruststore
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-trustStores#trustStoreArn
+      path: /portals/{portalArn}/trustStores#trustStoreArn
+      operations:
+      - name: associatetruststore
+        method: PUT
+        description: Amazon WorkSpaces Web Associate Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+        - name: trustStoreArn
+          in: query
+          type: string
+          description: The ARN of the trust store.
+          required: true
+    - name: portals-portalArn-userAccessLoggingSettings
+      path: /portals/{portalArn}/userAccessLoggingSettings
+      operations:
+      - name: disassociateuseraccessloggingsettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-userAccessLoggingSettings#userAccessLoggingSettingsArn
+      path: /portals/{portalArn}/userAccessLoggingSettings#userAccessLoggingSettingsArn
+      operations:
+      - name: associateuseraccessloggingsettings
+        method: PUT
+        description: Amazon WorkSpaces Web Associate User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+        - name: userAccessLoggingSettingsArn
+          in: query
+          type: string
+          description: The ARN of the user access logging settings.
+          required: true
+    - name: portals-portalArn-userSettings
+      path: /portals/{portalArn}/userSettings
+      operations:
+      - name: disassociateusersettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Disassociate User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+    - name: portals-portalArn-userSettings#userSettingsArn
+      path: /portals/{portalArn}/userSettings#userSettingsArn
+      operations:
+      - name: associateusersettings
+        method: PUT
+        description: Amazon WorkSpaces Web Associate User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: portalArn
+          in: path
+          type: string
+          description: The ARN of the web portal.
+          required: true
+        - name: userSettingsArn
+          in: query
+          type: string
+          description: The ARN of the user settings.
+          required: true
+    - name: tags-resourceArn
+      path: /tags/{resourceArn}
+      operations:
+      - name: listtagsforresource
+        method: GET
+        description: Amazon WorkSpaces Web List Tags for Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The ARN of the resource.
+          required: true
+      - name: tagresource
+        method: POST
+        description: Amazon WorkSpaces Web Tag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The ARN of the resource.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: tags-resourceArn}#tagKeys
+      path: /tags/{resourceArn}#tagKeys
+      operations:
+      - name: untagresource
+        method: DELETE
+        description: Amazon WorkSpaces Web Untag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The ARN of the resource.
+          required: true
+        - name: tagKeys
+          in: query
+          type: array
+          description: The list of tag keys to remove from the resource.
+          required: true
+    - name: trustStores
+      path: /trustStores
+      operations:
+      - name: createtruststore
+        method: POST
+        description: Amazon WorkSpaces Web Create Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listtruststores
+        method: GET
+        description: Amazon WorkSpaces Web List Trust Stores
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: trustStores-trustStoreArn
+      path: /trustStores/{trustStoreArn}
+      operations:
+      - name: deletetruststore
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: trustStoreArn
+          in: path
+          type: string
+          description: The ARN of the trust store.
+          required: true
+      - name: gettruststore
+        method: GET
+        description: Amazon WorkSpaces Web Get Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: trustStoreArn
+          in: path
+          type: string
+          description: The ARN of the trust store.
+          required: true
+      - name: updatetruststore
+        method: PATCH
+        description: Amazon WorkSpaces Web Update Trust Store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: trustStoreArn
+          in: path
+          type: string
+          description: The ARN of the trust store.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: trustStores-trustStoreArn-certificate#thumbprint
+      path: /trustStores/{trustStoreArn}/certificate#thumbprint
+      operations:
+      - name: gettruststorecertificate
+        method: GET
+        description: Amazon WorkSpaces Web Get Trust Store Certificate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: thumbprint
+          in: query
+          type: string
+          description: The thumbprint of the trust store certificate.
+          required: true
+        - name: trustStoreArn
+          in: path
+          type: string
+          description: The ARN of the trust store certificate.
+          required: true
+    - name: trustStores-trustStoreArn-certificates
+      path: /trustStores/{trustStoreArn}/certificates
+      operations:
+      - name: listtruststorecertificates
+        method: GET
+        description: Amazon WorkSpaces Web List Trust Store Certificates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+        - name: trustStoreArn
+          in: path
+          type: string
+          description: The ARN of the trust store
+          required: true
+    - name: userAccessLoggingSettings
+      path: /userAccessLoggingSettings
+      operations:
+      - name: createuseraccessloggingsettings
+        method: POST
+        description: Amazon WorkSpaces Web Create User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listuseraccessloggingsettings
+        method: GET
+        description: Amazon WorkSpaces Web List User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: userAccessLoggingSettings-userAccessLoggingSettingsArn
+      path: /userAccessLoggingSettings/{userAccessLoggingSettingsArn}
+      operations:
+      - name: deleteuseraccessloggingsettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userAccessLoggingSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user access logging settings.
+          required: true
+      - name: getuseraccessloggingsettings
+        method: GET
+        description: Amazon WorkSpaces Web Get User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userAccessLoggingSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user access logging settings.
+          required: true
+      - name: updateuseraccessloggingsettings
+        method: PATCH
+        description: Amazon WorkSpaces Web Update User Access Logging Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userAccessLoggingSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user access logging settings.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: userSettings
+      path: /userSettings
+      operations:
+      - name: createusersettings
+        method: POST
+        description: Amazon WorkSpaces Web Create User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listusersettings
+        method: GET
+        description: Amazon WorkSpaces Web List User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be included in the next page.
+        - name: nextToken
+          in: query
+          type: string
+          description: The pagination token used to retrieve the next page of results for this operation.
+    - name: userSettings-userSettingsArn
+      path: /userSettings/{userSettingsArn}
+      operations:
+      - name: deleteusersettings
+        method: DELETE
+        description: Amazon WorkSpaces Web Delete User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user settings.
+          required: true
+      - name: getusersettings
+        method: GET
+        description: Amazon WorkSpaces Web Get User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user settings.
+          required: true
+      - name: updateusersettings
+        method: PATCH
+        description: Amazon WorkSpaces Web Update User Settings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: userSettingsArn
+          in: path
+          type: string
+          description: The ARN of the user settings.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_WORKSPACES_WEB_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-workspaces-web-rest
+    port: 8080
+    description: REST adapter for Amazon WorkSpaces Web. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/browsersettings
+      name: browsersettings
+      description: REST surface for browserSettings.
+      operations:
+      - method: POST
+        name: createbrowsersettings
+        description: Amazon WorkSpaces Web Create Browser Settings
+        call: amazon-workspaces-web.createbrowsersettings
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listbrowsersettings
+        description: Amazon WorkSpaces Web List Browser Settings
+        call: amazon-workspaces-web.listbrowsersettings
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/browsersettings/{browsersettingsarn}
+      name: browsersettings-browsersettingsarn
+      description: REST surface for browserSettings-browserSettingsArn.
+      operations:
+      - method: DELETE
+        name: deletebrowsersettings
+        description: Amazon WorkSpaces Web Delete Browser Settings
+        call: amazon-workspaces-web.deletebrowsersettings
+        with:
+          browserSettingsArn: rest.browserSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getbrowsersettings
+        description: Amazon WorkSpaces Web Get Browser Settings
+        call: amazon-workspaces-web.getbrowsersettings
+        with:
+          browserSettingsArn: rest.browserSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatebrowsersettings
+        description: Amazon WorkSpaces Web Update Browser Settings
+        call: amazon-workspaces-web.updatebrowsersettings
+        with:
+          browserSettingsArn: rest.browserSettingsArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/identityproviders
+      name: identityproviders
+      description: REST surface for identityProviders.
+      operations:
+      - method: POST
+        name: createidentityprovider
+        description: Amazon WorkSpaces Web Create Identity Provider
+        call: amazon-workspaces-web.createidentityprovider
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/identityproviders/{identityproviderarn}
+      name: identityproviders-identityproviderarn
+      description: REST surface for identityProviders-identityProviderArn.
+      operations:
+      - method: DELETE
+        name: deleteidentityprovider
+        description: Amazon WorkSpaces Web Delete Identity Provider
+        call: amazon-workspaces-web.deleteidentityprovider
+        with:
+          identityProviderArn: rest.identityProviderArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getidentityprovider
+        description: Amazon WorkSpaces Web Get Identity Provider
+        call: amazon-workspaces-web.getidentityprovider
+        with:
+          identityProviderArn: rest.identityProviderArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateidentityprovider
+        description: Amazon WorkSpaces Web Update Identity Provider
+        call: amazon-workspaces-web.updateidentityprovider
+        with:
+          identityProviderArn: rest.identityProviderArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/ipaccesssettings
+      name: ipaccesssettings
+      description: REST surface for ipAccessSettings.
+      operations:
+      - method: POST
+        name: createipaccesssettings
+        description: Amazon WorkSpaces Web Create Ip Access Settings
+        call: amazon-workspaces-web.createipaccesssettings
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listipaccesssettings
+        description: Amazon WorkSpaces Web List Ip Access Settings
+        call: amazon-workspaces-web.listipaccesssettings
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/ipaccesssettings/{ipaccesssettingsarn}
+      name: ipaccesssettings-ipaccesssettingsarn
+      description: REST surface for ipAccessSettings-ipAccessSettingsArn.
+      operations:
+      - method: DELETE
+        name: deleteipaccesssettings
+        description: Amazon WorkSpaces Web Delete Ip Access Settings
+        call: amazon-workspaces-web.deleteipaccesssettings
+        with:
+          ipAccessSettingsArn: rest.ipAccessSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getipaccesssettings
+        description: Amazon WorkSpaces Web Get Ip Access Settings
+        call: amazon-workspaces-web.getipaccesssettings
+        with:
+          ipAccessSettingsArn: rest.ipAccessSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateipaccesssettings
+        description: Amazon WorkSpaces Web Update Ip Access Settings
+        call: amazon-workspaces-web.updateipaccesssettings
+        with:
+          ipAccessSettingsArn: rest.ipAccessSettingsArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/networksettings
+      name: networksettings
+      description: REST surface for networkSettings.
+      operations:
+      - method: POST
+        name: createnetworksettings
+        description: Amazon WorkSpaces Web Create Network Settings
+        call: amazon-workspaces-web.createnetworksettings
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listnetworksettings
+        description: Amazon WorkSpaces Web List Network Settings
+        call: amazon-workspaces-web.listnetworksettings
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/networksettings/{networksettingsarn}
+      name: networksettings-networksettingsarn
+      description: REST surface for networkSettings-networkSettingsArn.
+      operations:
+      - method: DELETE
+        name: deletenetworksettings
+        description: Amazon WorkSpaces Web Delete Network Settings
+        call: amazon-workspaces-web.deletenetworksettings
+        with:
+          networkSettingsArn: rest.networkSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getnetworksettings
+        description: Amazon WorkSpaces Web Get Network Settings
+        call: amazon-workspaces-web.getnetworksettings
+        with:
+          networkSettingsArn: rest.networkSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatenetworksettings
+        description: Amazon WorkSpaces Web Update Network Settings
+        call: amazon-workspaces-web.updatenetworksettings
+        with:
+          networkSettingsArn: rest.networkSettingsArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portalidp/{portalarn}
+      name: portalidp-portalarn
+      description: REST surface for portalIdp-portalArn.
+      operations:
+      - method: GET
+        name: getportalserviceprovidermetadata
+        description: Amazon WorkSpaces Web Get Portal Service Provider Metadata
+        call: amazon-workspaces-web.getportalserviceprovidermetadata
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals
+      name: portals
+      description: REST surface for portals.
+      operations:
+      - method: POST
+        name: createportal
+        description: Amazon WorkSpaces Web Create Portal
+        call: amazon-workspaces-web.createportal
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listportals
+        description: Amazon WorkSpaces Web List Portals
+        call: amazon-workspaces-web.listportals
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}
+      name: portals-portalarn
+      description: REST surface for portals-portalArn.
+      operations:
+      - method: DELETE
+        name: deleteportal
+        description: Amazon WorkSpaces Web Delete Portal
+        call: amazon-workspaces-web.deleteportal
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getportal
+        description: Amazon WorkSpaces Web Get Portal
+        call: amazon-workspaces-web.getportal
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updateportal
+        description: Amazon WorkSpaces Web Update Portal
+        call: amazon-workspaces-web.updateportal
+        with:
+          portalArn: rest.portalArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/browsersettings
+      name: portals-portalarn-browsersettings
+      description: REST surface for portals-portalArn-browserSettings.
+      operations:
+      - method: DELETE
+        name: disassociatebrowsersettings
+        description: Amazon WorkSpaces Web Disassociate Browser Settings
+        call: amazon-workspaces-web.disassociatebrowsersettings
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/browsersettings-browsersettingsarn
+      name: portals-portalarn-browsersettings-browsersettingsarn
+      description: REST surface for portals-portalArn-browserSettings#browserSettingsArn.
+      operations:
+      - method: PUT
+        name: associatebrowsersettings
+        description: Amazon WorkSpaces Web Associate Browser Settings
+        call: amazon-workspaces-web.associatebrowsersettings
+        with:
+          browserSettingsArn: rest.browserSettingsArn
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/identityproviders
+      name: portals-portalarn-identityproviders
+      description: REST surface for portals-portalArn-identityProviders.
+      operations:
+      - method: GET
+        name: listidentityproviders
+        description: Amazon WorkSpaces Web List Identity Providers
+        call: amazon-workspaces-web.listidentityproviders
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/ipaccesssettings
+      name: portals-portalarn-ipaccesssettings
+      description: REST surface for portals-portalArn-ipAccessSettings.
+      operations:
+      - method: DELETE
+        name: disassociateipaccesssettings
+        description: Amazon WorkSpaces Web Disassociate Ip Access Settings
+        call: amazon-workspaces-web.disassociateipaccesssettings
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/ipaccesssettings-ipaccesssettingsarn
+      name: portals-portalarn-ipaccesssettings-ipaccesssettingsarn
+      description: REST surface for portals-portalArn-ipAccessSettings#ipAccessSettingsArn.
+      operations:
+      - method: PUT
+        name: associateipaccesssettings
+        description: Amazon WorkSpaces Web Associate Ip Access Settings
+        call: amazon-workspaces-web.associateipaccesssettings
+        with:
+          ipAccessSettingsArn: rest.ipAccessSettingsArn
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/networksettings
+      name: portals-portalarn-networksettings
+      description: REST surface for portals-portalArn-networkSettings.
+      operations:
+      - method: DELETE
+        name: disassociatenetworksettings
+        description: Amazon WorkSpaces Web Disassociate Network Settings
+        call: amazon-workspaces-web.disassociatenetworksettings
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/networksettings-networksettingsarn
+      name: portals-portalarn-networksettings-networksettingsarn
+      description: REST surface for portals-portalArn-networkSettings#networkSettingsArn.
+      operations:
+      - method: PUT
+        name: associatenetworksettings
+        description: Amazon WorkSpaces Web Associate Network Settings
+        call: amazon-workspaces-web.associatenetworksettings
+        with:
+          networkSettingsArn: rest.networkSettingsArn
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/truststores
+      name: portals-portalarn-truststores
+      description: REST surface for portals-portalArn-trustStores.
+      operations:
+      - method: DELETE
+        name: disassociatetruststore
+        description: Amazon WorkSpaces Web Disassociate Trust Store
+        call: amazon-workspaces-web.disassociatetruststore
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/truststores-truststorearn
+      name: portals-portalarn-truststores-truststorearn
+      description: REST surface for portals-portalArn-trustStores#trustStoreArn.
+      operations:
+      - method: PUT
+        name: associatetruststore
+        description: Amazon WorkSpaces Web Associate Trust Store
+        call: amazon-workspaces-web.associatetruststore
+        with:
+          portalArn: rest.portalArn
+          trustStoreArn: rest.trustStoreArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/useraccessloggingsettings
+      name: portals-portalarn-useraccessloggingsettings
+      description: REST surface for portals-portalArn-userAccessLoggingSettings.
+      operations:
+      - method: DELETE
+        name: disassociateuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Disassociate User Access Logging Settings
+        call: amazon-workspaces-web.disassociateuseraccessloggingsettings
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/useraccessloggingsettings-useraccessloggingsettingsarn
+      name: portals-portalarn-useraccessloggingsettings-useraccessloggingsettingsarn
+      description: REST surface for portals-portalArn-userAccessLoggingSettings#userAccessLoggingSettingsArn.
+      operations:
+      - method: PUT
+        name: associateuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Associate User Access Logging Settings
+        call: amazon-workspaces-web.associateuseraccessloggingsettings
+        with:
+          portalArn: rest.portalArn
+          userAccessLoggingSettingsArn: rest.userAccessLoggingSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/usersettings
+      name: portals-portalarn-usersettings
+      description: REST surface for portals-portalArn-userSettings.
+      operations:
+      - method: DELETE
+        name: disassociateusersettings
+        description: Amazon WorkSpaces Web Disassociate User Settings
+        call: amazon-workspaces-web.disassociateusersettings
+        with:
+          portalArn: rest.portalArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/portals/{portalarn}/usersettings-usersettingsarn
+      name: portals-portalarn-usersettings-usersettingsarn
+      description: REST surface for portals-portalArn-userSettings#userSettingsArn.
+      operations:
+      - method: PUT
+        name: associateusersettings
+        description: Amazon WorkSpaces Web Associate User Settings
+        call: amazon-workspaces-web.associateusersettings
+        with:
+          portalArn: rest.portalArn
+          userSettingsArn: rest.userSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tags/{resourcearn}
+      name: tags-resourcearn
+      description: REST surface for tags-resourceArn.
+      operations:
+      - method: GET
+        name: listtagsforresource
+        description: Amazon WorkSpaces Web List Tags for Resource
+        call: amazon-workspaces-web.listtagsforresource
+        with:
+          resourceArn: rest.resourceArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: tagresource
+        description: Amazon WorkSpaces Web Tag Resource
+        call: amazon-workspaces-web.tagresource
+        with:
+          resourceArn: rest.resourceArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tags/resourcearn-tagkeys
+      name: tags-resourcearn-tagkeys
+      description: REST surface for tags-resourceArn}#tagKeys.
+      operations:
+      - method: DELETE
+        name: untagresource
+        description: Amazon WorkSpaces Web Untag Resource
+        call: amazon-workspaces-web.untagresource
+        with:
+          resourceArn: rest.resourceArn
+          tagKeys: rest.tagKeys
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/truststores
+      name: truststores
+      description: REST surface for trustStores.
+      operations:
+      - method: POST
+        name: createtruststore
+        description: Amazon WorkSpaces Web Create Trust Store
+        call: amazon-workspaces-web.createtruststore
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listtruststores
+        description: Amazon WorkSpaces Web List Trust Stores
+        call: amazon-workspaces-web.listtruststores
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/truststores/{truststorearn}
+      name: truststores-truststorearn
+      description: REST surface for trustStores-trustStoreArn.
+      operations:
+      - method: DELETE
+        name: deletetruststore
+        description: Amazon WorkSpaces Web Delete Trust Store
+        call: amazon-workspaces-web.deletetruststore
+        with:
+          trustStoreArn: rest.trustStoreArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: gettruststore
+        description: Amazon WorkSpaces Web Get Trust Store
+        call: amazon-workspaces-web.gettruststore
+        with:
+          trustStoreArn: rest.trustStoreArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatetruststore
+        description: Amazon WorkSpaces Web Update Trust Store
+        call: amazon-workspaces-web.updatetruststore
+        with:
+          trustStoreArn: rest.trustStoreArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/truststores/{truststorearn}/certificate-thumbprint
+      name: truststores-truststorearn-certificate-thumbprint
+      description: REST surface for trustStores-trustStoreArn-certificate#thumbprint.
+      operations:
+      - method: GET
+        name: gettruststorecertificate
+        description: Amazon WorkSpaces Web Get Trust Store Certificate
+        call: amazon-workspaces-web.gettruststorecertificate
+        with:
+          thumbprint: rest.thumbprint
+          trustStoreArn: rest.trustStoreArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/truststores/{truststorearn}/certificates
+      name: truststores-truststorearn-certificates
+      description: REST surface for trustStores-trustStoreArn-certificates.
+      operations:
+      - method: GET
+        name: listtruststorecertificates
+        description: Amazon WorkSpaces Web List Trust Store Certificates
+        call: amazon-workspaces-web.listtruststorecertificates
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+          trustStoreArn: rest.trustStoreArn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/useraccessloggingsettings
+      name: useraccessloggingsettings
+      description: REST surface for userAccessLoggingSettings.
+      operations:
+      - method: POST
+        name: createuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Create User Access Logging Settings
+        call: amazon-workspaces-web.createuseraccessloggingsettings
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listuseraccessloggingsettings
+        description: Amazon WorkSpaces Web List User Access Logging Settings
+        call: amazon-workspaces-web.listuseraccessloggingsettings
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/useraccessloggingsettings/{useraccessloggingsettingsarn}
+      name: useraccessloggingsettings-useraccessloggingsettingsarn
+      description: REST surface for userAccessLoggingSettings-userAccessLoggingSettingsArn.
+      operations:
+      - method: DELETE
+        name: deleteuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Delete User Access Logging Settings
+        call: amazon-workspaces-web.deleteuseraccessloggingsettings
+        with:
+          userAccessLoggingSettingsArn: rest.userAccessLoggingSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Get User Access Logging Settings
+        call: amazon-workspaces-web.getuseraccessloggingsettings
+        with:
+          userAccessLoggingSettingsArn: rest.userAccessLoggingSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateuseraccessloggingsettings
+        description: Amazon WorkSpaces Web Update User Access Logging Settings
+        call: amazon-workspaces-web.updateuseraccessloggingsettings
+        with:
+          userAccessLoggingSettingsArn: rest.userAccessLoggingSettingsArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/usersettings
+      name: usersettings
+      description: REST surface for userSettings.
+      operations:
+      - method: POST
+        name: createusersettings
+        description: Amazon WorkSpaces Web Create User Settings
+        call: amazon-workspaces-web.createusersettings
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listusersettings
+        description: Amazon WorkSpaces Web List User Settings
+        call: amazon-workspaces-web.listusersettings
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/usersettings/{usersettingsarn}
+      name: usersettings-usersettingsarn
+      description: REST surface for userSettings-userSettingsArn.
+      operations:
+      - method: DELETE
+        name: deleteusersettings
+        description: Amazon WorkSpaces Web Delete User Settings
+        call: amazon-workspaces-web.deleteusersettings
+        with:
+          userSettingsArn: rest.userSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getusersettings
+        description: Amazon WorkSpaces Web Get User Settings
+        call: amazon-workspaces-web.getusersettings
+        with:
+          userSettingsArn: rest.userSettingsArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateusersettings
+        description: Amazon WorkSpaces Web Update User Settings
+        call: amazon-workspaces-web.updateusersettings
+        with:
+          userSettingsArn: rest.userSettingsArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-workspaces-web-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon WorkSpaces Web. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: amazon-workspaces-web-create-browser
+      description: Amazon WorkSpaces Web Create Browser Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createbrowsersettings
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-browser
+      description: Amazon WorkSpaces Web List Browser Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listbrowsersettings
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-browser
+      description: Amazon WorkSpaces Web Delete Browser Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deletebrowsersettings
+      with:
+        browserSettingsArn: tools.browserSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-browser
+      description: Amazon WorkSpaces Web Get Browser Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getbrowsersettings
+      with:
+        browserSettingsArn: tools.browserSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-browser
+      description: Amazon WorkSpaces Web Update Browser Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updatebrowsersettings
+      with:
+        browserSettingsArn: tools.browserSettingsArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-identity
+      description: Amazon WorkSpaces Web Create Identity Provider
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createidentityprovider
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-identity
+      description: Amazon WorkSpaces Web Delete Identity Provider
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deleteidentityprovider
+      with:
+        identityProviderArn: tools.identityProviderArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-identity
+      description: Amazon WorkSpaces Web Get Identity Provider
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getidentityprovider
+      with:
+        identityProviderArn: tools.identityProviderArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-identity
+      description: Amazon WorkSpaces Web Update Identity Provider
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updateidentityprovider
+      with:
+        identityProviderArn: tools.identityProviderArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-ip
+      description: Amazon WorkSpaces Web Create Ip Access Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createipaccesssettings
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-ip
+      description: Amazon WorkSpaces Web List Ip Access Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listipaccesssettings
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-ip
+      description: Amazon WorkSpaces Web Delete Ip Access Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deleteipaccesssettings
+      with:
+        ipAccessSettingsArn: tools.ipAccessSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-ip
+      description: Amazon WorkSpaces Web Get Ip Access Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getipaccesssettings
+      with:
+        ipAccessSettingsArn: tools.ipAccessSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-ip
+      description: Amazon WorkSpaces Web Update Ip Access Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updateipaccesssettings
+      with:
+        ipAccessSettingsArn: tools.ipAccessSettingsArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-network
+      description: Amazon WorkSpaces Web Create Network Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createnetworksettings
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-network
+      description: Amazon WorkSpaces Web List Network Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listnetworksettings
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-network
+      description: Amazon WorkSpaces Web Delete Network Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deletenetworksettings
+      with:
+        networkSettingsArn: tools.networkSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-network
+      description: Amazon WorkSpaces Web Get Network Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getnetworksettings
+      with:
+        networkSettingsArn: tools.networkSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-network
+      description: Amazon WorkSpaces Web Update Network Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updatenetworksettings
+      with:
+        networkSettingsArn: tools.networkSettingsArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-portal
+      description: Amazon WorkSpaces Web Get Portal Service Provider Metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getportalserviceprovidermetadata
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-portal
+      description: Amazon WorkSpaces Web Create Portal
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createportal
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-portals
+      description: Amazon WorkSpaces Web List Portals
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listportals
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-portal
+      description: Amazon WorkSpaces Web Delete Portal
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deleteportal
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-portal-2
+      description: Amazon WorkSpaces Web Get Portal
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getportal
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-portal
+      description: Amazon WorkSpaces Web Update Portal
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updateportal
+      with:
+        portalArn: tools.portalArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-browser
+      description: Amazon WorkSpaces Web Disassociate Browser Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociatebrowsersettings
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-browser
+      description: Amazon WorkSpaces Web Associate Browser Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associatebrowsersettings
+      with:
+        browserSettingsArn: tools.browserSettingsArn
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-identity
+      description: Amazon WorkSpaces Web List Identity Providers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listidentityproviders
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-ip
+      description: Amazon WorkSpaces Web Disassociate Ip Access Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociateipaccesssettings
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-ip
+      description: Amazon WorkSpaces Web Associate Ip Access Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associateipaccesssettings
+      with:
+        ipAccessSettingsArn: tools.ipAccessSettingsArn
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-network
+      description: Amazon WorkSpaces Web Disassociate Network Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociatenetworksettings
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-network
+      description: Amazon WorkSpaces Web Associate Network Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associatenetworksettings
+      with:
+        networkSettingsArn: tools.networkSettingsArn
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-trust
+      description: Amazon WorkSpaces Web Disassociate Trust Store
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociatetruststore
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-trust
+      description: Amazon WorkSpaces Web Associate Trust Store
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associatetruststore
+      with:
+        portalArn: tools.portalArn
+        trustStoreArn: tools.trustStoreArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-user
+      description: Amazon WorkSpaces Web Disassociate User Access Logging Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociateuseraccessloggingsettings
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-user
+      description: Amazon WorkSpaces Web Associate User Access Logging Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associateuseraccessloggingsettings
+      with:
+        portalArn: tools.portalArn
+        userAccessLoggingSettingsArn: tools.userAccessLoggingSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-disassociate-user-2
+      description: Amazon WorkSpaces Web Disassociate User Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.disassociateusersettings
+      with:
+        portalArn: tools.portalArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-associate-user-2
+      description: Amazon WorkSpaces Web Associate User Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.associateusersettings
+      with:
+        portalArn: tools.portalArn
+        userSettingsArn: tools.userSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-tags
+      description: Amazon WorkSpaces Web List Tags for Resource
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listtagsforresource
+      with:
+        resourceArn: tools.resourceArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-tag-resource
+      description: Amazon WorkSpaces Web Tag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.tagresource
+      with:
+        resourceArn: tools.resourceArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-untag-resource
+      description: Amazon WorkSpaces Web Untag Resource
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.untagresource
+      with:
+        resourceArn: tools.resourceArn
+        tagKeys: tools.tagKeys
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-trust
+      description: Amazon WorkSpaces Web Create Trust Store
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createtruststore
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-trust
+      description: Amazon WorkSpaces Web List Trust Stores
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listtruststores
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-trust
+      description: Amazon WorkSpaces Web Delete Trust Store
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deletetruststore
+      with:
+        trustStoreArn: tools.trustStoreArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-trust
+      description: Amazon WorkSpaces Web Get Trust Store
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.gettruststore
+      with:
+        trustStoreArn: tools.trustStoreArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-trust
+      description: Amazon WorkSpaces Web Update Trust Store
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updatetruststore
+      with:
+        trustStoreArn: tools.trustStoreArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-trust-2
+      description: Amazon WorkSpaces Web Get Trust Store Certificate
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.gettruststorecertificate
+      with:
+        thumbprint: tools.thumbprint
+        trustStoreArn: tools.trustStoreArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-trust-2
+      description: Amazon WorkSpaces Web List Trust Store Certificates
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listtruststorecertificates
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+        trustStoreArn: tools.trustStoreArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-user
+      description: Amazon WorkSpaces Web Create User Access Logging Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createuseraccessloggingsettings
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-user
+      description: Amazon WorkSpaces Web List User Access Logging Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listuseraccessloggingsettings
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-user
+      description: Amazon WorkSpaces Web Delete User Access Logging Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deleteuseraccessloggingsettings
+      with:
+        userAccessLoggingSettingsArn: tools.userAccessLoggingSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-user
+      description: Amazon WorkSpaces Web Get User Access Logging Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getuseraccessloggingsettings
+      with:
+        userAccessLoggingSettingsArn: tools.userAccessLoggingSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-user
+      description: Amazon WorkSpaces Web Update User Access Logging Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updateuseraccessloggingsettings
+      with:
+        userAccessLoggingSettingsArn: tools.userAccessLoggingSettingsArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-create-user-2
+      description: Amazon WorkSpaces Web Create User Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-workspaces-web.createusersettings
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-list-user-2
+      description: Amazon WorkSpaces Web List User Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.listusersettings
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-delete-user-2
+      description: Amazon WorkSpaces Web Delete User Settings
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-workspaces-web.deleteusersettings
+      with:
+        userSettingsArn: tools.userSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-get-user-2
+      description: Amazon WorkSpaces Web Get User Settings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.getusersettings
+      with:
+        userSettingsArn: tools.userSettingsArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-workspaces-web-update-user-2
+      description: Amazon WorkSpaces Web Update User Settings
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-workspaces-web.updateusersettings
+      with:
+        userSettingsArn: tools.userSettingsArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
