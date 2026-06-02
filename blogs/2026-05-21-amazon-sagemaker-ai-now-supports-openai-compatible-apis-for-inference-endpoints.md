@@ -1,0 +1,8 @@
+---
+title: Amazon SageMaker AI now supports OpenAI-compatible APIs for inference endpoints
+url: https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-ai-openai-apis/
+date: '2026-05-21'
+author: aws@amazon.com
+feed_url: https://aws.amazon.com/rss
+---
+Amazon SageMaker Inference now supports OpenAI-compatible APIs, so you can use the tools and frameworks you already know, like the OpenAI SDK, LangChain, and Strands Agents, to connect directly to your SageMaker endpoints. Switching requires nothing more than changing an endpoint URL — no custom integration code, no SDK wrappers, no rewrites. With this launch, you no longer need to adopt a different API format or change your authentication approach. Simply change your endpoint URL, and your existing SDK calls, streaming logic, and framework integrations continue to work as-is. You immediately gain the ability to choose your own GPU instances, keep data in your own VPC, run any open source or fine-tuned model, and scale with auto-scaling policies tuned to your workload. Authentication uses existing AWS credentials with automatic token refresh, so there is nothing extra to manage in production. This capability is available today in US East (N. Virginia), US West (Oregon), US East (Ohio), Asia Pacific (Mumbai), Asia Pacific (Jakarta), Europe (Ireland), Europe (Frankfurt), South America (São Paulo), Asia Pacific (Tokyo), Asia Pacific (Seoul), Europe (London), Asia Pacific (Singapore), Asia Pacific (Sydney), and Canada (Central). To learn more and get started, read the launch blog or visit the SageMaker Inference documentation.

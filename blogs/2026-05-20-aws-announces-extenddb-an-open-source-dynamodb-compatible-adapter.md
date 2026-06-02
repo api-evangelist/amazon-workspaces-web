@@ -1,0 +1,8 @@
+---
+title: AWS announces ExtendDB, an open source DynamoDB-compatible adapter
+url: https://aws.amazon.com/about-aws/whats-new/2026/05/aws-extenddb-dynamodb/
+date: '2026-05-20'
+author: aws@amazon.com
+feed_url: https://aws.amazon.com/rss
+---
+Today, Amazon Web Services (AWS) announced version 0.1 of ExtendDB, an open source project that implements the Amazon DynamoDB API with pluggable storage backends. Amazon DynamoDB is a serverless, fully managed NoSQL database with single-digit millisecond performance at any scale. ExtendDB enables application developers, platform teams, and enterprise architects to use the DynamoDB programming model in environments where the DynamoDB managed service is not available, including developer laptops, on-premises data centers, and disconnected edge sites, without rewriting application code. ExtendDB implements the DynamoDB control plane and data plane APIs, including operations on tables, items, and streams. The reference storage backend at launch is PostgreSQL, and the pluggable architecture allows the community to add new storage backends without modifying the core adapter. Developers can use ExtendDB for high-fidelity local development and continuous integration testing, and operate DynamoDB-shaped workloads in on-premises data centers backed by a supported database. ExtendDB is maintained by AWS, released under the Apache 2.0 license, and developed in the open on GitHub. We invite the community to contribute backend implementations, submit feedback, and participate in the project's evolution. To learn more, see the ExtendDB project page and the AWS database blog post . To get started or contribute, visit the GitHub repository .

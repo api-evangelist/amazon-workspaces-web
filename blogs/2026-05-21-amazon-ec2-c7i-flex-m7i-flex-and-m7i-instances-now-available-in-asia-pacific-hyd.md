@@ -1,0 +1,9 @@
+---
+title: Amazon EC2 C7i-flex, M7i-flex & M7i instances now available in Asia Pacific
+  (Hyderabad) region
+url: https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-c7i-flex-m7i-flex-m7i-instances-HYD-region/
+date: '2026-05-21'
+author: aws@amazon.com
+feed_url: https://aws.amazon.com/rss
+---
+Starting today, Amazon Elastic Compute Cloud (Amazon EC2) C7i-flex, M7i-flex and M7i instances powered by custom 4th Gen Intel Xeon Scalable processors (code-named Sapphire Rapids) are available in Asia Pacific (Hyderabad) region. These custom processors, available only on AWS, offer up to 15% better performance over comparable x86-based Intel processors utilized by other cloud providers. C7i-flex and M7i-flex instances are the easiest way for you to get price-performance benefits for a majority of general-purpose workloads. They deliver up to 19% better price-performance compared to C6i and M6i  instances respectively. These instances offer the most common sizes, from large to 16xlarge, and are a great first choice for applications that don't fully utilize all compute resources such as web and application servers, virtual-desktops, batch-processing, and microservices. M7i deliver up to 15% better price-performance compared to M6i. M7i instances are a great choice for workloads that need the largest instance sizes or continuous high CPU usage, such as gaming servers, CPU-based machine learning (ML), and video-streaming. M7i offer larger instance sizes, up to 48xlarge, and two bare metal sizes (metal-24xl, metal-48xl). These bare-metal sizes support built-in Intel accelerators: Data Streaming Accelerator, In-Memory Analytics Accelerator, and QuickAssist Technology that are used to facilitate efficient offload and acceleration of data operations and optimize performance for workloads. To learn more, visit the EC2 C7i-flex and M7i/M7i-flex instances pages.

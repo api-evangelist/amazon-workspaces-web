@@ -1,0 +1,8 @@
+---
+title: AWS Clean Rooms now supports mutable payment configurations for collaborations
+url: https://aws.amazon.com/about-aws/whats-new/2026/05/aws-clean-rooms-mutable-payments
+date: '2026-05-22'
+author: aws@amazon.com
+feed_url: https://aws.amazon.com/rss
+---
+AWS Clean Rooms now supports mutable fine-grained payment configurations for collaboration members. This capability offers customers greater flexibility and control over payment responsibilities as they develop new use cases with their partners. With this launch, customers can specify which partners are authorized to pay for specific cost types after a collaboration is created—including SQL queries, PySpark jobs, ML model training and inference jobs, and synthetic data generation in AWS Clean Rooms. With AWS Clean Rooms, you can add or remove authorized payers for specific cost types through a change request. Collaboration members must approve the results before it takes effect. Payment configurations support multiple authorized payers for SQL and PySpark analyses. You can select an authorized payer when submitting the analysis. For example, a pharmaceutical research company collaborates with healthcare organizations for real-world clinical trial data. The pharmaceutical research company can pay for complex analysis, and the healthcare organizations can pay for simple SQL analyses in a collaboration. AWS Clean Rooms helps companies and their partners easily analyze and collaborate on their collective datasets without revealing or copying one another’s underlying data. For more information about the AWS Regions where AWS Clean Rooms is available, see the AWS Regions table. To learn more about collaborating with AWS Clean Rooms, visit AWS Clean Rooms .
