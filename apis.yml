@@ -5,7 +5,7 @@ description: Amazon WorkSpaces Web is a purpose-built, low-cost, fully managed s
   users from downloading content to local devices while maintaining a seamless browsing experience. The service offers 58
   API operations for managing portals, user settings, browser policies, network settings, trust stores, and IP access controls.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - AWS
 - End User Computing
