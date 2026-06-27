@@ -46,7 +46,7 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/amazon-workspaces-web.yaml
 common:
 - type: Portal
@@ -63,7 +63,7 @@ common:
   url: https://aws.amazon.com/privacy/
 - type: Support
   url: https://aws.amazon.com/premiumsupport/
-- type: SignUp
+- type: Signup
   url: https://signin.aws.amazon.com/signup?request_type=register
 - type: Login
   url: https://aws.amazon.com/console/
