@@ -49,6 +49,16 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-workspaces-web.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-workspaces-web-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-workspaces-web-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-workspaces-web-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-workspaces-web-authentication.yml
+- type: Blog
+  url: https://aws.amazon.com/blogs/desktop-and-application-streaming/feed/
 - type: Portal
   url: https://aws.amazon.com/
 - type: Website
