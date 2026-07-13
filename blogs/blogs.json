@@ -1,0 +1,13 @@
+{
+  "repo": "amazon-workspaces-web",
+  "feeds": [
+    {
+      "source": "https://aws.amazon.com/blogs/desktop-and-application-streaming/feed/",
+      "feed_url": "https://aws.amazon.com/blogs/desktop-and-application-streaming/feed/",
+      "title": "Desktop and Application Streaming",
+      "saved": 0
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 20
+}

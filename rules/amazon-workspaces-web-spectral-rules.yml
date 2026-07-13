@@ -1,4 +1,21 @@
-# Amazon WorkSpaces Web API Spectral Ruleset
+# amazon-workspaces-web — Spectral ruleset (strengthened)
+# Plain Spectral. Existing hand-authored rules preserved; measured rules added
+# from this provider's own OpenAPI conventions by strengthen_ruleset.py,
+# then self-validated against the spec.
+#
+# Provenance:
+#   - servers-https-only: 50% of servers already https (warn)
+#   - path-params-casing: camel @ 100% (n=43)
+#   - query-params-casing: camel @ 96% (n=26)
+#   - operationid-casing: pascal @ 100% (n=58)
+#   - schema-names-casing: pascal @ 99% (n=195)
+#   - schema-properties-casing: camel @ 88% (n=232)
+#   - security: global (root) — NOT emitting operation-security-required
+#   - pagination params observed: ['maxResults', 'nextToken']
+#   - merge: kept 18 existing, added 4 measured, upgraded 0
+#   - added: query-params-casing, operationid-casing, schema-names-casing, schema-properties-casing
+extends:
+  - spectral:oas
 rules:
   info-title-format:
     description: API title should reference Amazon WorkSpaces Web
@@ -8,7 +25,7 @@ rules:
       field: title
       function: pattern
       functionOptions:
-        match: "^Amazon WorkSpaces Web"
+        match: ^Amazon WorkSpaces Web
   info-description-required:
     description: API info must have a description
     severity: error
@@ -31,7 +48,7 @@ rules:
       field: openapi
       function: pattern
       functionOptions:
-        match: "^3\\.0\\."
+        match: ^3\.0\.
   servers-defined:
     description: At least one server must be defined
     severity: error
@@ -47,16 +64,16 @@ rules:
       field: url
       function: pattern
       functionOptions:
-        match: "^https://"
+        match: ^https://
   paths-no-trailing-slash:
     description: Paths must not have a trailing slash
     severity: warn
     given: $.paths
     then:
-      field: "@key"
+      field: '@key'
       function: pattern
       functionOptions:
-        notMatch: "/$"
+        notMatch: /$
   operation-operationid-required:
     description: Every operation must have an operationId
     severity: error
@@ -79,7 +96,7 @@ rules:
       field: summary
       function: pattern
       functionOptions:
-        match: "^Amazon WorkSpaces Web"
+        match: ^Amazon WorkSpaces Web
   operation-tags-required:
     description: Every operation must have at least one tag
     severity: warn
@@ -122,7 +139,7 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: ".+"
+        match: .+
   security-schemes-defined:
     description: Security schemes should be defined in components
     severity: warn
@@ -137,3 +154,38 @@ rules:
     then:
       field: schemas
       function: truthy
+  query-params-casing:
+    description: Query parameters should be camelCase (the dominant convention in this API).
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete].parameters[?(@.in=='query')]
+    then:
+      field: name
+      function: casing
+      functionOptions:
+        type: camel
+  operationid-casing:
+    description: Operation IDs should be PascalCase (the dominant convention in this API).
+    severity: warn
+    given: $.paths[*][get,post,put,patch,delete].operationId
+    then:
+      function: casing
+      functionOptions:
+        type: pascal
+  schema-names-casing:
+    description: Component schema names should be PascalCase (the dominant convention in this API).
+    severity: warn
+    given: $.components.schemas
+    then:
+      field: '@key'
+      function: pattern
+      functionOptions:
+        match: ^[A-Z][A-Za-z0-9]*$
+  schema-properties-casing:
+    description: Schema properties should be camelCase (the dominant convention in this API).
+    severity: info
+    given: $.components.schemas[*].properties
+    then:
+      field: '@key'
+      function: casing
+      functionOptions:
+        type: camel
