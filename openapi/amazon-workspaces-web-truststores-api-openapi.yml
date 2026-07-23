@@ -1,0 +1,865 @@
+openapi: 3.0.0
+info:
+  version: '2020-07-08'
+  x-release: v4
+  title: Amazon WorkSpaces Web BrowserSettings TrustStores API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: workspaces-web
+  x-aws-signingName: workspaces-web
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: https://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: http://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+- url: https://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: TrustStores
+paths:
+  /trustStores:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateTrustStore
+      description: 'Creates a trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - certificateList
+              properties:
+                certificateList:
+                  description: A list of CA certificates to be added to the trust store.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CertificateAuthorityBody'
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                tags:
+                  description: The tags to add to the trust store. A tag is a key-value pair.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Tag'
+                  minItems: 0
+                  maxItems: 200
+      summary: Amazon WorkSpaces Web Create Trust Store
+      tags:
+      - TrustStores
+    get:
+      operationId: ListTrustStores
+      description: Retrieves a list of trust stores.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListTrustStoresResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: The pagination token used to retrieve the next page of results for this operation.
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List Trust Stores
+      tags:
+      - TrustStores
+  /trustStores/{trustStoreArn}:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeleteTrustStore
+      description: Deletes the trust store.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: trustStoreArn
+        in: path
+        required: true
+        description: The ARN of the trust store.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Delete Trust Store
+      tags:
+      - TrustStores
+    get:
+      operationId: GetTrustStore
+      description: Gets the trust store.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: trustStoreArn
+        in: path
+        required: true
+        description: The ARN of the trust store.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Get Trust Store
+      tags:
+      - TrustStores
+    patch:
+      operationId: UpdateTrustStore
+      description: Updates the trust store.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '485':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: trustStoreArn
+        in: path
+        required: true
+        description: The ARN of the trust store.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                certificatesToAdd:
+                  description: A list of CA certificates to add to the trust store.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CertificateAuthorityBody'
+                certificatesToDelete:
+                  description: A list of CA certificates to delete from a trust store.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CertificateThumbprint'
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token return the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+      summary: Amazon WorkSpaces Web Update Trust Store
+      tags:
+      - TrustStores
+  /trustStores/{trustStoreArn}/certificate#thumbprint:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: GetTrustStoreCertificate
+      description: Gets the trust store certificate.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTrustStoreCertificateResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: thumbprint
+        in: query
+        required: true
+        description: The thumbprint of the trust store certificate.
+        schema:
+          type: string
+          pattern: ^[A-Fa-f0-9]{64}$
+          minLength: 64
+          maxLength: 64
+      - name: trustStoreArn
+        in: path
+        required: true
+        description: The ARN of the trust store certificate.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Get Trust Store Certificate
+      tags:
+      - TrustStores
+  /trustStores/{trustStoreArn}/certificates:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: ListTrustStoreCertificates
+      description: Retrieves a list of trust store certificates.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListTrustStoreCertificatesResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: The pagination token used to retrieve the next page of results for this operation.
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      - name: trustStoreArn
+        in: path
+        required: true
+        description: The ARN of the trust store
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List Trust Store Certificates
+      tags:
+      - TrustStores
+components:
+  schemas:
+    UpdateTrustStoreResponse:
+      type: object
+      required:
+      - trustStoreArn
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    Certificate:
+      type: object
+      properties:
+        body:
+          allOf:
+          - $ref: '#/components/schemas/CertificateAuthorityBody'
+          - description: The body of the certificate.
+        issuer:
+          allOf:
+          - $ref: '#/components/schemas/CertificatePrincipal'
+          - description: The entity that issued the certificate.
+        notValidAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The certificate is not valid after this date.
+        notValidBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The certificate is not valid before this date.
+        subject:
+          allOf:
+          - $ref: '#/components/schemas/CertificatePrincipal'
+          - description: The entity the certificate belongs to.
+        thumbprint:
+          allOf:
+          - $ref: '#/components/schemas/CertificateThumbprint'
+          - description: A hexadecimal identifier for the certificate.
+      description: The certificate.
+    TrustStoreSummary:
+      type: object
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+      description: The summary of the trust store.
+    CertificateSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateSummary'
+    GetTrustStoreResponse:
+      type: object
+      properties:
+        trustStore:
+          allOf:
+          - $ref: '#/components/schemas/TrustStore'
+          - description: The trust store.
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    ListTrustStoresResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+        trustStores:
+          allOf:
+          - $ref: '#/components/schemas/TrustStoreSummaryList'
+          - description: The trust stores.
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    AccessDeniedException: {}
+    CreateTrustStoreResponse:
+      type: object
+      required:
+      - trustStoreArn
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    ThrottlingException: {}
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    GetTrustStoreCertificateResponse:
+      type: object
+      properties:
+        certificate:
+          allOf:
+          - $ref: '#/components/schemas/Certificate'
+          - description: The certificate of the trust store certificate.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store certificate.
+    Timestamp:
+      type: string
+      format: date-time
+    CertificateAuthorityBody:
+      type: string
+    TrustStoreSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/TrustStoreSummary'
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
+    CertificateThumbprint:
+      type: string
+      pattern: ^[A-Fa-f0-9]{64}$
+      minLength: 64
+      maxLength: 64
+    CertificatePrincipal:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 256
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    CertificateSummary:
+      type: object
+      properties:
+        issuer:
+          allOf:
+          - $ref: '#/components/schemas/CertificatePrincipal'
+          - description: The entity that issued the certificate.
+        notValidAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The certificate is not valid after this date.
+        notValidBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The certificate is not valid before this date.
+        subject:
+          allOf:
+          - $ref: '#/components/schemas/CertificatePrincipal'
+          - description: The entity the certificate belongs to.
+        thumbprint:
+          allOf:
+          - $ref: '#/components/schemas/CertificateThumbprint'
+          - description: A hexadecimal identifier for the certificate.
+      description: The summary of the certificate.
+    TrustStore:
+      type: object
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this trust store is associated with.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+      description: 'A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
+    ListTrustStoreCertificatesResponse:
+      type: object
+      properties:
+        certificateList:
+          allOf:
+          - $ref: '#/components/schemas/CertificateSummaryList'
+          - description: The certificate list.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.&gt;
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    DeleteTrustStoreResponse:
+      type: object
+      properties: {}
+    ResourceNotFoundException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    ValidationException: {}
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/workspaces-web/
+x-hasEquivalentPaths: true

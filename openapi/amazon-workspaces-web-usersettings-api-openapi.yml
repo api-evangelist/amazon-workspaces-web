@@ -1,0 +1,753 @@
+openapi: 3.0.0
+info:
+  version: '2020-07-08'
+  x-release: v4
+  title: Amazon WorkSpaces Web BrowserSettings UserSettings API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: workspaces-web
+  x-aws-signingName: workspaces-web
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: https://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: http://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+- url: https://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: UserSettings
+paths:
+  /userSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateUserSettings
+      description: 'Creates a user settings resource that can be associated with a web portal. Once associated with a web portal, user settings control how users can transfer data between a streaming session and the their local devices. '
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - copyAllowed
+              - downloadAllowed
+              - pasteAllowed
+              - printAllowed
+              - uploadAllowed
+              properties:
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                copyAllowed:
+                  description: Specifies whether the user can copy text from the streaming session to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                disconnectTimeoutInMinutes:
+                  description: The amount of time that a streaming session remains active after users disconnect.
+                  type: integer
+                  minimum: 1
+                  maximum: 600
+                downloadAllowed:
+                  description: Specifies whether the user can download files from the streaming session to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                idleDisconnectTimeoutInMinutes:
+                  description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
+                  type: integer
+                  minimum: 0
+                  maximum: 60
+                pasteAllowed:
+                  description: Specifies whether the user can paste text from the local device to the streaming session.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                printAllowed:
+                  description: Specifies whether the user can print to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                tags:
+                  description: The tags to add to the user settings resource. A tag is a key-value pair.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Tag'
+                  minItems: 0
+                  maxItems: 200
+                uploadAllowed:
+                  description: Specifies whether the user can upload files from the local device to the streaming session.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+      summary: Amazon WorkSpaces Web Create User Settings
+      tags:
+      - UserSettings
+    get:
+      operationId: ListUserSettings
+      description: Retrieves a list of user settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: 'The pagination token used to retrieve the next page of results for this operation. '
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List User Settings
+      tags:
+      - UserSettings
+  /userSettings/{userSettingsArn}:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeleteUserSettings
+      description: Deletes user settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: userSettingsArn
+        in: path
+        required: true
+        description: The ARN of the user settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Delete User Settings
+      tags:
+      - UserSettings
+    get:
+      operationId: GetUserSettings
+      description: Gets user settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: userSettingsArn
+        in: path
+        required: true
+        description: The ARN of the user settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Get User Settings
+      tags:
+      - UserSettings
+    patch:
+      operationId: UpdateUserSettings
+      description: Updates the user settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: userSettingsArn
+        in: path
+        required: true
+        description: The ARN of the user settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token return the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                copyAllowed:
+                  description: Specifies whether the user can copy text from the streaming session to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                disconnectTimeoutInMinutes:
+                  description: The amount of time that a streaming session remains active after users disconnect.
+                  type: integer
+                  minimum: 1
+                  maximum: 600
+                downloadAllowed:
+                  description: Specifies whether the user can download files from the streaming session to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                idleDisconnectTimeoutInMinutes:
+                  description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
+                  type: integer
+                  minimum: 0
+                  maximum: 60
+                pasteAllowed:
+                  description: Specifies whether the user can paste text from the local device to the streaming session.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                printAllowed:
+                  description: Specifies whether the user can print to the local device.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+                uploadAllowed:
+                  description: Specifies whether the user can upload files from the local device to the streaming session.
+                  type: string
+                  enum:
+                  - Disabled
+                  - Enabled
+      summary: Amazon WorkSpaces Web Update User Settings
+      tags:
+      - UserSettings
+components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    AccessDeniedException: {}
+    UserSettings:
+      type: object
+      required:
+      - userSettingsArn
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this user settings is associated with.
+        copyAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can copy text from the streaming session to the local device.
+        disconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/DisconnectTimeoutInMinutes'
+          - description: The amount of time that a streaming session remains active after users disconnect.
+        downloadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can download files from the streaming session to the local device.
+        idleDisconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/IdleDisconnectTimeoutInMinutes'
+          - description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
+        pasteAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can paste text from the local device to the streaming session.
+        printAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can print to the local device.
+        uploadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can upload files from the local device to the streaming session.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
+      description: 'A user settings resource that can be associated with a web portal. Once associated with a web portal, user settings control how users can transfer data between a streaming session and the their local devices. '
+    ListUserSettingsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'The pagination token used to retrieve the next page of results for this operation. '
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettingsList'
+          - description: The user settings.
+    ThrottlingException: {}
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    EnabledType:
+      type: string
+      enum:
+      - Disabled
+      - Enabled
+    DeleteUserSettingsResponse:
+      type: object
+      properties: {}
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
+    UserSettingsSummary:
+      type: object
+      properties:
+        copyAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can copy text from the streaming session to the local device.
+        disconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/DisconnectTimeoutInMinutes'
+          - description: The amount of time that a streaming session remains active after users disconnect.
+        downloadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can download files from the streaming session to the local device.
+        idleDisconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/IdleDisconnectTimeoutInMinutes'
+          - description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
+        pasteAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can paste text from the local device to the streaming session.
+        printAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can print to the local device.
+        uploadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can upload files from the local device to the streaming session.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
+      description: The summary of user settings.
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    ResourceNotFoundException: {}
+    GetUserSettingsResponse:
+      type: object
+      properties:
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettings'
+          - description: The user settings.
+    CreateUserSettingsResponse:
+      type: object
+      required:
+      - userSettingsArn
+      properties:
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    UserSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserSettingsSummary'
+    ValidationException: {}
+    DisconnectTimeoutInMinutes:
+      type: integer
+      minimum: 1
+      maximum: 600
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    IdleDisconnectTimeoutInMinutes:
+      type: integer
+      minimum: 0
+      maximum: 60
+    UpdateUserSettingsResponse:
+      type: object
+      required:
+      - userSettings
+      properties:
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettings'
+          - description: The user settings.
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/workspaces-web/
+x-hasEquivalentPaths: true

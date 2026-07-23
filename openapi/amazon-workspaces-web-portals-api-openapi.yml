@@ -1,0 +1,1834 @@
+openapi: 3.0.0
+info:
+  version: '2020-07-08'
+  x-release: v4
+  title: Amazon WorkSpaces Web BrowserSettings Portals API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: workspaces-web
+  x-aws-signingName: workspaces-web
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: https://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: http://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+- url: https://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Portals
+paths:
+  /portals/{portalArn}/browserSettings#browserSettingsArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateBrowserSettings
+      description: Associates a browser settings resource with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateBrowserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: browserSettingsArn
+        in: query
+        required: true
+        description: The ARN of the browser settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate Browser Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/ipAccessSettings#ipAccessSettingsArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateIpAccessSettings
+      description: Associates an IP access settings resource with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: ipAccessSettingsArn
+        in: query
+        required: true
+        description: The ARN of the IP access settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate Ip Access Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/networkSettings#networkSettingsArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateNetworkSettings
+      description: Associates a network settings resource with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateNetworkSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: networkSettingsArn
+        in: query
+        required: true
+        description: The ARN of the network settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate Network Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/trustStores#trustStoreArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateTrustStore
+      description: Associates a trust store with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: trustStoreArn
+        in: query
+        required: true
+        description: The ARN of the trust store.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate Trust Store
+      tags:
+      - Portals
+  /portals/{portalArn}/userAccessLoggingSettings#userAccessLoggingSettingsArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateUserAccessLoggingSettings
+      description: Associates a user access logging settings resource with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateUserAccessLoggingSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: userAccessLoggingSettingsArn
+        in: query
+        required: true
+        description: The ARN of the user access logging settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate User Access Logging Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/userSettings#userSettingsArn:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    put:
+      operationId: AssociateUserSettings
+      description: Associates a user settings resource with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssociateUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      - name: userSettingsArn
+        in: query
+        required: true
+        description: The ARN of the user settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Associate User Settings
+      tags:
+      - Portals
+  /portals:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreatePortal
+      description: Creates a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatePortalResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '485':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '486':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                additionalEncryptionContext:
+                  description: The additional encryption context of the portal.
+                  type: object
+                  additionalProperties:
+                    $ref: '#/components/schemas/StringType'
+                authenticationType:
+                  description: <p>The type of authentication integration points used when signing into the web portal. Defaults to <code>Standard</code>.</p> <p> <code>Standard</code> web portals are authenticated directly through your identity provider. You need to call <code>CreateIdentityProvider</code> to integrate your identity provider with your web portal. User and group access to your web portal is controlled through your identity provider.</p> <p> <code>IAM_Identity_Center</code> web portals are authenticated through AWS IAM Identity Center (successor to AWS Single Sign-On). They provide additional features, such as IdP-initiated authentication. Identity sources (including external identity provider integration), plus user and group access to your web portal, can be configured in the IAM Identity Center.</p>
+                  type: string
+                  enum:
+                  - Standard
+                  - IAM_Identity_Center
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                customerManagedKey:
+                  description: The customer managed key of the web portal.
+                  type: string
+                  pattern: ^arn:[\w+=\/,.@-]+:kms:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:key\/[a-zA-Z0-9-]+$
+                  minLength: 20
+                  maxLength: 2048
+                displayName:
+                  description: The name of the web portal. This is not visible to users who log into the web portal.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+                tags:
+                  description: The tags to add to the web portal. A tag is a key-value pair.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Tag'
+                  minItems: 0
+                  maxItems: 200
+      summary: Amazon WorkSpaces Web Create Portal
+      tags:
+      - Portals
+    get:
+      operationId: ListPortals
+      description: Retrieves a list or web portals.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListPortalsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: 'The pagination token used to retrieve the next page of results for this operation. '
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List Portals
+      tags:
+      - Portals
+  /portals/{portalArn}:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeletePortal
+      description: Deletes a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeletePortalResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Delete Portal
+      tags:
+      - Portals
+    get:
+      operationId: GetPortal
+      description: Gets the web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPortalResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Get Portal
+      tags:
+      - Portals
+    put:
+      operationId: UpdatePortal
+      description: Updates a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdatePortalResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                authenticationType:
+                  description: <p>The type of authentication integration points used when signing into the web portal. Defaults to <code>Standard</code>.</p> <p> <code>Standard</code> web portals are authenticated directly through your identity provider. You need to call <code>CreateIdentityProvider</code> to integrate your identity provider with your web portal. User and group access to your web portal is controlled through your identity provider.</p> <p> <code>IAM_Identity_Center</code> web portals are authenticated through AWS IAM Identity Center (successor to AWS Single Sign-On). They provide additional features, such as IdP-initiated authentication. Identity sources (including external identity provider integration), plus user and group access to your web portal, can be configured in the IAM Identity Center.</p>
+                  type: string
+                  enum:
+                  - Standard
+                  - IAM_Identity_Center
+                displayName:
+                  description: The name of the web portal. This is not visible to users who log into the web portal.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+      summary: Amazon WorkSpaces Web Update Portal
+      tags:
+      - Portals
+  /portals/{portalArn}/browserSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateBrowserSettings
+      description: Disassociates browser settings from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateBrowserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate Browser Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/ipAccessSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateIpAccessSettings
+      description: Disassociates IP access settings from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate Ip Access Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/networkSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateNetworkSettings
+      description: Disassociates network settings from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateNetworkSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate Network Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/trustStores:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateTrustStore
+      description: Disassociates a trust store from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateTrustStoreResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate Trust Store
+      tags:
+      - Portals
+  /portals/{portalArn}/userAccessLoggingSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateUserAccessLoggingSettings
+      description: Disassociates user access logging settings from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateUserAccessLoggingSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate User Access Logging Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/userSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DisassociateUserSettings
+      description: Disassociates user settings from a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisassociateUserSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Disassociate User Settings
+      tags:
+      - Portals
+  /portals/{portalArn}/identityProviders:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: ListIdentityProviders
+      description: Retrieves a list of identity providers for a specific web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListIdentityProvidersResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: The pagination token used to retrieve the next page of results for this operation.
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      - name: portalArn
+        in: path
+        required: true
+        description: The ARN of the web portal.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List Identity Providers
+      tags:
+      - Portals
+components:
+  schemas:
+    AssociateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettingsArn
+      - portalArn
+      properties:
+        networkSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    DisplayName:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 64
+      format: password
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    AssociateBrowserSettingsResponse:
+      type: object
+      required:
+      - browserSettingsArn
+      - portalArn
+      properties:
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    AccessDeniedException: {}
+    StatusReason:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    IdentityProviderList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IdentityProviderSummary'
+    PortalEndpoint:
+      type: string
+      pattern: ^[a-zA-Z0-9]?((?!-)([A-Za-z0-9-]*[A-Za-z0-9])\.)+[a-zA-Z0-9]+$
+      minLength: 1
+      maxLength: 253
+    PortalSummary:
+      type: object
+      properties:
+        authenticationType:
+          allOf:
+          - $ref: '#/components/schemas/AuthenticationType'
+          - description: <p>The type of authentication integration points used when signing into the web portal. Defaults to <code>Standard</code>.</p> <p> <code>Standard</code> web portals are authenticated directly through your identity provider. You need to call <code>CreateIdentityProvider</code> to integrate your identity provider with your web portal. User and group access to your web portal is controlled through your identity provider.</p> <p> <code>IAM_Identity_Center</code> web portals are authenticated through AWS IAM Identity Center (successor to AWS Single Sign-On). They provide additional features, such as IdP-initiated authentication. Identity sources (including external identity provider integration), plus user and group access to your web portal, can be configured in the IAM Identity Center.</p>
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings that is associated with the web portal.
+        browserType:
+          allOf:
+          - $ref: '#/components/schemas/BrowserType'
+          - description: The browser type of the web portal.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date of the web portal.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: The name of the web portal.
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings.
+        networkSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings that is associated with the web portal.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        portalEndpoint:
+          allOf:
+          - $ref: '#/components/schemas/PortalEndpoint'
+          - description: The endpoint URL of the web portal that users access in order to start streaming sessions.
+        portalStatus:
+          allOf:
+          - $ref: '#/components/schemas/PortalStatus'
+          - description: The status of the web portal.
+        rendererType:
+          allOf:
+          - $ref: '#/components/schemas/RendererType'
+          - description: The renderer that is used in streaming sessions.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust that is associated with this web portal.
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings that is associated with the web portal.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings that is associated with the web portal.
+      description: The summary of the portal.
+    ThrottlingException: {}
+    CreatePortalResponse:
+      type: object
+      required:
+      - portalArn
+      - portalEndpoint
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        portalEndpoint:
+          allOf:
+          - $ref: '#/components/schemas/PortalEndpoint'
+          - description: The endpoint URL of the web portal that users access in order to start streaming sessions.
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    DisassociateNetworkSettingsResponse:
+      type: object
+      properties: {}
+    Timestamp:
+      type: string
+      format: date-time
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    DisassociateIpAccessSettingsResponse:
+      type: object
+      properties: {}
+    BrowserType:
+      type: string
+      enum:
+      - Chrome
+    IdentityProviderName:
+      type: string
+      pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
+      minLength: 1
+      maxLength: 32
+      format: password
+    DisassociateBrowserSettingsResponse:
+      type: object
+      properties: {}
+    PortalStatus:
+      type: string
+      enum:
+      - Incomplete
+      - Pending
+      - Active
+    UpdatePortalResponse:
+      type: object
+      properties:
+        portal:
+          allOf:
+          - $ref: '#/components/schemas/Portal'
+          - description: The web portal.
+    Portal:
+      type: object
+      properties:
+        authenticationType:
+          allOf:
+          - $ref: '#/components/schemas/AuthenticationType'
+          - description: <p>The type of authentication integration points used when signing into the web portal. Defaults to <code>Standard</code>.</p> <p> <code>Standard</code> web portals are authenticated directly through your identity provider. You need to call <code>CreateIdentityProvider</code> to integrate your identity provider with your web portal. User and group access to your web portal is controlled through your identity provider.</p> <p> <code>IAM_Identity_Center</code> web portals are authenticated through AWS IAM Identity Center (successor to AWS Single Sign-On). They provide additional features, such as IdP-initiated authentication. Identity sources (including external identity provider integration), plus user and group access to your web portal, can be configured in the IAM Identity Center.</p>
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings that is associated with this web portal.
+        browserType:
+          allOf:
+          - $ref: '#/components/schemas/BrowserType'
+          - description: The browser that users see when using a streaming session.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date of the web portal.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: The name of the web portal.
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings.
+        networkSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings that is associated with the web portal.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        portalEndpoint:
+          allOf:
+          - $ref: '#/components/schemas/PortalEndpoint'
+          - description: The endpoint URL of the web portal that users access in order to start streaming sessions.
+        portalStatus:
+          allOf:
+          - $ref: '#/components/schemas/PortalStatus'
+          - description: The status of the web portal.
+        rendererType:
+          allOf:
+          - $ref: '#/components/schemas/RendererType'
+          - description: The renderer that is used in streaming sessions.
+        statusReason:
+          allOf:
+          - $ref: '#/components/schemas/StatusReason'
+          - description: A message that explains why the web portal is in its current status.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store that is associated with the web portal.
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings that is associated with the web portal.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings that is associated with the web portal.
+      description: The web portal.
+    DisassociateUserSettingsResponse:
+      type: object
+      properties: {}
+    ListIdentityProvidersResponse:
+      type: object
+      properties:
+        identityProviders:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderList'
+          - description: The identity providers.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    ServiceQuotaExceededException: {}
+    IdentityProviderSummary:
+      type: object
+      properties:
+        identityProviderArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the identity provider.
+        identityProviderName:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderName'
+          - description: The identity provider name.
+        identityProviderType:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderType'
+          - description: The identity provider type.
+      description: The summary of the identity provider.
+    InternalServerException: {}
+    IdentityProviderType:
+      type: string
+      enum:
+      - SAML
+      - Facebook
+      - Google
+      - LoginWithAmazon
+      - SignInWithApple
+      - OIDC
+    DeletePortalResponse:
+      type: object
+      properties: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    AssociateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      - portalArn
+      properties:
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    DisassociateTrustStoreResponse:
+      type: object
+      properties: {}
+    DisassociateUserAccessLoggingSettingsResponse:
+      type: object
+      properties: {}
+    AssociateUserSettingsResponse:
+      type: object
+      required:
+      - portalArn
+      - userSettingsArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
+    ResourceNotFoundException: {}
+    AssociateTrustStoreResponse:
+      type: object
+      required:
+      - portalArn
+      - trustStoreArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    PortalList:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortalSummary'
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    GetPortalResponse:
+      type: object
+      properties:
+        portal:
+          allOf:
+          - $ref: '#/components/schemas/Portal'
+          - description: The web portal.
+    AssociateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - portalArn
+      - userAccessLoggingSettingsArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings.
+    AuthenticationType:
+      type: string
+      enum:
+      - Standard
+      - IAM_Identity_Center
+    ValidationException: {}
+    RendererType:
+      type: string
+      enum:
+      - AppStream
+    ListPortalsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'The pagination token used to retrieve the next page of results for this operation. '
+        portals:
+          allOf:
+          - $ref: '#/components/schemas/PortalList'
+          - description: The portals in the list.
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/workspaces-web/
+x-hasEquivalentPaths: true

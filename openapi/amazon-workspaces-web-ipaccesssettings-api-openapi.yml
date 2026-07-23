@@ -1,0 +1,726 @@
+openapi: 3.0.0
+info:
+  version: '2020-07-08'
+  x-release: v4
+  title: Amazon WorkSpaces Web BrowserSettings IpAccessSettings API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: workspaces-web
+  x-aws-signingName: workspaces-web
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: https://workspaces-web.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon WorkSpaces Web multi-region endpoint
+- url: http://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+- url: https://workspaces-web.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon WorkSpaces Web endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: IpAccessSettings
+paths:
+  /ipAccessSettings:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateIpAccessSettings
+      description: Creates an IP access settings resource that can be associated with a web portal.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - ipRules
+              properties:
+                additionalEncryptionContext:
+                  description: Additional encryption context of the IP access settings.
+                  type: object
+                  additionalProperties:
+                    $ref: '#/components/schemas/StringType'
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                customerManagedKey:
+                  description: The custom managed key of the IP access settings.
+                  type: string
+                  pattern: ^arn:[\w+=\/,.@-]+:kms:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:key\/[a-zA-Z0-9-]+$
+                  minLength: 20
+                  maxLength: 2048
+                description:
+                  description: The description of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 256
+                  format: password
+                displayName:
+                  description: The display name of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+                ipRules:
+                  description: The IP rules of the IP access settings.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/IpRule'
+                  minItems: 1
+                  maxItems: 100
+                tags:
+                  description: The tags to add to the browser settings resource. A tag is a key-value pair.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Tag'
+                  minItems: 0
+                  maxItems: 200
+      summary: Amazon WorkSpaces Web Create Ip Access Settings
+      tags:
+      - IpAccessSettings
+    get:
+      operationId: ListIpAccessSettings
+      description: Retrieves a list of IP access settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: The maximum number of results to be included in the next page.
+        schema:
+          type: integer
+          minimum: 1
+      - name: nextToken
+        in: query
+        required: false
+        description: The pagination token used to retrieve the next page of results for this operation.
+        schema:
+          type: string
+          pattern: ^\S+$
+          minLength: 1
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web List Ip Access Settings
+      tags:
+      - IpAccessSettings
+  /ipAccessSettings/{ipAccessSettingsArn}:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeleteIpAccessSettings
+      description: Deletes IP access settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+      parameters:
+      - name: ipAccessSettingsArn
+        in: path
+        required: true
+        description: The ARN of the IP access settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Delete Ip Access Settings
+      tags:
+      - IpAccessSettings
+    get:
+      operationId: GetIpAccessSettings
+      description: Gets the IP access settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: ipAccessSettingsArn
+        in: path
+        required: true
+        description: The ARN of the IP access settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      summary: Amazon WorkSpaces Web Get Ip Access Settings
+      tags:
+      - IpAccessSettings
+    patch:
+      operationId: UpdateIpAccessSettings
+      description: Updates IP access settings.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateIpAccessSettingsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+      parameters:
+      - name: ipAccessSettingsArn
+        in: path
+        required: true
+        description: The ARN of the IP access settings.
+        schema:
+          type: string
+          pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+          minLength: 20
+          maxLength: 2048
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                clientToken:
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token return the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                description:
+                  description: The description of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 256
+                  format: password
+                displayName:
+                  description: The display name of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+                ipRules:
+                  description: The updated IP rules of the IP access settings.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/IpRule'
+                  minItems: 1
+                  maxItems: 100
+      summary: Amazon WorkSpaces Web Update Ip Access Settings
+      tags:
+      - IpAccessSettings
+components:
+  schemas:
+    IpAccessSettingsSummary:
+      type: object
+      properties:
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date timestamp of the IP access settings.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP access settings.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: The display name of the IP access settings.
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of IP access settings.
+      description: The summary of IP access settings.
+    ListIpAccessSettingsResponse:
+      type: object
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettingsList'
+          - description: The IP access settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    IpRange:
+      type: string
+      pattern: ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/([0-9]|[12][0-9]|3[0-2])|)$
+      description: A single IP address or an IP address range in CIDR notation
+      format: password
+    UpdateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettings
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettings'
+          - description: The IP access settings.
+    DisplayName:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 64
+      format: password
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    DeleteIpAccessSettingsResponse:
+      type: object
+      properties: {}
+    AccessDeniedException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    GetIpAccessSettingsResponse:
+      type: object
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettings'
+          - description: The IP access settings.
+    ThrottlingException: {}
+    IpAccessSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpAccessSettingsSummary'
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    IpRuleList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpRule'
+      minItems: 1
+      maxItems: 100
+    Timestamp:
+      type: string
+      format: date-time
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    IpAccessSettings:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this IP access settings resource is associated with.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date timestamp of the IP access settings.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP access settings.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: ' The display name of the IP access settings.'
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+        ipRules:
+          allOf:
+          - $ref: '#/components/schemas/IpRuleList'
+          - description: The IP rules of the IP access settings.
+      description: 'The IP access settings resource that can be associated with a web portal. '
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    IpRule:
+      type: object
+      required:
+      - ipRange
+      properties:
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP rule.
+        ipRange:
+          allOf:
+          - $ref: '#/components/schemas/IpRange'
+          - description: The IP range of the IP rule.
+      description: The IP rules of the IP access settings.
+    Description:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 256
+      format: password
+    ResourceNotFoundException: {}
+    CreateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      properties:
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    ValidationException: {}
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/workspaces-web/
+x-hasEquivalentPaths: true
