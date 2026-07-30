@@ -5,7 +5,20 @@ description: Amazon WorkSpaces Web is a purpose-built, low-cost, fully managed s
   users from downloading content to local devices while maintaining a seamless browsing experience. The service offers 58
   API operations for managing portals, user settings, browser policies, network settings, trust stores, and IP access controls.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-workspaces-web.png
 tags:
 - AWS
 - End User Computing
@@ -17,19 +30,16 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-workspaces-web:amazon-workspaces-web-api
-  name: Amazon WorkSpaces Web API
-  description: The Amazon WorkSpaces Web API provides programmatic access to create and manage web portals, network settings,
-    user access logging, user settings, browser settings, and trust store configurations for secure browser deployments. 58
-    operations covering portals, user settings, browser policies, network settings, trust stores, and IP access controls.
+- aid: amazon-workspaces-web:amazon-workspaces-web-browsersettings-api
+  name: Amazon WorkSpaces Web BrowserSettings API
+  description: The BrowserSettings API from Amazon WorkSpaces Web — 2 operation(s) for browsersettings.
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
-  - AWS
-  - End User Computing
-  - Secure Browser
-  - Zero Trust
+  - BrowserSettings
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-browsersettings-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
   - type: APIReference
@@ -40,8 +50,243 @@ apis:
     url: https://aws.amazon.com/workspaces/web/pricing/
   - type: FAQ
     url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-identityproviders-api
+  name: Amazon WorkSpaces Web IdentityProviders API
+  description: >-
+    The IdentityProviders API from Amazon WorkSpaces Web — 2 operation(s) for identityproviders.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - IdentityProviders
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-workspaces-web-openapi-original.yaml
+    url: openapi/amazon-workspaces-web-identityproviders-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-ipaccesssettings-api
+  name: Amazon WorkSpaces Web IpAccessSettings API
+  description: >-
+    The IpAccessSettings API from Amazon WorkSpaces Web — 2 operation(s) for ipaccesssettings.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - IpAccessSettings
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-ipaccesssettings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-networksettings-api
+  name: Amazon WorkSpaces Web NetworkSettings API
+  description: The NetworkSettings API from Amazon WorkSpaces Web — 2 operation(s) for networksettings.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - NetworkSettings
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-networksettings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-portalidp-api
+  name: Amazon WorkSpaces Web PortalIdp API
+  description: The PortalIdp API from Amazon WorkSpaces Web — 1 operation(s) for portalidp.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - PortalIdp
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-portalidp-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-portals-api
+  name: Amazon WorkSpaces Web Portals API
+  description: The Portals API from Amazon WorkSpaces Web — 15 operation(s) for portals.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - Portals
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-portals-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-tags-api
+  name: Amazon WorkSpaces Web Tags API
+  description: The Tags API from Amazon WorkSpaces Web — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-truststores-api
+  name: Amazon WorkSpaces Web TrustStores API
+  description: The TrustStores API from Amazon WorkSpaces Web — 4 operation(s) for truststores.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - TrustStores
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-truststores-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-useraccessloggingsettings-api
+  name: Amazon WorkSpaces Web UserAccessLoggingSettings API
+  description: >-
+    The UserAccessLoggingSettings API from Amazon WorkSpaces Web — 2 operation(s) for useraccessloggingsettings.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - UserAccessLoggingSettings
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-useraccessloggingsettings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
+  - type: JSONSchema
+    url: json-schema/workspaces-web-portal-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-workspaces-web-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-workspaces-web.yaml
+- aid: amazon-workspaces-web:amazon-workspaces-web-usersettings-api
+  name: Amazon WorkSpaces Web UserSettings API
+  description: The UserSettings API from Amazon WorkSpaces Web — 2 operation(s) for usersettings.
+  humanURL: https://aws.amazon.com/workspaces/web/
+  baseURL: https://workspaces-web.amazonaws.com
+  tags:
+  - UserSettings
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-workspaces-web-usersettings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/workspaces-web/latest/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/workspaces/web/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/workspaces/web/faqs/
   - type: JSONSchema
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
@@ -49,6 +294,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-workspaces-web.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-workspaces-web/overview
 - type: AgenticAccess
   url: agentic-access/amazon-workspaces-web-agentic-access.yml
 - type: TrustCenter
