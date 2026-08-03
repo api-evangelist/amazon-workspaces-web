@@ -1,0 +1,2824 @@
+{
+  "info": {
+    "_postman_id": "e2db31c1-ecca-4e86-bf95-b4113e99a01d",
+    "name": "Amazon WorkSpaces Web BrowserSettings NetworkSettings API",
+    "description": "WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:49:21.000Z",
+    "updatedAt": "2026-07-28T10:49:21.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-e2db31c1-ecca-4e86-bf95-b4113e99a01d"
+  },
+  "item": [
+    {
+      "name": "networkSettings",
+      "item": [
+        {
+          "name": "{networkSettingsArn}",
+          "item": [
+            {
+              "name": "Amazon WorkSpaces Web Delete Network Settings",
+              "id": "23a374b6-67e9-449f-8379-2dd3598560d7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings",
+                    ":networkSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d8773e4d-7d51-4d22-8a93-5443481fd73a",
+                      "key": "networkSettingsArn",
+                      "value": "arn:9:ff:h1EgaAIa:B7dDR6H5:PcjAZTelATN/cD5f2cC4eAbA3AcD90FCB10cE71Ae734EC2C/4f6b9-F3A6c6a9F7C1E-9Ea5b50A03E7c564/24f6cFF-eCF268B3EcAf1-eB86d89D4230aa/A58C5d537AE--fBa42480eC2DfFC6cba77e7/C75C912CCc9F5Db8-60B8b0d5cFFe0ef55b1/C9-DACFf6FD7-f9e2Fddbf70aB0E61D8",
+                      "description": "(Required) The ARN of the network settings."
+                    }
+                  ]
+                },
+                "description": "Deletes network settings."
+              },
+              "response": [
+                {
+                  "id": "3ce52df3-3503-47ff-bd3a-b6c7525bf276",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-3ce52df3-3503-47ff-bd3a-b6c7525bf276"
+                },
+                {
+                  "id": "55fa08a7-a67b-4b3b-8e98-7f779b5cba65",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-55fa08a7-a67b-4b3b-8e98-7f779b5cba65"
+                },
+                {
+                  "id": "9ee11bf1-d30b-4d40-a2d1-4fab95bc244f",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-9ee11bf1-d30b-4d40-a2d1-4fab95bc244f"
+                },
+                {
+                  "id": "11f81a71-4897-4829-abe8-072ead0dc68c",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-11f81a71-4897-4829-abe8-072ead0dc68c"
+                },
+                {
+                  "id": "336e2e57-cd44-4545-84fb-1a9583f32531",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-336e2e57-cd44-4545-84fb-1a9583f32531"
+                },
+                {
+                  "id": "aa425cc1-c7cf-4436-b624-f10fc72d1bbb",
+                  "name": "ConflictException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-aa425cc1-c7cf-4436-b624-f10fc72d1bbb"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-23a374b6-67e9-449f-8379-2dd3598560d7"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Get Network Settings",
+              "id": "a0b19a70-1766-4327-aa2d-00cb3d231e0b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings",
+                    ":networkSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2e22cd78-0455-48c1-86cd-105b0aa95ae4",
+                      "key": "networkSettingsArn",
+                      "value": "arn:9:ff:h1EgaAIa:B7dDR6H5:PcjAZTelATN/cD5f2cC4eAbA3AcD90FCB10cE71Ae734EC2C/4f6b9-F3A6c6a9F7C1E-9Ea5b50A03E7c564/24f6cFF-eCF268B3EcAf1-eB86d89D4230aa/A58C5d537AE--fBa42480eC2DfFC6cba77e7/C75C912CCc9F5Db8-60B8b0d5cFFe0ef55b1/C9-DACFf6FD7-f9e2Fddbf70aB0E61D8",
+                      "description": "(Required) The ARN of the network settings."
+                    }
+                  ]
+                },
+                "description": "Gets the network settings."
+              },
+              "response": [
+                {
+                  "id": "ddbc4755-12b7-4bb0-ba37-a29241f36fa2",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"networkSettings\": {\n    \"networkSettingsArn\": \"arn:X1PdBzr@KRk:OgfDEV:AfF:Yivr0ApE:P/F4e6eEbCdbD471fB7fEa0AE-1a26c23b8CEC/BB71-84aE-40aE4bdEB688B092F5f7CBae79/7D8a75991504CFD2d76bA8efABF6bdEDDAf6/508-e5DEFA34ad8D7B5c64b9B1fa69f4eabe/c155A52E7e31C3Da88acBfF455e3c1b9b6Fd/c-Bb07D0A01ADDF07C4ed6Db826daeb76\",\n    \"associatedPortalArns\": [\n      \"arn:ud=9.D+,7gw:u6GhMIrTF::fE8mBxRwJ:Avgq/50Ec678f-bF-fCB-2-fBF0Bd-baD-Ee7d6--/D8dfa1D77Cb4620f20b2c9daa4bd2AC62BB6/c7b4abeDbF4e8d49d81c7D9baae44D199ddC/a77B110422bc1aaA5BCa2221F48551-fBCda/a438c-5bA-6A8C009dD5533D00c1BD7F4cB3/D2AaCBa32b4a5e4a8c65CeDFdbec2\",\n      \"arn:S7_7Dn:n:2c6nWh9hx:aP:yXf/957AD7Cf4fa4fcdD72D6CC9cFD1CEC015527/3c9eceAeaFA878cE-F1bA10007-fdf86EeE1/9-c5-0acECE5fB96-b7F1CE503a7c-a5c8-8/ebdADC59c6730Dc-96aDF1c687ceFeE7834a\"\n    ],\n    \"securityGroupIds\": [\n      \"wOMpdo8NJc\"\n    ],\n    \"subnetIds\": [\n      \"subnet-e1c2a4c720c0fc8f9\",\n      \"subnet-6cb5dc3436ceb05fb\"\n    ],\n    \"vpcId\": \"vpc-g5esn0\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-ddbc4755-12b7-4bb0-ba37-a29241f36fa2"
+                },
+                {
+                  "id": "d48f9591-1b0d-4d0b-aded-7a01cacc63d1",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-d48f9591-1b0d-4d0b-aded-7a01cacc63d1"
+                },
+                {
+                  "id": "0095949e-6fe9-40e8-967a-e09701dcfbef",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-0095949e-6fe9-40e8-967a-e09701dcfbef"
+                },
+                {
+                  "id": "67082303-e659-4f0a-87bb-2cc4f8f66728",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-67082303-e659-4f0a-87bb-2cc4f8f66728"
+                },
+                {
+                  "id": "b5903843-0dd3-49ff-b7a4-ee987ad7e761",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-b5903843-0dd3-49ff-b7a4-ee987ad7e761"
+                },
+                {
+                  "id": "dcbc797e-fbdb-4ca6-ad2b-e5208559f358",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-dcbc797e-fbdb-4ca6-ad2b-e5208559f358"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-a0b19a70-1766-4327-aa2d-00cb3d231e0b"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Update Network Settings",
+              "id": "6d33caef-d85a-43f7-9817-afae08069c75",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings",
+                    ":networkSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "a4704b20-e985-49d9-afc4-46cd558351e7",
+                      "key": "networkSettingsArn",
+                      "value": "arn:9:ff:h1EgaAIa:B7dDR6H5:PcjAZTelATN/cD5f2cC4eAbA3AcD90FCB10cE71Ae734EC2C/4f6b9-F3A6c6a9F7C1E-9Ea5b50A03E7c564/24f6cFF-eCF268B3EcAf1-eB86d89D4230aa/A58C5d537AE--fBa42480eC2DfFC6cba77e7/C75C912CCc9F5Db8-60B8b0d5cFFe0ef55b1/C9-DACFf6FD7-f9e2Fddbf70aB0E61D8",
+                      "description": "(Required) The ARN of the network settings."
+                    }
+                  ]
+                },
+                "description": "Updates network settings."
+              },
+              "response": [
+                {
+                  "id": "082436c2-3efb-46e6-b7d2-e62a5ef46b43",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"networkSettings\": {\n    \"networkSettingsArn\": \"arn:4PG:cZ6NQ0f3G2:-:YWLrd1A:YlakNredr/E62F09d-C87fAeeEafe7c2F2c9703f0f43a1/94fccbcaFA951cDc2db850eD-eaD5f5A6c26/B2D47dCCd63C4f1D73-5BdCd-5c918-3f-DA/6da07E1A6E5e05a464b4-43A0Df0CFEbD8A2/EBAa72-ecBcFdab44819f1Ab157-7ceFBa89/BA34fAFadcC7a5Afe2C823D88CbE-72D\",\n    \"associatedPortalArns\": [\n      \"arn:m@ou4a:JWcirBAPD:tAgqpf53:uuvJPD:lFDETuvOQ/-fb391f4C57fdA9FB7EbdF4D-9392ebE3B65/D2f828Df1-f4Ad2eBCcA42c36da429B1AB-A/3e1-89c3FD7Db-bA4E54e2535b90a93dffBE/9e9073b3fA-A6aA4f5d1-cFFee863efaff98/da-F62cBBE46cff3f0875bBf66Ccd0A6dCBd/4E-7-7A29d58327BadC9ddD6\",\n      \"arn:Nn,L2E:bXL:tcD-9owm:0mZ8:rcFpypnRawG/01a3A9CE-4Ac93c4-81-b59ebEfA0FA5214a/B4B10D83Ec0Bf72ba8A7f2C67BB3A1bcE2A8/E3d625d891bEC42BE1Aaf682b0FD6Df1CbE3/06D-B6DDeE3e07C8C6A5E759ffbEdE4E0c04\"\n    ],\n    \"securityGroupIds\": [\n      \"1Ch\"\n    ],\n    \"subnetIds\": [\n      \"subnet-b6529f6a\",\n      \"subnet-fd8cd61f\"\n    ],\n    \"vpcId\": \"vpc-cd2cwndr\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-082436c2-3efb-46e6-b7d2-e62a5ef46b43"
+                },
+                {
+                  "id": "4056303c-18de-4fbb-9a4b-7cd1c8da447c",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-4056303c-18de-4fbb-9a4b-7cd1c8da447c"
+                },
+                {
+                  "id": "d36c7ec1-3365-40e4-a559-6e25f69adfeb",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-d36c7ec1-3365-40e4-a559-6e25f69adfeb"
+                },
+                {
+                  "id": "cc39aed9-0dad-4086-b290-bdc332e44f15",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-cc39aed9-0dad-4086-b290-bdc332e44f15"
+                },
+                {
+                  "id": "ee8da09a-2d8b-4a99-82cd-0856ebc13c1f",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-ee8da09a-2d8b-4a99-82cd-0856ebc13c1f"
+                },
+                {
+                  "id": "c1460ac8-c790-4733-8a67-66bb8648e638",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"securityGroupIds\": [\n    \"H\"\n  ],\n  \"subnetIds\": [\n    \"subnet-bb64574d3f5ea677e\",\n    \"subnet-f28afe74\"\n  ],\n  \"vpcId\": \"vpc-vdxe\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/networkSettings/:networkSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "networkSettings",
+                        ":networkSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "networkSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:22.000Z",
+                  "updatedAt": "2026-07-28T10:49:22.000Z",
+                  "uid": "35240-c1460ac8-c790-4733-8a67-66bb8648e638"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-6d33caef-d85a-43f7-9817-afae08069c75"
+            }
+          ],
+          "id": "391314cd-d2ee-4d0c-801a-2065de7c9294",
+          "createdAt": "2026-07-28T10:49:22.000Z",
+          "updatedAt": "2026-07-28T10:49:22.000Z",
+          "uid": "35240-391314cd-d2ee-4d0c-801a-2065de7c9294"
+        },
+        {
+          "name": "Amazon WorkSpaces Web Create Network Settings",
+          "id": "0da1c2fb-01ba-4527-bbeb-17dc748e76c9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/networkSettings",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "networkSettings"
+              ]
+            },
+            "description": "Creates a network settings resource that can be associated with a web portal. Once associated with a web portal, network settings define how streaming instances will connect with your specified VPC. "
+          },
+          "response": [
+            {
+              "id": "db85cd28-207d-4d96-baf1-2635e0f524e5",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"networkSettingsArn\": \"arn:rgDa.M12q:SrWk3:5eozl:mS56oE8Cwwc:zdmSwjJhddu/59bfb98ceF5bbd9C83adBDca86EdF5Be9fF9/43C680Eeb02c2bc6ffF176-D0ADaA09F7bec/f6e467d4343DAa7bbee9b-2DbD50d17D-4b5/321CfDA41d1Eb3212FaeC4080dC4ABC8D10E/9adf944F-101dB1b10cea7ca6fD-c11dbCFC/C-2f8a1b54cCFDdAA-2Bd\"\n}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-db85cd28-207d-4d96-baf1-2635e0f524e5"
+            },
+            {
+              "id": "2bfae54b-434c-4836-af33-bc053f33f9e0",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-2bfae54b-434c-4836-af33-bc053f33f9e0"
+            },
+            {
+              "id": "672c86c5-bc7f-459a-becc-fe51914df69c",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-672c86c5-bc7f-459a-becc-fe51914df69c"
+            },
+            {
+              "id": "f011ac8f-0732-4871-ae60-f7de34aa42ba",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-f011ac8f-0732-4871-ae60-f7de34aa42ba"
+            },
+            {
+              "id": "95cce717-03de-4efc-a8d3-0777285d220e",
+              "name": "ServiceQuotaExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-95cce717-03de-4efc-a8d3-0777285d220e"
+            },
+            {
+              "id": "e2874ded-7fa8-47f4-aaf1-d82b84d6f4d3",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-e2874ded-7fa8-47f4-aaf1-d82b84d6f4d3"
+            },
+            {
+              "id": "b8acd5f5-4165-43bf-b71f-cfbfcaeda518",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"securityGroupIds\": [\n    \"2NRvszf\"\n  ],\n  \"subnetIds\": [\n    \"subnet-41fcb21e\",\n    \"subnet-271f63fe3b27c9e17\"\n  ],\n  \"vpcId\": \"vpc-7c7x2mecpa\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"Z:+@=}+/\",\n      \"Value\": \"{L/}+=/p\"\n    },\n    {\n      \"Key\": \"{_@{{N\",\n      \"Value\": \"-N+p:\"\n    },\n    {\n      \"Key\": \":--{/:\",\n      \"Value\": \"{/\"\n    },\n    {\n      \"Key\": \"Z@_N{+-+p\",\n      \"Value\": \"L_p_}{L\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"-{N_L\"\n    },\n    {\n      \"Key\": \"@N}p}+:\",\n      \"Value\": \"}\"\n    },\n    {\n      \"Key\": \"p{@/@}\",\n      \"Value\": \"{=/}@@L/\"\n    },\n    {\n      \"Key\": \"}Z=:\",\n      \"Value\": \"_p}\"\n    },\n    {\n      \"Key\": \"=+pN+=L@N\",\n      \"Value\": \":.+Zp/N+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"}=./:/:\"\n    },\n    {\n      \"Key\": \".Z=+@/:L_/\",\n      \"Value\": \"N\"\n    },\n    {\n      \"Key\": \"-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"Z./Z/_\",\n      \"Value\": \"+@+:@/:\"\n    },\n    {\n      \"Key\": \"Z++L_:}Z.p\",\n      \"Value\": \"+\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p/.ppZ+p=L\"\n    },\n    {\n      \"Key\": \":+\",\n      \"Value\": \"N.-=+\"\n    },\n    {\n      \"Key\": \":_\",\n      \"Value\": \"L=Z=-=p{\"\n    },\n    {\n      \"Key\": \"/=:L{L\",\n      \"Value\": \"+=+/pp+++\"\n    },\n    {\n      \"Key\": \"p+{=Z:=@\",\n      \"Value\": \"}N}@:Z\"\n    },\n    {\n      \"Key\": \"/ZZ\",\n      \"Value\": \"\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-b8acd5f5-4165-43bf-b71f-cfbfcaeda518"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:22.000Z",
+          "updatedAt": "2026-07-28T10:49:22.000Z",
+          "uid": "35240-0da1c2fb-01ba-4527-bbeb-17dc748e76c9"
+        },
+        {
+          "name": "Amazon WorkSpaces Web List Network Settings",
+          "id": "910a50c0-1629-49e5-b508-92ccfe09f510",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "networkSettings"
+              ],
+              "query": [
+                {
+                  "description": "The maximum number of results to be included in the next page.",
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "description": "The pagination token used to retrieve the next page of results for this operation.",
+                  "key": "nextToken",
+                  "value": ",A_IB:zHKYh"
+                }
+              ]
+            },
+            "description": "Retrieves a list of network settings."
+          },
+          "response": [
+            {
+              "id": "84726557-9f4e-4421-97a9-9724b8c0ec14",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": ",A_IB:zHKYh"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"networkSettings\": [\n    {\n      \"networkSettingsArn\": \"arn:gIryhy:bcFnNNExHf:XQEzpv:fuXpGEjy:AYIjTTI/60d90-5C7eE45F4C-AEbBdf3E2ff6B3-6caf/AEe7D498fc992-5636C529CfA9-F0F851A-1/b6eDd893Bd923D6E-De5c5AD543f7cAd-41F/2fcadfCb-C0c8EA7F9Fb08Cf601796e752Ff/79FCEE0dE4BAab3CAbD8A8BE6BD7B-Ade2a4/A1F10e-6aebbbaf9BEfcA2dC4\",\n      \"vpcId\": \"vpc-4380y\"\n    },\n    {\n      \"networkSettingsArn\": \"arn:.DZTLJjlV:QQW:EZK2If:Gc1QylLhPi:Mjfs/5626D4b69Dc4a051c8A09Ec1F17dc3A02FB0/C67dAb84eD949A1E55-55af13fDf11D4540D/-b8AD-F6AfA48CC2DeFFeE1d81BFc4EB3f27/D0A4330-aa9-Fbe2Fa3ae1a5aAbaaa8c34d3/Cdbd9E069EDC665b49ede3A9bB-F40fc518F/e38cf55FBCBa790CF9116B6fED8550\",\n      \"vpcId\": \"vpc-b9zuer\"\n    }\n  ],\n  \"nextToken\": \"1Px\"\n}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-84726557-9f4e-4421-97a9-9724b8c0ec14"
+            },
+            {
+              "id": "868b8a23-0b38-45dc-8758-1cf6d108745a",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": ",A_IB:zHKYh"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-868b8a23-0b38-45dc-8758-1cf6d108745a"
+            },
+            {
+              "id": "7d89ef69-8b0e-4490-bf7c-a491184de6e5",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": ",A_IB:zHKYh"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-7d89ef69-8b0e-4490-bf7c-a491184de6e5"
+            },
+            {
+              "id": "32b77eb5-2ae7-4edd-b8cb-d7cc8ea310be",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": ",A_IB:zHKYh"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-32b77eb5-2ae7-4edd-b8cb-d7cc8ea310be"
+            },
+            {
+              "id": "d158c558-8422-4692-a162-19794e54bb87",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/networkSettings?maxResults=<integer>&nextToken=,A_IB:zHKYh",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "networkSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": ",A_IB:zHKYh"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:22.000Z",
+              "updatedAt": "2026-07-28T10:49:22.000Z",
+              "uid": "35240-d158c558-8422-4692-a162-19794e54bb87"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:22.000Z",
+          "updatedAt": "2026-07-28T10:49:22.000Z",
+          "uid": "35240-910a50c0-1629-49e5-b508-92ccfe09f510"
+        }
+      ],
+      "id": "21d61393-7c89-4472-ad34-fe7966d50998",
+      "createdAt": "2026-07-28T10:49:22.000Z",
+      "updatedAt": "2026-07-28T10:49:22.000Z",
+      "uid": "35240-21d61393-7c89-4472-ad34-fe7966d50998"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://workspaces-web.{{region}}.amazonaws.com"
+    }
+  ]
+}

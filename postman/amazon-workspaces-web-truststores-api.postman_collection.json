@@ -1,0 +1,4112 @@
+{
+  "info": {
+    "_postman_id": "768e98b7-e49a-40f5-8f9b-6ffdd547b4a6",
+    "name": "Amazon WorkSpaces Web BrowserSettings TrustStores API",
+    "description": "WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:49:26.000Z",
+    "updatedAt": "2026-07-28T10:49:27.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-768e98b7-e49a-40f5-8f9b-6ffdd547b4a6"
+  },
+  "item": [
+    {
+      "name": "trustStores",
+      "item": [
+        {
+          "name": "{trustStoreArn}",
+          "item": [
+            {
+              "name": "certificate#thumbprint",
+              "item": [
+                {
+                  "name": "Amazon WorkSpaces Web Get Trust Store Certificate",
+                  "id": "98c38ede-5312-47eb-b091-610790bd79c6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn",
+                        "certificate"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) The thumbprint of the trust store certificate.",
+                          "key": "thumbprint",
+                          "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                        }
+                      ],
+                      "hash": "thumbprint",
+                      "variable": [
+                        {
+                          "id": "5843eada-b718-495f-9ec6-17efec3ec7fd",
+                          "key": "trustStoreArn",
+                          "value": "arn:-x:HTizfGo:3D-d9bW-:TPZ6evZUK:bNAmSAmRxg/4D3BCC2D5fC57DfC420dcc7Dd3a8Af85D3A4/-1ff3aC7e4eE01304e923f6e2A7bfceDa-97/D5fd26eFcEfAEDC1607155E2aADbCbCe589D/Ee87E5C08127a4A654-b-bAfE8B1Ca19d05d/D0EDAc8EDB14Ce3aEE7Bc37ECf3b0E0-62A5/b6e69dC7CAfafbdDE3D90cF6f3",
+                          "description": "(Required) The ARN of the trust store certificate."
+                        }
+                      ]
+                    },
+                    "description": "Gets the trust store certificate."
+                  },
+                  "response": [
+                    {
+                      "id": "2c35daf8-4b11-4118-876f-8a4386a636d4",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"certificate\": {\n    \"body\": \"<string>\",\n    \"issuer\": \".`dX&i;Z{1\",\n    \"notValidAfter\": \"<dateTime>\",\n    \"notValidBefore\": \"<dateTime>\",\n    \"subject\": \"Qe49;\",\n    \"thumbprint\": \"eCFA0a14BecEBf69fa1DeAbADa584ffeA6C02fdF5fb4AfBacdb0B2929C3ddBD9\"\n  },\n  \"trustStoreArn\": \"arn:=rn2M:zD-K6D:pF8u3rFur:fUQaA1qBNy:EtP/7fd87dDA7df6EbA1DFd1F890AEbE69a81c9C/d8f3B604A57e8Ee60fd567b750D18BAbCfe1/bA12-ecB7b0aa5D2bA8c90bD5AFEacceD1c9/c25DfEfc762Dc14-f6E7BA329BBb10FE8dEC/74Aa946dd6fB8E-aEedCA9dB3CffFa3dbac-/e7CD83D0abc67e3DfA2b5dbAfd66C\"\n}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-2c35daf8-4b11-4118-876f-8a4386a636d4"
+                    },
+                    {
+                      "id": "aaff2f83-bea6-4ef6-9ea3-dc10f73eb29a",
+                      "name": "InternalServerException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-aaff2f83-bea6-4ef6-9ea3-dc10f73eb29a"
+                    },
+                    {
+                      "id": "3a72bc7a-9b2d-4e74-b8a0-0ec6723051c0",
+                      "name": "ResourceNotFoundException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-3a72bc7a-9b2d-4e74-b8a0-0ec6723051c0"
+                    },
+                    {
+                      "id": "e95ad27d-d871-4188-a29b-1f5dbc0be6f3",
+                      "name": "AccessDeniedException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-e95ad27d-d871-4188-a29b-1f5dbc0be6f3"
+                    },
+                    {
+                      "id": "6f94078b-4f81-428e-ae4a-a59c54933ce9",
+                      "name": "ThrottlingException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-6f94078b-4f81-428e-ae4a-a59c54933ce9"
+                    },
+                    {
+                      "id": "829b3fd5-9d20-4fef-ae11-0c079d2b541d",
+                      "name": "ValidationException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificate?thumbprint=7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A#thumbprint",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificate"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The thumbprint of the trust store certificate.",
+                              "key": "thumbprint",
+                              "value": "7418dAfD8530bEC51E9C9206Dac602Ce046DB5A132EC1FfBE7187bbDEccC0a5A"
+                            }
+                          ],
+                          "hash": "thumbprint",
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-829b3fd5-9d20-4fef-ae11-0c079d2b541d"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-98c38ede-5312-47eb-b091-610790bd79c6"
+                }
+              ],
+              "id": "00145bb8-1f82-4215-afc6-a9a295b65591",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-00145bb8-1f82-4215-afc6-a9a295b65591"
+            },
+            {
+              "name": "certificates",
+              "item": [
+                {
+                  "name": "Amazon WorkSpaces Web List Trust Store Certificates",
+                  "id": "80dd4013-e325-4c7c-8df0-d0aa0763ac1c",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn",
+                        "certificates"
+                      ],
+                      "query": [
+                        {
+                          "description": "The maximum number of results to be included in the next page.",
+                          "key": "maxResults",
+                          "value": "<integer>"
+                        },
+                        {
+                          "description": "The pagination token used to retrieve the next page of results for this operation.",
+                          "key": "nextToken",
+                          "value": "4=,7a9i"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "8006c614-ce92-4470-a52c-2d237462a7bc",
+                          "key": "trustStoreArn",
+                          "value": "arn:-x:HTizfGo:3D-d9bW-:TPZ6evZUK:bNAmSAmRxg/4D3BCC2D5fC57DfC420dcc7Dd3a8Af85D3A4/-1ff3aC7e4eE01304e923f6e2A7bfceDa-97/D5fd26eFcEfAEDC1607155E2aADbCbCe589D/Ee87E5C08127a4A654-b-bAfE8B1Ca19d05d/D0EDAc8EDB14Ce3aEE7Bc37ECf3b0E0-62A5/b6e69dC7CAfafbdDE3D90cF6f3",
+                          "description": "(Required) The ARN of the trust store"
+                        }
+                      ]
+                    },
+                    "description": "Retrieves a list of trust store certificates."
+                  },
+                  "response": [
+                    {
+                      "id": "3dd48f75-3a23-4023-b41d-f8b69cdce026",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"certificateList\": [\n    {\n      \"issuer\": \"-?*P7\",\n      \"notValidAfter\": \"<dateTime>\",\n      \"notValidBefore\": \"<dateTime>\",\n      \"subject\": \"C?\\\"ZPoh'SY\",\n      \"thumbprint\": \"016D394E99bc0f057f75F6eB9fc12540d5B71bd3fE3BAbddF58bc3FE9C86a786\"\n    },\n    {\n      \"issuer\": \"nMXLB\",\n      \"notValidAfter\": \"<dateTime>\",\n      \"notValidBefore\": \"<dateTime>\",\n      \"subject\": \"HISMLK;-1(\",\n      \"thumbprint\": \"5D7C63DF3C4e4B82FEBEf06DF63BD4ecDC2Af8DE3d011CD526C3a4b6cc8C2cA6\"\n    }\n  ],\n  \"nextToken\": \"'8Go\",\n  \"trustStoreArn\": \"arn:fExuNw:q3zSHyF:AF3N8v23:OKCsWH7:HR/79C113354fcFd8fE6088-A80421f36d6BCde/9BC5cE7DB5956640E4Df2CAA0E0-2CEa64-D/A04f0E8d10-Ef3fC9b9-e37d9a31c2da14-B/D7eCFFbccEaAD1C8E8-Cc1ba4E54BA4Eec90/f947-feA803D39f2dAa6AB1E62CAe3Ec6F73/7f3aF4139bd7298d3Da7B58b55a6e85c\"\n}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-3dd48f75-3a23-4023-b41d-f8b69cdce026"
+                    },
+                    {
+                      "id": "cdf40ec1-960f-46f4-855e-b7d745c3d419",
+                      "name": "InternalServerException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-cdf40ec1-960f-46f4-855e-b7d745c3d419"
+                    },
+                    {
+                      "id": "84b30e1e-aa63-422b-8d70-ade52be2bdfe",
+                      "name": "ResourceNotFoundException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-84b30e1e-aa63-422b-8d70-ade52be2bdfe"
+                    },
+                    {
+                      "id": "283c866a-0d84-43ab-ace4-cb37484585ad",
+                      "name": "AccessDeniedException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-283c866a-0d84-43ab-ace4-cb37484585ad"
+                    },
+                    {
+                      "id": "28b1fa37-9148-47de-8744-655ab8cfa4ed",
+                      "name": "ThrottlingException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-28b1fa37-9148-47de-8744-655ab8cfa4ed"
+                    },
+                    {
+                      "id": "1cafe742-5cbd-4391-b985-17427b41e642",
+                      "name": "ValidationException",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-Amz-Content-Sha256",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Date",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Algorithm",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Credential",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Security-Token",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-Signature",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "X-Amz-SignedHeaders",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/trustStores/:trustStoreArn/certificates?maxResults=<integer>&nextToken=4=,7a9i",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "trustStores",
+                            ":trustStoreArn",
+                            "certificates"
+                          ],
+                          "query": [
+                            {
+                              "description": "The maximum number of results to be included in the next page.",
+                              "key": "maxResults",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "The pagination token used to retrieve the next page of results for this operation.",
+                              "key": "nextToken",
+                              "value": "4=,7a9i"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "trustStoreArn"
+                            }
+                          ]
+                        }
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-07-28T10:49:27.000Z",
+                      "updatedAt": "2026-07-28T10:49:27.000Z",
+                      "uid": "35240-1cafe742-5cbd-4391-b985-17427b41e642"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-80dd4013-e325-4c7c-8df0-d0aa0763ac1c"
+                }
+              ],
+              "id": "af012a53-9c75-40df-b8af-b4ddcc92642e",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-af012a53-9c75-40df-b8af-b4ddcc92642e"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Delete Trust Store",
+              "id": "ac1d2c10-6b12-45e9-b6c0-45d74e0e85ad",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores",
+                    ":trustStoreArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2171a795-2762-4ceb-aef9-45df3963ded6",
+                      "key": "trustStoreArn",
+                      "value": "arn:-x:HTizfGo:3D-d9bW-:TPZ6evZUK:bNAmSAmRxg/4D3BCC2D5fC57DfC420dcc7Dd3a8Af85D3A4/-1ff3aC7e4eE01304e923f6e2A7bfceDa-97/D5fd26eFcEfAEDC1607155E2aADbCbCe589D/Ee87E5C08127a4A654-b-bAfE8B1Ca19d05d/D0EDAc8EDB14Ce3aEE7Bc37ECf3b0E0-62A5/b6e69dC7CAfafbdDE3D90cF6f3",
+                      "description": "(Required) The ARN of the trust store."
+                    }
+                  ]
+                },
+                "description": "Deletes the trust store."
+              },
+              "response": [
+                {
+                  "id": "fd14a0e2-d447-444c-a890-adf1759dbb6b",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-fd14a0e2-d447-444c-a890-adf1759dbb6b"
+                },
+                {
+                  "id": "225d429f-0583-4601-8ed9-18f33ce89b62",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-225d429f-0583-4601-8ed9-18f33ce89b62"
+                },
+                {
+                  "id": "2f12f3bd-6de8-41bd-b5e3-e74c0d598cb7",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-2f12f3bd-6de8-41bd-b5e3-e74c0d598cb7"
+                },
+                {
+                  "id": "f1660a14-c392-42fa-9996-00d779c11e44",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-f1660a14-c392-42fa-9996-00d779c11e44"
+                },
+                {
+                  "id": "e7cc3623-bc6b-457f-8d9a-d12d4aea8f1b",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-e7cc3623-bc6b-457f-8d9a-d12d4aea8f1b"
+                },
+                {
+                  "id": "4b1d96c9-e460-4a7d-939d-a333de0190af",
+                  "name": "ConflictException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-4b1d96c9-e460-4a7d-939d-a333de0190af"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-ac1d2c10-6b12-45e9-b6c0-45d74e0e85ad"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Get Trust Store",
+              "id": "c237b138-6c65-4927-96a6-d33ecdac42dc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores",
+                    ":trustStoreArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "de5e1526-4449-4a25-aadd-33ec89f5b581",
+                      "key": "trustStoreArn",
+                      "value": "arn:-x:HTizfGo:3D-d9bW-:TPZ6evZUK:bNAmSAmRxg/4D3BCC2D5fC57DfC420dcc7Dd3a8Af85D3A4/-1ff3aC7e4eE01304e923f6e2A7bfceDa-97/D5fd26eFcEfAEDC1607155E2aADbCbCe589D/Ee87E5C08127a4A654-b-bAfE8B1Ca19d05d/D0EDAc8EDB14Ce3aEE7Bc37ECf3b0E0-62A5/b6e69dC7CAfafbdDE3D90cF6f3",
+                      "description": "(Required) The ARN of the trust store."
+                    }
+                  ]
+                },
+                "description": "Gets the trust store."
+              },
+              "response": [
+                {
+                  "id": "c0163c0d-69e4-455d-b8d7-b7e8e76c4495",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"trustStore\": {\n    \"associatedPortalArns\": [\n      \"arn:mcLud462Bo:a8dBZ:xbpc:0hT6yzhtfz:OwUBmX/abf45B91badDce6C449Cb20D6449AdE3788e/4D6bA8bBA0f580d8f23DeeE-eaCc2b7c5caC/38C28Aa9824f5a5263153CbFaA-f3cFCA649/f31cc3cDf9AaEEb4DCa-265C90C-3--75B2-/E4bc12A72eDD5865FD82b1e2df1AfD20ea6E/881f29-a-FbA493-F4c250AcF56\",\n      \"arn:_RjC+UXZ@:uhiNLKanmm:u8ywFDCD:rTZld6MaD:mCAbjCBuP/789d-56C35FCdd8B44FaA229924Ff77E238b/394aa78BDE425C8aFbDdbCBCED9Dee4f-5fE/B5178-efc8Fffbd73d-bDDCD32236baa0523/7aAd04eADA-9859a4B69fF0472aA6F67Da8D/9FDDd-8D0A1ba9eB1C2AC98FB8abefD37D5a\"\n    ],\n    \"trustStoreArn\": \"arn:PIcMwgO:GbGRA7yFSC:m3iXu:eP2mNe:wcQfAvXK/5E8c6E2F5fE0aA13-bfEdbB5AF0C20DCfcd7/EA8cAE5D3Fe7f56bbFfd6E73e0E1De6d46c4/AD3bDE6fE3F2Fabfab3DBbACc-6fb11E4cDF\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-c0163c0d-69e4-455d-b8d7-b7e8e76c4495"
+                },
+                {
+                  "id": "cd0870cd-ad0a-473f-890f-028fd087704d",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-cd0870cd-ad0a-473f-890f-028fd087704d"
+                },
+                {
+                  "id": "58beda4c-5651-4f28-8231-4b85e28296be",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-58beda4c-5651-4f28-8231-4b85e28296be"
+                },
+                {
+                  "id": "ed407281-d920-4460-819c-3861382a2784",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-ed407281-d920-4460-819c-3861382a2784"
+                },
+                {
+                  "id": "14a0a690-9a67-4115-8f77-f57c59c63537",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-14a0a690-9a67-4115-8f77-f57c59c63537"
+                },
+                {
+                  "id": "329e60e7-f18c-413f-9751-1fe865e45bb4",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-329e60e7-f18c-413f-9751-1fe865e45bb4"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-c237b138-6c65-4927-96a6-d33ecdac42dc"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Update Trust Store",
+              "id": "a9acae3d-136c-42a2-bb23-ce3f5de930f4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores",
+                    ":trustStoreArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "4bf5a3da-0c68-43ba-b039-9f7ee0cf4c46",
+                      "key": "trustStoreArn",
+                      "value": "arn:-x:HTizfGo:3D-d9bW-:TPZ6evZUK:bNAmSAmRxg/4D3BCC2D5fC57DfC420dcc7Dd3a8Af85D3A4/-1ff3aC7e4eE01304e923f6e2A7bfceDa-97/D5fd26eFcEfAEDC1607155E2aADbCbCe589D/Ee87E5C08127a4A654-b-bAfE8B1Ca19d05d/D0EDAc8EDB14Ce3aEE7Bc37ECf3b0E0-62A5/b6e69dC7CAfafbdDE3D90cF6f3",
+                      "description": "(Required) The ARN of the trust store."
+                    }
+                  ]
+                },
+                "description": "Updates the trust store."
+              },
+              "response": [
+                {
+                  "id": "00cacb93-675e-425c-8bdf-106775ecbadb",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"trustStoreArn\": \"arn:,:k:fJ-3:FO3BJnvlEzfN:PpJCUQNVO/D9547-1Ccdd4445Cb55cBA9467E162f1dfC7/2--ECF5C1Cb-C0bA73dc6bfadCEdc66C19C-/AEDfa76F5dE96a07F5FDeBd7-fd6C897F2a8\"\n}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-00cacb93-675e-425c-8bdf-106775ecbadb"
+                },
+                {
+                  "id": "3672c500-5b64-4d9d-8cbc-48f749f5a959",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-3672c500-5b64-4d9d-8cbc-48f749f5a959"
+                },
+                {
+                  "id": "be068beb-5167-4a63-b708-fa9a9cc9c136",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-be068beb-5167-4a63-b708-fa9a9cc9c136"
+                },
+                {
+                  "id": "893c9831-fb94-4131-9cba-8583deaf7448",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-893c9831-fb94-4131-9cba-8583deaf7448"
+                },
+                {
+                  "id": "8bc11e97-7175-4939-bdb8-1577d2089c70",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-8bc11e97-7175-4939-bdb8-1577d2089c70"
+                },
+                {
+                  "id": "b1cf4a29-d0e8-47c5-ba47-459acc828985",
+                  "name": "ServiceQuotaExceededException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-b1cf4a29-d0e8-47c5-ba47-459acc828985"
+                },
+                {
+                  "id": "6b52a42e-bea2-41e9-86f4-78e76a5a257b",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"certificatesToAdd\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"certificatesToDelete\": [\n    \"4FA54bcFe47045c7cdEDA75F30D3489306666fB6e0D3Ec485E93Bb20d016eCab\",\n    \"DCBbAF801c539ecAEfa53c1A7Ea5EE7ea8dfcd8e0b5C3a3E643eFA0E7ce05b7d\"\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/trustStores/:trustStoreArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trustStores",
+                        ":trustStoreArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trustStoreArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:27.000Z",
+                  "updatedAt": "2026-07-28T10:49:27.000Z",
+                  "uid": "35240-6b52a42e-bea2-41e9-86f4-78e76a5a257b"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-a9acae3d-136c-42a2-bb23-ce3f5de930f4"
+            }
+          ],
+          "id": "6e704cfb-9f15-48f2-b356-bd1d88b157ed",
+          "createdAt": "2026-07-28T10:49:27.000Z",
+          "updatedAt": "2026-07-28T10:49:27.000Z",
+          "uid": "35240-6e704cfb-9f15-48f2-b356-bd1d88b157ed"
+        },
+        {
+          "name": "Amazon WorkSpaces Web Create Trust Store",
+          "id": "2a3343db-5d17-40fb-bc0a-e6768b439711",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/trustStores",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "trustStores"
+              ]
+            },
+            "description": "Creates a trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. "
+          },
+          "response": [
+            {
+              "id": "750b3dd8-9f7f-4f30-aada-15ff1b4db8ce",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"trustStoreArn\": \"arn:,:k:fJ-3:FO3BJnvlEzfN:PpJCUQNVO/D9547-1Ccdd4445Cb55cBA9467E162f1dfC7/2--ECF5C1Cb-C0bA73dc6bfadCEdc66C19C-/AEDfa76F5dE96a07F5FDeBd7-fd6C897F2a8\"\n}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-750b3dd8-9f7f-4f30-aada-15ff1b4db8ce"
+            },
+            {
+              "id": "e480aec8-2e93-43fc-a242-e4684863d633",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-e480aec8-2e93-43fc-a242-e4684863d633"
+            },
+            {
+              "id": "af2d3efc-3d4f-4bd6-a6a2-1336e669b98b",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-af2d3efc-3d4f-4bd6-a6a2-1336e669b98b"
+            },
+            {
+              "id": "d87a73a2-3206-4797-a51a-7cb003ff093b",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-d87a73a2-3206-4797-a51a-7cb003ff093b"
+            },
+            {
+              "id": "8e7a7a53-eed8-46d9-90d1-d9d0e21cca34",
+              "name": "ServiceQuotaExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-8e7a7a53-eed8-46d9-90d1-d9d0e21cca34"
+            },
+            {
+              "id": "1b53b698-6066-4ec9-8706-7949903e239e",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-1b53b698-6066-4ec9-8706-7949903e239e"
+            },
+            {
+              "id": "afa3eb3b-6166-494f-8eaf-8466f56d86f4",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"certificateList\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"/{_\",\n      \"Value\": \"p-/-\"\n    },\n    {\n      \"Key\": \"NLZNL-N}=@\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"L+}@}}p_}p\",\n      \"Value\": \"{-}-@@{/\"\n    },\n    {\n      \"Key\": \"N-@=@_{=NN\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"}=_\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \".}}=\"\n    },\n    {\n      \"Key\": \"NZ}-\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N{\",\n      \"Value\": \"NL{L\"\n    },\n    {\n      \"Key\": \"Z//@+/_\",\n      \"Value\": \"+@N:L--_\"\n    },\n    {\n      \"Key\": \"+{\",\n      \"Value\": \"=/@:-NN.\"\n    },\n    {\n      \"Key\": \"+=+-N\",\n      \"Value\": \"=}}_N.L\"\n    },\n    {\n      \"Key\": \"{}_N\",\n      \"Value\": \"N_:+/:N\"\n    },\n    {\n      \"Key\": \"@:N/{L@pL\",\n      \"Value\": \"-@L}N=\"\n    },\n    {\n      \"Key\": \"LZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"__+}=.-\",\n      \"Value\": \"=@=Z\"\n    },\n    {\n      \"Key\": \"/\",\n      \"Value\": \"L\"\n    },\n    {\n      \"Key\": \".L++@p++=p\",\n      \"Value\": \"p{N}=\"\n    },\n    {\n      \"Key\": \"/:L.=_+N@.\",\n      \"Value\": \":\"\n    },\n    {\n      \"Key\": \"+p}\",\n      \"Value\": \"@}=\"\n    },\n    {\n      \"Key\": \"pp+-.\",\n      \"Value\": \"+NZ.\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-afa3eb3b-6166-494f-8eaf-8466f56d86f4"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:27.000Z",
+          "updatedAt": "2026-07-28T10:49:27.000Z",
+          "uid": "35240-2a3343db-5d17-40fb-bc0a-e6768b439711"
+        },
+        {
+          "name": "Amazon WorkSpaces Web List Trust Stores",
+          "id": "28996396-f72c-4d22-b7b5-eb9313d62013",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "trustStores"
+              ],
+              "query": [
+                {
+                  "description": "The maximum number of results to be included in the next page.",
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "description": "The pagination token used to retrieve the next page of results for this operation.",
+                  "key": "nextToken",
+                  "value": "4=,7a9i"
+                }
+              ]
+            },
+            "description": "Retrieves a list of trust stores."
+          },
+          "response": [
+            {
+              "id": "9ee9137a-d8fd-4c1e-ad64-f15c35c7d535",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "4=,7a9i"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"nextToken\": \"QJ<9v~AB\",\n  \"trustStores\": [\n    {\n      \"trustStoreArn\": \"arn:36x_GD@gS:LFc7DU6w9lR:Oi:V1E:oqavcsbSs/E7EeEE09C2d0e3B528aF6B21F4-A0E--07B9/dDb0e81-1CC30aaBF4322aA53F367b-1AEA5/AEBBa4D8aFDFe6E4829054d-1FcaA7B7f3AF/fCbbdeaa8-FafB374fd4eB-C4c63826dC8b2/FDb6-E58e-f-CfB33A9F5CF71ECe7AF6C70f/3-BA--EDd5cEd7ea5B18B5D8e4dC\"\n    },\n    {\n      \"trustStoreArn\": \"arn:R7zrKA:xp:RnTXjeYKa:izb9:jZu/ECF2b-2-aeEfA7D26dF1D831bce9F1E87eDE\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-9ee9137a-d8fd-4c1e-ad64-f15c35c7d535"
+            },
+            {
+              "id": "3f4912c4-7761-4d79-bd9a-8f0c8f0ef010",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "4=,7a9i"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-3f4912c4-7761-4d79-bd9a-8f0c8f0ef010"
+            },
+            {
+              "id": "500c73be-8c71-4420-aa17-1ba94fc26329",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "4=,7a9i"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-500c73be-8c71-4420-aa17-1ba94fc26329"
+            },
+            {
+              "id": "7d8e5678-c4f8-402c-a1a2-de05afd78ae7",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "4=,7a9i"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-7d8e5678-c4f8-402c-a1a2-de05afd78ae7"
+            },
+            {
+              "id": "f6baa3f2-0c55-49ad-9f27-6cdc99a149cf",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trustStores?maxResults=<integer>&nextToken=4=,7a9i",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trustStores"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "4=,7a9i"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:27.000Z",
+              "updatedAt": "2026-07-28T10:49:27.000Z",
+              "uid": "35240-f6baa3f2-0c55-49ad-9f27-6cdc99a149cf"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:27.000Z",
+          "updatedAt": "2026-07-28T10:49:27.000Z",
+          "uid": "35240-28996396-f72c-4d22-b7b5-eb9313d62013"
+        }
+      ],
+      "id": "9882d278-cb5a-4b83-b59b-ecf73bb6ab8d",
+      "createdAt": "2026-07-28T10:49:27.000Z",
+      "updatedAt": "2026-07-28T10:49:27.000Z",
+      "uid": "35240-9882d278-cb5a-4b83-b59b-ecf73bb6ab8d"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://workspaces-web.{{region}}.amazonaws.com"
+    }
+  ]
+}

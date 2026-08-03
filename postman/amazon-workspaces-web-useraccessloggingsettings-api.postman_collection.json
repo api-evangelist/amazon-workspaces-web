@@ -1,0 +1,2824 @@
+{
+  "info": {
+    "_postman_id": "1edfe37c-883e-4bc9-935d-7ae3aa4c63d6",
+    "name": "Amazon WorkSpaces Web BrowserSettings UserAccessLoggingSettings API",
+    "description": "WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:49:28.000Z",
+    "updatedAt": "2026-07-28T10:49:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1edfe37c-883e-4bc9-935d-7ae3aa4c63d6"
+  },
+  "item": [
+    {
+      "name": "userAccessLoggingSettings",
+      "item": [
+        {
+          "name": "{userAccessLoggingSettingsArn}",
+          "item": [
+            {
+              "name": "Amazon WorkSpaces Web Delete User Access Logging Settings",
+              "id": "413f4054-5811-4484-9548-bab7d7ffc62a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings",
+                    ":userAccessLoggingSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "f17c1477-2876-46e7-b2de-e2c08698c8e7",
+                      "key": "userAccessLoggingSettingsArn",
+                      "value": "arn:Xi:i54w7FH1:rv9oo:4HhasTOLXpIz:ZtEDQcazD/D96f314020d0DBf85e1eBb79958daee-e8E0/7351-04BDbB551bf5839de-47FD989a6e3FD/80a-BC6f8b-eCf8B4-fF8cB7A2ee6BD9-496/9F0eE412edEb73-9cbe36Dde-C2B26540-F-/A70-5b3eaFB1ACEE7Aa13C16CCF9dA908b03/9C447-b-D4EeDFde2a011eBfbE",
+                      "description": "(Required) The ARN of the user access logging settings."
+                    }
+                  ]
+                },
+                "description": "Deletes user access logging settings."
+              },
+              "response": [
+                {
+                  "id": "6c58e556-18c2-4463-a11f-54578c560206",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-6c58e556-18c2-4463-a11f-54578c560206"
+                },
+                {
+                  "id": "0e840adf-f8b2-4c3c-87aa-490bdad42241",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-0e840adf-f8b2-4c3c-87aa-490bdad42241"
+                },
+                {
+                  "id": "1e5be074-595e-407d-a525-994a45ffd700",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-1e5be074-595e-407d-a525-994a45ffd700"
+                },
+                {
+                  "id": "f27b030c-8540-4f6e-9e6a-17a89e5a600e",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-f27b030c-8540-4f6e-9e6a-17a89e5a600e"
+                },
+                {
+                  "id": "55e545e7-dcc5-4f25-9eef-8fef5db8afd2",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-55e545e7-dcc5-4f25-9eef-8fef5db8afd2"
+                },
+                {
+                  "id": "4f58045e-c8c6-4971-b8ce-a20112feca41",
+                  "name": "ConflictException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-4f58045e-c8c6-4971-b8ce-a20112feca41"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-413f4054-5811-4484-9548-bab7d7ffc62a"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Get User Access Logging Settings",
+              "id": "4afda2b6-778e-44d0-8d3f-54aca6658e92",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings",
+                    ":userAccessLoggingSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "85dfccbe-56b9-4953-bbad-2ecfb4d9d22d",
+                      "key": "userAccessLoggingSettingsArn",
+                      "value": "arn:Xi:i54w7FH1:rv9oo:4HhasTOLXpIz:ZtEDQcazD/D96f314020d0DBf85e1eBb79958daee-e8E0/7351-04BDbB551bf5839de-47FD989a6e3FD/80a-BC6f8b-eCf8B4-fF8cB7A2ee6BD9-496/9F0eE412edEb73-9cbe36Dde-C2B26540-F-/A70-5b3eaFB1ACEE7Aa13C16CCF9dA908b03/9C447-b-D4EeDFde2a011eBfbE",
+                      "description": "(Required) The ARN of the user access logging settings."
+                    }
+                  ]
+                },
+                "description": "Gets user access logging settings."
+              },
+              "response": [
+                {
+                  "id": "47570b32-af63-454b-b0fb-afe38c8d9aa0",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"userAccessLoggingSettings\": {\n    \"userAccessLoggingSettingsArn\": \"arn:apvR=H:aZn9HTLBybv:MbZyGnrX2C:n6m:YNUzyRmQsUv/059-A76aDA51f8b--897AA7911eEf-1b5b30/-3D622ec-3D54d18DD0-a02Efc-4AED4491B/-5d0FffEBea53CE317B7047161eEdDD1-c0B/4B-aF5a-a64bDcB197d-12D60b1BA5A180Cb\",\n    \"associatedPortalArns\": [\n      \"arn:x6noAaJ:go::blUWQC:Mfb/0285eF9cae398Aa7DDAb9F09Fd-5AbCeFdBf/c-C5CD5DAB66e85A76Ea793dEaD9D2A23997/ba0FAD712bFf5457e0Ad9890b4-9e3Ee3f6e/ca91FCCb706Ca87333Dd958d-fBBFCcb-c19/247769fFdBA9B2-D0a93a14dD921-197FFBA/f0eaac67a4A-5da7f3eEd561BEec73a25428/2F639E3\",\n      \"arn:uS1rnZqX:zk4WuPlWBEV:ppD:C0HAUzkp:kVWw/f9fb0561AcdA1fFAACfAc9aD9d9BfeF33bc3\"\n    ],\n    \"kinesisStreamArn\": \"arn:Ek8pY:kinesis:MEXBZDgjW:6x4hgErmqp:stream/Yl$p:3;.ouT\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-47570b32-af63-454b-b0fb-afe38c8d9aa0"
+                },
+                {
+                  "id": "0b017b76-5fe2-4490-8353-a2142ff79285",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-0b017b76-5fe2-4490-8353-a2142ff79285"
+                },
+                {
+                  "id": "fd88a680-0009-4c12-a133-06d9bd861f64",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-fd88a680-0009-4c12-a133-06d9bd861f64"
+                },
+                {
+                  "id": "3ccf98c9-d6e2-444c-a727-bb803a2171ab",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-3ccf98c9-d6e2-444c-a727-bb803a2171ab"
+                },
+                {
+                  "id": "1afd0ef0-e0ab-43a1-af51-0408f4dfa7e1",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-1afd0ef0-e0ab-43a1-af51-0408f4dfa7e1"
+                },
+                {
+                  "id": "aecf2222-1957-4633-b0a7-38111df913af",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-aecf2222-1957-4633-b0a7-38111df913af"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-4afda2b6-778e-44d0-8d3f-54aca6658e92"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Update User Access Logging Settings",
+              "id": "15f89072-12f2-4553-a843-7297445e92b4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings",
+                    ":userAccessLoggingSettingsArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2b7fdb39-b492-445f-8c55-de197f5068a8",
+                      "key": "userAccessLoggingSettingsArn",
+                      "value": "arn:Xi:i54w7FH1:rv9oo:4HhasTOLXpIz:ZtEDQcazD/D96f314020d0DBf85e1eBb79958daee-e8E0/7351-04BDbB551bf5839de-47FD989a6e3FD/80a-BC6f8b-eCf8B4-fF8cB7A2ee6BD9-496/9F0eE412edEb73-9cbe36Dde-C2B26540-F-/A70-5b3eaFB1ACEE7Aa13C16CCF9dA908b03/9C447-b-D4EeDFde2a011eBfbE",
+                      "description": "(Required) The ARN of the user access logging settings."
+                    }
+                  ]
+                },
+                "description": "Updates the user access logging settings."
+              },
+              "response": [
+                {
+                  "id": "554c1c22-a2f4-4638-9c7a-0e730cb7ff6f",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"userAccessLoggingSettings\": {\n    \"userAccessLoggingSettingsArn\": \"arn:qd4:GhIS:c:29oJEJZsa3S:LThywXjfphl/5786A83E8DC4c0E-1BFC6C-1F4CA5597bb8a/3c0b4DC36703C6-df39f3E0AeecAAdd01a40/A274Cf034EF4578D1dBdd3b4D0E0dDcAaebc/88-E70BFef-F-3C093B1E4-E-759BD63ba3A\",\n    \"associatedPortalArns\": [\n      \"arn:6rrPqMEvsO:yO:8txV:RG3IciH:O/F43BDD10cA56fAca6aaa7D7871b7A66FAb8E/4-BCd8ee8AA5fd0a0E3FF4DA1d208DbDFdd4/f6eEBb0635-B632CE2Fab7aaFAca3cBE37a-/BcFbcE2E8cfB-6b5DAbCa83FDcCB23cca98B/2CE48-3Ccd3D-2e5Fc8F6A9EfD97160e1a97/d028C1beD8dDFffdEAD473A5Fc595957C7CF/1\",\n      \"arn:XQn9nWV-C:15Y:c0b6ZTH:TFnF7VMbF:eBdZ/-884B35afCF-7BB51DFA0d0Cd9-519a7fEC8/eca73f9A8cB6F7F5-7aC89AD59aA5C24Ef34/dA7acbff9aBdfFe36efa7-ba1dCdBa28F35c\"\n    ],\n    \"kinesisStreamArn\": \"arn:Dip-:kinesis:lU1w:ivdcuZGJYj:stream/EEVUcY0\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-554c1c22-a2f4-4638-9c7a-0e730cb7ff6f"
+                },
+                {
+                  "id": "9e256662-f778-4529-98b8-ee6fd7d775bb",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-9e256662-f778-4529-98b8-ee6fd7d775bb"
+                },
+                {
+                  "id": "1ea5e5c5-1d1a-4c1a-8ffe-2a50adfacac3",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-1ea5e5c5-1d1a-4c1a-8ffe-2a50adfacac3"
+                },
+                {
+                  "id": "7ceef65f-8cbf-42e1-9eb7-8ed450614ec3",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-7ceef65f-8cbf-42e1-9eb7-8ed450614ec3"
+                },
+                {
+                  "id": "4cc153b4-3ac1-4029-ac34-09836d56f89d",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-4cc153b4-3ac1-4029-ac34-09836d56f89d"
+                },
+                {
+                  "id": "0403714f-2c7b-47c2-9be3-255bc960cf4d",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"kinesisStreamArn\": \"arn:rAGe:kinesis:YX6:0FFbUeCKy:stream/fdlA8I\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "userAccessLoggingSettings",
+                        ":userAccessLoggingSettingsArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userAccessLoggingSettingsArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:28.000Z",
+                  "updatedAt": "2026-07-28T10:49:28.000Z",
+                  "uid": "35240-0403714f-2c7b-47c2-9be3-255bc960cf4d"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-15f89072-12f2-4553-a843-7297445e92b4"
+            }
+          ],
+          "id": "6ef14996-73c7-45e0-a4bc-a5ef487372db",
+          "createdAt": "2026-07-28T10:49:28.000Z",
+          "updatedAt": "2026-07-28T10:49:28.000Z",
+          "uid": "35240-6ef14996-73c7-45e0-a4bc-a5ef487372db"
+        },
+        {
+          "name": "Amazon WorkSpaces Web Create User Access Logging Settings",
+          "id": "4ba869ac-5826-45d3-b2d5-db912c6d542a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/userAccessLoggingSettings",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "userAccessLoggingSettings"
+              ]
+            },
+            "description": "Creates a user access logging settings resource that can be associated with a web portal."
+          },
+          "response": [
+            {
+              "id": "bf4910e0-487d-44e3-bd3a-5bfd91c349b4",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"userAccessLoggingSettingsArn\": \"arn:HViRi7NH:wm:dDmG:woCmR8O:QNGiCNS/E2F-B29265522b2FB4B788Eba399bBEc1A94/B59a-dD6ff19F98-5644-f06-Bb0dC04EA2D/C9cA88-715344D-e6fa73A99bB9a93AE73DB/BB4-AAc18A5EAa8-E62E5BC1805DcBA0Cb30/D2ECd4CEd2853934D81fb-ABe777FabfA42d/79668DCb65aCf4554A-b7FF29D-04d990F\"\n}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-bf4910e0-487d-44e3-bd3a-5bfd91c349b4"
+            },
+            {
+              "id": "48d35fdb-8e9a-451c-8f46-7887908ca619",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-48d35fdb-8e9a-451c-8f46-7887908ca619"
+            },
+            {
+              "id": "1af6e589-b56e-4b86-957a-81ea7ef87f20",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-1af6e589-b56e-4b86-957a-81ea7ef87f20"
+            },
+            {
+              "id": "0b759044-90eb-4377-b787-af9fe5e3196e",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-0b759044-90eb-4377-b787-af9fe5e3196e"
+            },
+            {
+              "id": "13d1a30c-631b-4b7e-88cc-1dceb4691e50",
+              "name": "ServiceQuotaExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-13d1a30c-631b-4b7e-88cc-1dceb4691e50"
+            },
+            {
+              "id": "ff2b4499-c009-443a-85c8-8d6b4e731c9e",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-ff2b4499-c009-443a-85c8-8d6b4e731c9e"
+            },
+            {
+              "id": "a6324bba-6b38-4911-ab6e-69797387de1e",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kinesisStreamArn\": \"arn:Ss71Sq:kinesis:Yrl7qBlCOf:rvTJmkHj:stream/rqX~\",\n  \"clientToken\": \"<string>\",\n  \"tags\": [\n    {\n      \"Key\": \"}:@_L_=\",\n      \"Value\": \"_N@\"\n    },\n    {\n      \"Key\": \"+=N\",\n      \"Value\": \"}N@\"\n    },\n    {\n      \"Key\": \"_{\",\n      \"Value\": \"._\"\n    },\n    {\n      \"Key\": \"L@L\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"/p//=ZN}\",\n      \"Value\": \"}p=}\"\n    },\n    {\n      \"Key\": \"//-\",\n      \"Value\": \"L-_Z/.--{\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"p-{{-\"\n    },\n    {\n      \"Key\": \"=-L.Z\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N@ZZ}-:{\",\n      \"Value\": \"-_N}--:Z@}\"\n    },\n    {\n      \"Key\": \"_pL_{{@ZN\",\n      \"Value\": \"=}N}p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"LLp\"\n    },\n    {\n      \"Key\": \"-+{L\",\n      \"Value\": \"}+\"\n    },\n    {\n      \"Key\": \":=/.:+}-\",\n      \"Value\": \"LLp{\"\n    },\n    {\n      \"Key\": \"N-\",\n      \"Value\": \"N-L{--+={\"\n    },\n    {\n      \"Key\": \"}p-\",\n      \"Value\": \"@N.\"\n    },\n    {\n      \"Key\": \"@@p+}+:=N-\",\n      \"Value\": \"@_p:@p:@\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"L}.+@\"\n    },\n    {\n      \"Key\": \":-Z_L=+.\",\n      \"Value\": \"@N/+N_+p_\"\n    },\n    {\n      \"Key\": \".@{+=Z-@{-\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"_::_\",\n      \"Value\": \"@_:@Lp}\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-a6324bba-6b38-4911-ab6e-69797387de1e"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:28.000Z",
+          "updatedAt": "2026-07-28T10:49:28.000Z",
+          "uid": "35240-4ba869ac-5826-45d3-b2d5-db912c6d542a"
+        },
+        {
+          "name": "Amazon WorkSpaces Web List User Access Logging Settings",
+          "id": "dc5308b3-6795-48fe-8c62-31a7586ae192",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "userAccessLoggingSettings"
+              ],
+              "query": [
+                {
+                  "description": "The maximum number of results to be included in the next page.",
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "description": "The pagination token used to retrieve the next page of results for this operation.",
+                  "key": "nextToken",
+                  "value": "VUPu"
+                }
+              ]
+            },
+            "description": "Retrieves a list of user access logging settings."
+          },
+          "response": [
+            {
+              "id": "5afcbb8f-95e8-4e20-8151-5042e8cc30e2",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "VUPu"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"nextToken\": \"[z0\",\n  \"userAccessLoggingSettings\": [\n    {\n      \"kinesisStreamArn\": \"arn:JPS+OK=N3E:kinesis:ms:eYDaPgKIEVI:stream/[eNrObM\",\n      \"userAccessLoggingSettingsArn\": \"arn:ZmCfy8Y_:e:dwU:xxGL5lxV5D:SK/5F5EE8-785EDAd-160da0BDE177-9fed0bF1/Cd-C5A-Eb98Abccd5a5bC14-c97E-cecC614/7DacC8cB-2dc60c1cB5F34AdBbd03C31D3E8/dB6005B7FD39DBa7C1b5d97536532adC-9dC/BCE524E030630e7B6C-C-E1E-bE48aadA8bA/EA5eD02C5Ecc0E7B3EdaFe74f63f2c78CF0-/2\"\n    },\n    {\n      \"kinesisStreamArn\": \"arn:a:kinesis:ms:t77GFT:stream/:}&i\",\n      \"userAccessLoggingSettingsArn\": \"arn:AWe+.g:2xTr9ZRO6j:rNM1WKJ:O7U4tqAxSVT6:TNNapOKWeX/42EBf06aA-dDd2bDFBC4B5A42EecDffFD242/82EcD1E2b037008A2727eb-2C1Ad5ec-a042/f82-3Ba35f6dD5C1F67D73-b106AFcc2Ce77/7E4266aDBd0AcaaD4055e1-eD7Bef9896df1/0DA204D91a364dBd2d73Ef48c5EcAc37bFb7/-89-2994-F1D8FF5a\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-5afcbb8f-95e8-4e20-8151-5042e8cc30e2"
+            },
+            {
+              "id": "6d192a5e-2083-4645-8eb7-3517affaf4fe",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "VUPu"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-6d192a5e-2083-4645-8eb7-3517affaf4fe"
+            },
+            {
+              "id": "ae9acefd-ebc0-4c86-921f-4917b83cbaf2",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "VUPu"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-ae9acefd-ebc0-4c86-921f-4917b83cbaf2"
+            },
+            {
+              "id": "068333ef-8a88-4a17-b8f3-9e151f4d35c3",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "VUPu"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-068333ef-8a88-4a17-b8f3-9e151f4d35c3"
+            },
+            {
+              "id": "b13f786e-4b0d-4a9c-97f9-116c83ac29f9",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/userAccessLoggingSettings?maxResults=<integer>&nextToken=VUPu",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "userAccessLoggingSettings"
+                  ],
+                  "query": [
+                    {
+                      "description": "The maximum number of results to be included in the next page.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The pagination token used to retrieve the next page of results for this operation.",
+                      "key": "nextToken",
+                      "value": "VUPu"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:28.000Z",
+              "updatedAt": "2026-07-28T10:49:28.000Z",
+              "uid": "35240-b13f786e-4b0d-4a9c-97f9-116c83ac29f9"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:28.000Z",
+          "updatedAt": "2026-07-28T10:49:28.000Z",
+          "uid": "35240-dc5308b3-6795-48fe-8c62-31a7586ae192"
+        }
+      ],
+      "id": "83e3544e-eaae-4942-9d94-b249d4da4e5a",
+      "createdAt": "2026-07-28T10:49:28.000Z",
+      "updatedAt": "2026-07-28T10:49:28.000Z",
+      "uid": "35240-83e3544e-eaae-4942-9d94-b249d4da4e5a"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://workspaces-web.{{region}}.amazonaws.com"
+    }
+  ]
+}

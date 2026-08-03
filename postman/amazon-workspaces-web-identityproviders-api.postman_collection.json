@@ -1,0 +1,2433 @@
+{
+  "info": {
+    "_postman_id": "ec410aa9-c549-4395-b564-c9684b3b17f1",
+    "name": "Amazon WorkSpaces Web BrowserSettings IdentityProviders API",
+    "description": "WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:49:18.000Z",
+    "updatedAt": "2026-07-28T10:49:19.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-ec410aa9-c549-4395-b564-c9684b3b17f1"
+  },
+  "item": [
+    {
+      "name": "identityProviders",
+      "item": [
+        {
+          "name": "{identityProviderArn}",
+          "item": [
+            {
+              "name": "Amazon WorkSpaces Web Delete Identity Provider",
+              "id": "d99259b8-8250-4eb4-a38b-4bfe96663b5f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders",
+                    ":identityProviderArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "32b7b8c0-f412-4528-af91-90721921d908",
+                      "key": "identityProviderArn",
+                      "value": "arn:DoY-G:Fz2c:gpU5:F0l:twlCYxDmyf/2C485-cf7dcdda2593ce1d512-D239E63-4-/832e5a65400FD5B34a04E6df94DA73DB3dD6/E56AfD-76e28aacc295-127fD8-BF2B0eed8/6bbbd1850DBF8C99EBB1EAf6ea7f7121cAce/918A4bD1c9B6cA2048F8D6BecaC8cafef641/d23AA-e9Dac2fE2D6Eabd-7aE4b9fb6bDfD1",
+                      "description": "(Required) The ARN of the identity provider."
+                    }
+                  ]
+                },
+                "description": "Deletes the identity provider."
+              },
+              "response": [
+                {
+                  "id": "964f1b0a-9808-4739-be32-f9a1142ed23e",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-964f1b0a-9808-4739-be32-f9a1142ed23e"
+                },
+                {
+                  "id": "fae4c61a-015f-423f-92e5-660cae99edc3",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-fae4c61a-015f-423f-92e5-660cae99edc3"
+                },
+                {
+                  "id": "2eb86a26-c8eb-4c9f-a6f9-ae4ff518ea6e",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-2eb86a26-c8eb-4c9f-a6f9-ae4ff518ea6e"
+                },
+                {
+                  "id": "1a65e302-a1b1-4e37-92eb-be40ac6f8ef6",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-1a65e302-a1b1-4e37-92eb-be40ac6f8ef6"
+                },
+                {
+                  "id": "b7c46ad6-ef6b-45ec-8719-0fbc9fe00041",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-b7c46ad6-ef6b-45ec-8719-0fbc9fe00041"
+                },
+                {
+                  "id": "5ef4c12a-7516-4e78-afdf-bdf9711e2957",
+                  "name": "ConflictException",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-5ef4c12a-7516-4e78-afdf-bdf9711e2957"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-d99259b8-8250-4eb4-a38b-4bfe96663b5f"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Get Identity Provider",
+              "id": "ee68f22b-7891-4172-a414-cf941eb42ab7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders",
+                    ":identityProviderArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "7f21f5aa-9aa5-440e-80a2-cfc0c4dfa79b",
+                      "key": "identityProviderArn",
+                      "value": "arn:DoY-G:Fz2c:gpU5:F0l:twlCYxDmyf/2C485-cf7dcdda2593ce1d512-D239E63-4-/832e5a65400FD5B34a04E6df94DA73DB3dD6/E56AfD-76e28aacc295-127fD8-BF2B0eed8/6bbbd1850DBF8C99EBB1EAf6ea7f7121cAce/918A4bD1c9B6cA2048F8D6BecaC8cafef641/d23AA-e9Dac2fE2D6Eabd-7aE4b9fb6bDfD1",
+                      "description": "(Required) The ARN of the identity provider."
+                    }
+                  ]
+                },
+                "description": "Gets the identity provider."
+              },
+              "response": [
+                {
+                  "id": "460f3bdb-6426-4866-9a19-f67b39247de0",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"identityProvider\": {\n    \"identityProviderArn\": \"arn:9,ycZZNF:y5l:5OEnFcef:LDPwpeX9:WNYBHTFDZBe/f7aC-9FcD00-EDb57B0-EFABaa-bc8E1D62A/b-F0ca16f5cfDB1b6cdffFA8D9fBABcD8fAA/41Ac4-1b9815Bc4d7660caDcEF963527470f/8de17eBc72f0a0f9bDE7fA3BE8AD7ccf6B99/Eb65-5cAcBBa33cFd8A40AF355Ea57D51bff/Dc40c4b4Daf2EE1-f32ac7e-\",\n    \"identityProviderDetails\": {\n      \"officia_7a\": \"\u2005X\",\n      \"Duis_7a\": \"r{d_\\f\u202f]RsP\",\n      \"minim_c06\": \"M|:D\"\n    },\n    \"identityProviderName\": \"e{B~>J-'\",\n    \"identityProviderType\": \"SignInWithApple\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-460f3bdb-6426-4866-9a19-f67b39247de0"
+                },
+                {
+                  "id": "0872b767-0326-47ff-ba5b-b8d76e55a9d5",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-0872b767-0326-47ff-ba5b-b8d76e55a9d5"
+                },
+                {
+                  "id": "69a909ce-c670-450f-93d3-b852a4bc8410",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-69a909ce-c670-450f-93d3-b852a4bc8410"
+                },
+                {
+                  "id": "e780d20e-039e-4d5c-bc40-7a4a14461a04",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-e780d20e-039e-4d5c-bc40-7a4a14461a04"
+                },
+                {
+                  "id": "30cea450-ee99-4723-b3ba-6e2c8a7d537e",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-30cea450-ee99-4723-b3ba-6e2c8a7d537e"
+                },
+                {
+                  "id": "5fd4c6ac-6b83-48cb-8bb7-ed42515fd036",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-5fd4c6ac-6b83-48cb-8bb7-ed42515fd036"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-ee68f22b-7891-4172-a414-cf941eb42ab7"
+            },
+            {
+              "name": "Amazon WorkSpaces Web Update Identity Provider",
+              "id": "5571599d-3f6e-43cc-a093-8d96a4868442",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders",
+                    ":identityProviderArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2f95978e-568c-4576-aac3-d35d142cdb43",
+                      "key": "identityProviderArn",
+                      "value": "arn:DoY-G:Fz2c:gpU5:F0l:twlCYxDmyf/2C485-cf7dcdda2593ce1d512-D239E63-4-/832e5a65400FD5B34a04E6df94DA73DB3dD6/E56AfD-76e28aacc295-127fD8-BF2B0eed8/6bbbd1850DBF8C99EBB1EAf6ea7f7121cAce/918A4bD1c9B6cA2048F8D6BecaC8cafef641/d23AA-e9Dac2fE2D6Eabd-7aE4b9fb6bDfD1",
+                      "description": "(Required) The ARN of the identity provider."
+                    }
+                  ]
+                },
+                "description": "Updates the identity provider. "
+              },
+              "response": [
+                {
+                  "id": "ae840151-0d07-4810-b2c7-e537a10fafd0",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"identityProvider\": {\n    \"identityProviderArn\": \"arn:C@c2zV-:uznArqsVB1:pbf2bUoWI:xS:xPAgIDVC/7-1692a2934c540625D6cD98AaB4Ad079AAa/cAd22B92afc8DCA753Fae3B1eCCC8F7196ff/DEE33b97fc-2Ed18d4bbcC0496cBdDA42b7f/7FdFc80eEecE4780Cb89B6DfF83FC3ff705a/DE33EF21c7cB47c-2a7FA3e4Bd2a8Ef399D6/1DDDc23AcEBe43f5f2d4E4c51a\",\n    \"identityProviderDetails\": {\n      \"ut_8\": \"<i;\u20009_k\u2006\u2003\u2006\",\n      \"amet9\": \"\",\n      \"sit964\": \"pAH=-\",\n      \"aliqua_4\": \"gcS0a\",\n      \"id7a_\": \"2i?g2\u2007%?H\"\n    },\n    \"identityProviderName\": \"5MQusvmO\",\n    \"identityProviderType\": \"SAML\"\n  }\n}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-ae840151-0d07-4810-b2c7-e537a10fafd0"
+                },
+                {
+                  "id": "ec32ba3b-0837-4192-a1ef-1d6b87bfab28",
+                  "name": "InternalServerException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-ec32ba3b-0837-4192-a1ef-1d6b87bfab28"
+                },
+                {
+                  "id": "2699d161-97f5-474f-a806-95853930fdda",
+                  "name": "ResourceNotFoundException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-2699d161-97f5-474f-a806-95853930fdda"
+                },
+                {
+                  "id": "0e324147-0d2a-4b55-b2cf-9c8eff6f4e6c",
+                  "name": "AccessDeniedException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-0e324147-0d2a-4b55-b2cf-9c8eff6f4e6c"
+                },
+                {
+                  "id": "4e41833a-89a8-4ae2-95f6-fcacc9a74722",
+                  "name": "ThrottlingException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-4e41833a-89a8-4ae2-95f6-fcacc9a74722"
+                },
+                {
+                  "id": "986c0d63-8681-49f8-bc26-25d74d479ad9",
+                  "name": "ValidationException",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"clientToken\": \"<string>\",\n  \"identityProviderDetails\": {\n    \"Duisa\": \"$\\t\\fB\u3000_Q\u1680\",\n    \"Duiscf\": \"tO{\",\n    \"doa\": \"jUZWjv\",\n    \"pariatur_8\": \"knFG'vx3\"\n  },\n  \"identityProviderName\": \"@p/D1\",\n  \"identityProviderType\": \"Google\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/identityProviders/:identityProviderArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "identityProviders",
+                        ":identityProviderArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "identityProviderArn"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:49:19.000Z",
+                  "updatedAt": "2026-07-28T10:49:19.000Z",
+                  "uid": "35240-986c0d63-8681-49f8-bc26-25d74d479ad9"
+                }
+              ],
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-5571599d-3f6e-43cc-a093-8d96a4868442"
+            }
+          ],
+          "id": "2d8416fc-01a6-4998-8907-1b0c4aa4970e",
+          "createdAt": "2026-07-28T10:49:19.000Z",
+          "updatedAt": "2026-07-28T10:49:19.000Z",
+          "uid": "35240-2d8416fc-01a6-4998-8907-1b0c4aa4970e"
+        },
+        {
+          "name": "Amazon WorkSpaces Web Create Identity Provider",
+          "id": "947eb1e7-ed52-47be-b814-19ea0744967f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/identityProviders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "identityProviders"
+              ]
+            },
+            "description": "Creates an identity provider resource that is then associated with a web portal."
+          },
+          "response": [
+            {
+              "id": "88ecc144-bab1-49ae-88a5-e9b092d4479d",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"identityProviderArn\": \"arn:bW:m:WcK6I:f4i9NDRMI:QGVemMpldMP/fe6CdB53EbccDc23eD022E0ee8BdFCb7bB70/E461ba368aE9cb464d-2ac0B55-8e8B3Ca9e/78B-F3EBBBf57B0dD28D04C550fb5bD237bb/3c4CFB41fd7AE2E1D2cb6AaA0d4d91aeCf6E/EDb-9fd6989dB705e-1E9-d84eB003Db242F/11cF95b86bFDc-5F8DFf9Df5Cd817866b-\"\n}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-88ecc144-bab1-49ae-88a5-e9b092d4479d"
+            },
+            {
+              "id": "b431794f-4a1f-4532-9f86-2a9821e54af2",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-b431794f-4a1f-4532-9f86-2a9821e54af2"
+            },
+            {
+              "id": "df5cb1ff-07d6-41e8-b2c6-9366f9090bc6",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-df5cb1ff-07d6-41e8-b2c6-9366f9090bc6"
+            },
+            {
+              "id": "68b6d463-f50f-47f1-bf84-af53a4d7ae84",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-68b6d463-f50f-47f1-bf84-af53a4d7ae84"
+            },
+            {
+              "id": "d07e9a9e-5772-4f3e-a8da-f66519e51c4f",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-d07e9a9e-5772-4f3e-a8da-f66519e51c4f"
+            },
+            {
+              "id": "9f4d788c-d463-41e7-b6b0-6a14a21aa561",
+              "name": "ServiceQuotaExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-9f4d788c-d463-41e7-b6b0-6a14a21aa561"
+            },
+            {
+              "id": "40e48ba4-ba39-42ff-993b-4d87974a36a3",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-40e48ba4-ba39-42ff-993b-4d87974a36a3"
+            },
+            {
+              "id": "72834b78-1a5c-446a-a213-55af9a966e35",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identityProviderDetails\": {\n    \"minim__\": \"|WJ~pYA\",\n    \"cupidatat_1e3\": \"\u205f'4O\u2005\\te\",\n    \"commodo_dd\": \"-OM\u180erot,m\"\n  },\n  \"identityProviderName\": \"Lp\\\\\",\n  \"identityProviderType\": \"OIDC\",\n  \"portalArn\": \"arn:LcC7Twjq:Z0PRN50:AYLaEnU1:xXxkQ0PMt:A/95D3b09B209-CD48b38A7949DB7cd7A7FfdC\",\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/identityProviders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "identityProviders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:49:19.000Z",
+              "updatedAt": "2026-07-28T10:49:19.000Z",
+              "uid": "35240-72834b78-1a5c-446a-a213-55af9a966e35"
+            }
+          ],
+          "createdAt": "2026-07-28T10:49:19.000Z",
+          "updatedAt": "2026-07-28T10:49:19.000Z",
+          "uid": "35240-947eb1e7-ed52-47be-b814-19ea0744967f"
+        }
+      ],
+      "id": "f34c1021-c609-4104-9d44-f7208f140f8e",
+      "createdAt": "2026-07-28T10:49:19.000Z",
+      "updatedAt": "2026-07-28T10:49:19.000Z",
+      "uid": "35240-f34c1021-c609-4104-9d44-f7208f140f8e"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://workspaces-web.{{region}}.amazonaws.com"
+    }
+  ]
+}

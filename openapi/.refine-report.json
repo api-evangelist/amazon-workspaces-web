@@ -1,0 +1,32 @@
+{
+  "provider": "amazon-workspaces-web",
+  "sources": [
+    "amazon-workspaces-web-browsersettings-api-openapi.yml",
+    "amazon-workspaces-web-identityproviders-api-openapi.yml",
+    "amazon-workspaces-web-ipaccesssettings-api-openapi.yml",
+    "amazon-workspaces-web-networksettings-api-openapi.yml",
+    "amazon-workspaces-web-portalidp-api-openapi.yml",
+    "amazon-workspaces-web-portals-api-openapi.yml",
+    "amazon-workspaces-web-tags-api-openapi.yml",
+    "amazon-workspaces-web-truststores-api-openapi.yml",
+    "amazon-workspaces-web-useraccessloggingsettings-api-openapi.yml",
+    "amazon-workspaces-web-usersettings-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-workspaces-web-browsersettings-api-openapi.yml",
+    "amazon-workspaces-web-identityproviders-api-openapi.yml",
+    "amazon-workspaces-web-ipaccesssettings-api-openapi.yml",
+    "amazon-workspaces-web-networksettings-api-openapi.yml",
+    "amazon-workspaces-web-portalidp-api-openapi.yml",
+    "amazon-workspaces-web-portals-api-openapi.yml",
+    "amazon-workspaces-web-tags-api-openapi.yml",
+    "amazon-workspaces-web-truststores-api-openapi.yml",
+    "amazon-workspaces-web-useraccessloggingsettings-api-openapi.yml",
+    "amazon-workspaces-web-usersettings-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
