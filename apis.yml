@@ -54,8 +54,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-identityproviders-api
   name: Amazon WorkSpaces Web IdentityProviders API
   description: >-
@@ -81,8 +79,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-ipaccesssettings-api
   name: Amazon WorkSpaces Web IpAccessSettings API
   description: >-
@@ -108,8 +104,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-networksettings-api
   name: Amazon WorkSpaces Web NetworkSettings API
   description: The NetworkSettings API from Amazon WorkSpaces Web — 2 operation(s) for networksettings.
@@ -134,8 +128,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-portalidp-api
   name: Amazon WorkSpaces Web PortalIdp API
   description: The PortalIdp API from Amazon WorkSpaces Web — 1 operation(s) for portalidp.
@@ -160,8 +152,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-portals-api
   name: Amazon WorkSpaces Web Portals API
   description: The Portals API from Amazon WorkSpaces Web — 15 operation(s) for portals.
@@ -186,8 +176,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-tags-api
   name: Amazon WorkSpaces Web Tags API
   description: The Tags API from Amazon WorkSpaces Web — 2 operation(s) for tags.
@@ -212,8 +200,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-truststores-api
   name: Amazon WorkSpaces Web TrustStores API
   description: The TrustStores API from Amazon WorkSpaces Web — 4 operation(s) for truststores.
@@ -238,8 +224,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-useraccessloggingsettings-api
   name: Amazon WorkSpaces Web UserAccessLoggingSettings API
   description: >-
@@ -265,8 +249,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 - aid: amazon-workspaces-web:amazon-workspaces-web-usersettings-api
   name: Amazon WorkSpaces Web UserSettings API
   description: The UserSettings API from Amazon WorkSpaces Web — 2 operation(s) for usersettings.
@@ -291,8 +273,6 @@ apis:
     url: json-schema/workspaces-web-portal-schema.json
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-workspaces-web.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-workspaces-web/overview
