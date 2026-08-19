@@ -1,0 +1,183 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings Tags API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List Tags for Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/tags/:resourceArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the resource."
+              }
+            ]
+          },
+          "docs": "Retrieves a list of tags for a resource."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Tag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://workspaces-web.{region}.amazonaws.com/tags/:resourceArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the resource."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds or overwrites one or more tags for the specified resource."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Untag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/tags/:resourceArn#tagKeys",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the resource."
+              },
+              {
+                "name": "tagKeys",
+                "value": "",
+                "type": "query",
+                "description": "The list of tag keys to remove from the resource."
+              }
+            ]
+          },
+          "docs": "Removes one or more tags from the specified resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

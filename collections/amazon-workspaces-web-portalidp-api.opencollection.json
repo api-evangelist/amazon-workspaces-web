@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings PortalIdp API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PortalIdp",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Get Portal Service Provider Metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portalIdp/:portalArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Gets the service provider metadata."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

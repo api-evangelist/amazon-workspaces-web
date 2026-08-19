@@ -1,0 +1,277 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings UserAccessLoggingSettings API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UserAccessLoggingSettings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/userAccessLoggingSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to be included in the next page."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The pagination token used to retrieve the next page of results for this operation."
+              }
+            ]
+          },
+          "docs": "Retrieves a list of user access logging settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Create User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://workspaces-web.{region}.amazonaws.com/userAccessLoggingSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a user access logging settings resource that can be associated with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Get User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "userAccessLoggingSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the user access logging settings."
+              }
+            ]
+          },
+          "docs": "Gets user access logging settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Update User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://workspaces-web.{region}.amazonaws.com/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "userAccessLoggingSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the user access logging settings."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the user access logging settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Delete User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/userAccessLoggingSettings/:userAccessLoggingSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "userAccessLoggingSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the user access logging settings."
+              }
+            ]
+          },
+          "docs": "Deletes user access logging settings."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

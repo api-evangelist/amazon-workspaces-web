@@ -1,0 +1,2862 @@
+{
+  "item": [
+    {
+      "id": "fc87f027-655b-4f30-a536-15aa7d7cbb1d",
+      "name": "Tags",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0aa9b2dc-9706-486e-9ca6-d628fdd50afd",
+          "name": "Amazon WorkSpaces Web List Tags for Resource",
+          "request": {
+            "name": "Amazon WorkSpaces Web List Tags for Resource",
+            "description": {
+              "content": "Retrieves a list of tags for a resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags",
+                ":resourceArn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceArn",
+                  "description": "(Required) The ARN of the resource."
+                },
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cfe55268-4ca5-4337-b2d3-2d8c546a5ac1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"tags\": [\n    {\n      \"Key\": \"@-Z\",\n      \"Value\": \"/Z@\"\n    },\n    {\n      \"Key\": \"=:{}:+_@L\",\n      \"Value\": \"L{{\"\n    },\n    {\n      \"Key\": \"{:@L--N{Z\",\n      \"Value\": \"/=.\"\n    },\n    {\n      \"Key\": \"/.}{NZ\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"N+N+\",\n      \"Value\": \"pZ-=/LZ@L=\"\n    },\n    {\n      \"Key\": \"ZZZp\",\n      \"Value\": \".+@N+p=\"\n    },\n    {\n      \"Key\": \"p\",\n      \"Value\": \"_}L/{+\"\n    },\n    {\n      \"Key\": \"}=/-/@.\",\n      \"Value\": \"}L-}L=/N_L\"\n    },\n    {\n      \"Key\": \"{@=L.-Z=/\",\n      \"Value\": \"+.\"\n    },\n    {\n      \"Key\": \"_N:}}Z{_=/\",\n      \"Value\": \"Z._p\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \":/.+-.+.\",\n      \"Value\": \"+p{::ppLN\"\n    },\n    {\n      \"Key\": \"-NZ{Z.p{Np\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \" \",\n      \"Value\": \"N@p.{}\"\n    },\n    {\n      \"Key\": \"Z/@:L@}\",\n      \"Value\": \"}L@\"\n    },\n    {\n      \"Key\": \"L}\",\n      \"Value\": \"/Z_+pp@\"\n    },\n    {\n      \"Key\": \"p-Z=:+:+\",\n      \"Value\": \"@:pNL.\"\n    },\n    {\n      \"Key\": \"{/p\",\n      \"Value\": \"{\"\n    },\n    {\n      \"Key\": \"=NZ_/\",\n      \"Value\": \"\"\n    },\n    {\n      \"Key\": \"L}{+}{_{_\",\n      \"Value\": \"pN.Z}-{+{-\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b7a4e404-9fd2-4b7f-9236-962258a793b2",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "36d5abf9-0552-4f06-93db-29d970ef2cf1",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e7306319-d5fc-42a0-a974-b40f09d8f177",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c7ada5bb-2c73-454d-97e7-bb94c20a3296",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aec5cef8-ac9c-4cc8-8119-b1ffb50b7acc",
+              "name": "ValidationException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "code": 484,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f5e9c3c9-390b-485d-9a9c-63f11985ee3b",
+          "name": "Amazon WorkSpaces Web Tag Resource",
+          "request": {
+            "name": "Amazon WorkSpaces Web Tag Resource",
+            "description": {
+              "content": "Adds or overwrites one or more tags for the specified resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags",
+                ":resourceArn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceArn",
+                  "description": "(Required) The ARN of the resource."
+                },
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "adb48c53-d888-41d1-8784-dfb9ec626f71",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "768498f4-389e-47d9-b84d-b12d095bcd49",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a9b42b68-9058-410b-b36a-193a4db4bf61",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e626d1fc-b026-4c43-a60b-5955958ab2d6",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "75d27a5d-d95e-421c-98e9-53051f45b4ae",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6657ea7-4302-420c-ac30-ddb1b9d81480",
+              "name": "ValidationException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 484,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7e96be49-b665-4872-8a55-59cdcc8753b2",
+              "name": "TooManyTagsException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) The ARN of the resource."
+                    },
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tags\": [\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    },\n    {\n      \"Key\": \"<password>\",\n      \"Value\": \"<password>\"\n    }\n  ],\n  \"clientToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 485,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1c5ca49f-954b-42a8-8d18-d39b32074f3b",
+          "name": "Amazon WorkSpaces Web Untag Resource",
+          "request": {
+            "name": "Amazon WorkSpaces Web Untag Resource",
+            "description": {
+              "content": "Removes one or more tags from the specified resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags",
+                "{{resourceArn}}"
+              ],
+              "hash": "tagKeys",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                },
+                {
+                  "disabled": false,
+                  "key": "tagKeys",
+                  "value": "<password>",
+                  "description": "(Required) The list of tag keys to remove from the resource."
+                }
+              ],
+              "variable": [
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f3dd93d6-3a48-4826-bca4-0b3cf225b27c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e4df1de-e602-4588-a8b4-610fbf02d3bd",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "45c304ad-71d7-4eba-8cff-cc8308bcde6c",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "28090333-36f8-4207-a711-6eec3f666171",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "024adb71-74be-4aaa-92c0-60c54562badd",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0b5d5529-2a8e-4046-8e49-6078acc9a368",
+              "name": "ValidationException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    "{{resourceArn}}"
+                  ],
+                  "hash": "tagKeys",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    },
+                    {
+                      "key": "tagKeys",
+                      "value": "<password>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "code": 484,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "http://workspaces-web.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) The ARN of the resource.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "resourceArn"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "01cb61df-1bc5-47d4-aa94-c2afcf425547",
+    "name": "Amazon WorkSpaces Web BrowserSettings Tags API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}

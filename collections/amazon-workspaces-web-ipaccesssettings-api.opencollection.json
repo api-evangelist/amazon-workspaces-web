@@ -1,0 +1,277 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings IpAccessSettings API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "IpAccessSettings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/ipAccessSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to be included in the next page."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The pagination token used to retrieve the next page of results for this operation."
+              }
+            ]
+          },
+          "docs": "Retrieves a list of IP access settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Create Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://workspaces-web.{region}.amazonaws.com/ipAccessSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an IP access settings resource that can be associated with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Get Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/ipAccessSettings/:ipAccessSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ipAccessSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the IP access settings."
+              }
+            ]
+          },
+          "docs": "Gets the IP access settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Update Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://workspaces-web.{region}.amazonaws.com/ipAccessSettings/:ipAccessSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ipAccessSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the IP access settings."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates IP access settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Delete Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/ipAccessSettings/:ipAccessSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ipAccessSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the IP access settings."
+              }
+            ]
+          },
+          "docs": "Deletes IP access settings."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

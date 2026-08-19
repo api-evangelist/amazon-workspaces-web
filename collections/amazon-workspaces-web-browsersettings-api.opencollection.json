@@ -1,0 +1,277 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BrowserSettings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/browserSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to be included in the next page."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The pagination token used to retrieve the next page of results for this operation."
+              }
+            ]
+          },
+          "docs": "Retrieves a list of browser settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Create Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://workspaces-web.{region}.amazonaws.com/browserSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. "
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Get Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/browserSettings/:browserSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "browserSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the browser settings."
+              }
+            ]
+          },
+          "docs": "Gets browser settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Update Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "http://workspaces-web.{region}.amazonaws.com/browserSettings/:browserSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "browserSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the browser settings."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates browser settings."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Delete Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/browserSettings/:browserSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "browserSettingsArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the browser settings."
+              }
+            ]
+          },
+          "docs": "Deletes browser settings."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

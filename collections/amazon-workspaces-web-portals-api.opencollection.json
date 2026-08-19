@@ -1,0 +1,962 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon WorkSpaces Web BrowserSettings Portals API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Portals",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/browserSettings#browserSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "browserSettingsArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the browser settings."
+              },
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Associates a browser settings resource with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/ipAccessSettings#ipAccessSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ipAccessSettingsArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the IP access settings."
+              },
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Associates an IP access settings resource with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate Network Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/networkSettings#networkSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "networkSettingsArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the network settings."
+              },
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Associates a network settings resource with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate Trust Store",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/trustStores#trustStoreArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              },
+              {
+                "name": "trustStoreArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the trust store."
+              }
+            ]
+          },
+          "docs": "Associates a trust store with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/userAccessLoggingSettings#userAccessLoggingSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              },
+              {
+                "name": "userAccessLoggingSettingsArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the user access logging settings."
+              }
+            ]
+          },
+          "docs": "Associates a user access logging settings resource with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Associate User Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/userSettings#userSettingsArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              },
+              {
+                "name": "userSettingsArn",
+                "value": "",
+                "type": "query",
+                "description": "The ARN of the user settings."
+              }
+            ]
+          },
+          "docs": "Associates a user settings resource with a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List Portals",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to be included in the next page."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The pagination token used to retrieve the next page of results for this operation. "
+              }
+            ]
+          },
+          "docs": "Retrieves a list or web portals."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Create Portal",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Get Portal",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Gets the web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Update Portal",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Delete Portal",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Deletes a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate Browser Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/browserSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates browser settings from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate Ip Access Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/ipAccessSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates IP access settings from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate Network Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/networkSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates network settings from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate Trust Store",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/trustStores",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates a trust store from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate User Access Logging Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/userAccessLoggingSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates user access logging settings from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web Disassociate User Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/userSettings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Disassociates user settings from a web portal."
+        },
+        {
+          "info": {
+            "name": "Amazon WorkSpaces Web List Identity Providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://workspaces-web.{region}.amazonaws.com/portals/:portalArn/identityProviders",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to be included in the next page."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "The pagination token used to retrieve the next page of results for this operation."
+              },
+              {
+                "name": "portalArn",
+                "value": "",
+                "type": "path",
+                "description": "The ARN of the web portal."
+              }
+            ]
+          },
+          "docs": "Retrieves a list of identity providers for a specific web portal."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
