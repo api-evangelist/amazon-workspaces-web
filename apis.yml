@@ -61,6 +61,8 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
+  - Identity Providers
+  tags_raw:
   - IdentityProviders
   properties:
   - type: OpenAPI
@@ -110,6 +112,8 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
+  - Network Settings
+  tags_raw:
   - NetworkSettings
   properties:
   - type: OpenAPI
@@ -158,6 +162,8 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
+  - Portal
+  tags_raw:
   - Portals
   properties:
   - type: OpenAPI
@@ -255,6 +261,8 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
+  - User Settings
+  tags_raw:
   - UserSettings
   properties:
   - type: OpenAPI
