@@ -5,6 +5,18 @@ description: Amazon WorkSpaces Web is a purpose-built, low-cost, fully managed s
   users from downloading content to local devices while maintaining a seamless browsing experience. The service offers 58
   API operations for managing portals, user settings, browser policies, network settings, trust stores, and IP access controls.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
