@@ -73,7 +73,7 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
-  - IdentityProviders
+  - Identity Providers
   tags_raw:
   - IdentityProviders
   properties:
@@ -124,7 +124,7 @@ apis:
   humanURL: https://aws.amazon.com/workspaces/web/
   baseURL: https://workspaces-web.amazonaws.com
   tags:
-  - NetworkSettings
+  - Network Settings
   tags_raw:
   - NetworkSettings
   properties:
