@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: Amazon WorkSpaces Web BrowserSettings UserAccessLoggingSettings API
+  title: Amazon WorkSpaces Web BrowserSettings User Access Logging Settings API
   description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -442,20 +442,14 @@ paths:
       - UserAccessLoggingSettings
 components:
   parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -466,8 +460,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -478,13 +484,22 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
+    ConflictException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    UpdateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - userAccessLoggingSettings
+      properties:
+        userAccessLoggingSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserAccessLoggingSettings'
+          - description: The user access logging settings.
     GetUserAccessLoggingSettingsResponse:
       type: object
       properties:
@@ -492,23 +507,16 @@ components:
           allOf:
           - $ref: '#/components/schemas/UserAccessLoggingSettings'
           - description: The user access logging settings.
-    UserAccessLoggingSettingsSummary:
+    CreateUserAccessLoggingSettingsResponse:
       type: object
+      required:
+      - userAccessLoggingSettingsArn
       properties:
-        kinesisStreamArn:
-          allOf:
-          - $ref: '#/components/schemas/KinesisStreamArn'
-          - description: The ARN of the Kinesis stream.
         userAccessLoggingSettingsArn:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
-      description: The summary of user access logging settings.
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
+    ThrottlingException: {}
     Tag:
       type: object
       required:
@@ -524,38 +532,30 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    AccessDeniedException: {}
-    UserAccessLoggingSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
-    ThrottlingException: {}
-    ConflictException: {}
     TagKey:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 1
       maxLength: 128
       format: password
-    UpdateUserAccessLoggingSettingsResponse:
+    ServiceQuotaExceededException: {}
+    ResourceNotFoundException: {}
+    UserAccessLoggingSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
+    UserAccessLoggingSettingsSummary:
       type: object
-      required:
-      - userAccessLoggingSettings
       properties:
-        userAccessLoggingSettings:
+        kinesisStreamArn:
           allOf:
-          - $ref: '#/components/schemas/UserAccessLoggingSettings'
-          - description: The user access logging settings.
-    CreateUserAccessLoggingSettingsResponse:
-      type: object
-      required:
-      - userAccessLoggingSettingsArn
-      properties:
+          - $ref: '#/components/schemas/KinesisStreamArn'
+          - description: The ARN of the Kinesis stream.
         userAccessLoggingSettingsArn:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
-    ServiceQuotaExceededException: {}
+      description: The summary of user access logging settings.
     UserAccessLoggingSettings:
       type: object
       required:
@@ -574,13 +574,14 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
       description: A user access logging settings resource that can be associated with a web portal.
-    InternalServerException: {}
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    ResourceNotFoundException: {}
+    DeleteUserAccessLoggingSettingsResponse:
+      type: object
+      properties: {}
     ListUserAccessLoggingSettingsResponse:
       type: object
       properties:
@@ -592,9 +593,7 @@ components:
           allOf:
           - $ref: '#/components/schemas/UserAccessLoggingSettingsList'
           - description: The user access logging settings.
-    DeleteUserAccessLoggingSettingsResponse:
-      type: object
-      properties: {}
+    AccessDeniedException: {}
     ArnList:
       type: array
       items:
@@ -612,6 +611,7 @@ components:
       minLength: 0
       maxLength: 256
       format: password
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey

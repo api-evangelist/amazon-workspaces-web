@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: Amazon WorkSpaces Web BrowserSettings API
+  title: Amazon WorkSpaces Web Browser Settings API
   description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -461,20 +461,14 @@ paths:
       - BrowserSettings
 components:
   parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -485,8 +479,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -497,22 +503,30 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    BrowserSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BrowserSettingsSummary'
+    ConflictException: {}
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
     PaginationToken:
       type: string
       pattern: ^\S+$
       minLength: 1
       maxLength: 2048
+    ThrottlingException: {}
+    BrowserSettingsSummary:
+      type: object
+      properties:
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+      description: The summary for browser settings.
+    DeleteBrowserSettingsResponse:
+      type: object
+      properties: {}
     Tag:
       type: object
       required:
@@ -528,15 +542,30 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    AccessDeniedException: {}
-    BrowserSettingsSummary:
+    CreateBrowserSettingsResponse:
       type: object
+      required:
+      - browserSettingsArn
       properties:
         browserSettingsArn:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the browser settings.
-      description: The summary for browser settings.
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    GetBrowserSettingsResponse:
+      type: object
+      properties:
+        browserSettings:
+          allOf:
+          - $ref: '#/components/schemas/BrowserSettings'
+          - description: The browser settings.
+    ServiceQuotaExceededException: {}
+    ResourceNotFoundException: {}
     UpdateBrowserSettingsResponse:
       type: object
       required:
@@ -546,26 +575,15 @@ components:
           allOf:
           - $ref: '#/components/schemas/BrowserSettings'
           - description: The browser settings.
-    ThrottlingException: {}
-    ConflictException: {}
-    TagKey:
+    BrowserSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BrowserSettingsSummary'
+    ARN:
       type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    StringType:
-      type: string
-      pattern: ^[\s\S]*$
-      minLength: 0
-      maxLength: 131072
-    GetBrowserSettingsResponse:
-      type: object
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
     BrowserSettings:
       type: object
       required:
@@ -584,14 +602,6 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the browser settings.
       description: 'The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
-    ServiceQuotaExceededException: {}
-    InternalServerException: {}
-    BrowserPolicy:
-      type: string
-      pattern: \{[\S\s]*\}\s*
-      minLength: 2
-      maxLength: 131072
-      format: password
     ListBrowserSettingsResponse:
       type: object
       properties:
@@ -603,35 +613,25 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: The pagination token used to retrieve the next page of results for this operation.
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    ResourceNotFoundException: {}
-    CreateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettingsArn
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
+    AccessDeniedException: {}
     ArnList:
       type: array
       items:
         $ref: '#/components/schemas/ARN'
     ValidationException: {}
-    DeleteBrowserSettingsResponse:
-      type: object
-      properties: {}
+    BrowserPolicy:
+      type: string
+      pattern: \{[\S\s]*\}\s*
+      minLength: 2
+      maxLength: 131072
+      format: password
     TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
       maxLength: 256
       format: password
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey

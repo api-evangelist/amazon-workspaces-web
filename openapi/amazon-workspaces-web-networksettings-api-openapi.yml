@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: Amazon WorkSpaces Web BrowserSettings NetworkSettings API
+  title: Amazon WorkSpaces Web BrowserSettings Network Settings API
   description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -472,20 +472,14 @@ paths:
       - NetworkSettings
 components:
   parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -496,8 +490,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -508,34 +514,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    NetworkSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/NetworkSettingsSummary'
-    NetworkSettingsSummary:
-      type: object
-      properties:
-        networkSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the network settings.
-        vpcId:
-          allOf:
-          - $ref: '#/components/schemas/VpcId'
-          - description: The VPC ID of the network settings.
-      description: The summary of network settings.
+    ConflictException: {}
     PaginationToken:
       type: string
       pattern: ^\S+$
       minLength: 1
       maxLength: 2048
+    SubnetIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 2
+      maxItems: 3
+    ThrottlingException: {}
     Tag:
       type: object
       required:
@@ -551,12 +543,51 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    AccessDeniedException: {}
-    SecurityGroupId:
+    ListNetworkSettingsResponse:
+      type: object
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettingsList'
+          - description: The network settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    DeleteNetworkSettingsResponse:
+      type: object
+      properties: {}
+    TagKey:
       type: string
-      pattern: ^[\w+\-]+$
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 1
       maxLength: 128
+      format: password
+    ServiceQuotaExceededException: {}
+    NetworkSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NetworkSettingsSummary'
+    UpdateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettings
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettings'
+          - description: The network settings.
+    ResourceNotFoundException: {}
+    SubnetId:
+      type: string
+      pattern: ^subnet-([0-9a-f]{8}|[0-9a-f]{17})$
+      minLength: 1
+      maxLength: 32
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
     GetNetworkSettingsResponse:
       type: object
       properties:
@@ -564,26 +595,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/NetworkSettings'
           - description: The network settings.
-    ThrottlingException: {}
-    ConflictException: {}
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    SecurityGroupIdList:
-      type: array
-      items:
-        $ref: '#/components/schemas/SecurityGroupId'
-      minItems: 1
-      maxItems: 5
-    VpcId:
-      type: string
-      pattern: ^vpc-[0-9a-z]*$
-      minLength: 1
-      maxLength: 255
-    ServiceQuotaExceededException: {}
     NetworkSettings:
       type: object
       required:
@@ -610,26 +621,6 @@ components:
           - $ref: '#/components/schemas/VpcId'
           - description: The VPC that streaming instances will connect to.
       description: 'A network settings resource that can be associated with a web portal. Once associated with a web portal, network settings define how streaming instances will connect with your specified VPC. '
-    InternalServerException: {}
-    SubnetIdList:
-      type: array
-      items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 2
-      maxItems: 3
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    DeleteNetworkSettingsResponse:
-      type: object
-      properties: {}
-    ResourceNotFoundException: {}
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
     CreateNetworkSettingsResponse:
       type: object
       required:
@@ -639,38 +630,47 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the network settings.
-    UpdateNetworkSettingsResponse:
+    AccessDeniedException: {}
+    NetworkSettingsSummary:
       type: object
-      required:
-      - networkSettings
       properties:
-        networkSettings:
+        networkSettingsArn:
           allOf:
-          - $ref: '#/components/schemas/NetworkSettings'
-          - description: The network settings.
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings.
+        vpcId:
+          allOf:
+          - $ref: '#/components/schemas/VpcId'
+          - description: The VPC ID of the network settings.
+      description: The summary of network settings.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
     ValidationException: {}
-    SubnetId:
+    SecurityGroupId:
       type: string
-      pattern: ^subnet-([0-9a-f]{8}|[0-9a-f]{17})$
+      pattern: ^[\w+\-]+$
       minLength: 1
-      maxLength: 32
-    ListNetworkSettingsResponse:
-      type: object
-      properties:
-        networkSettings:
-          allOf:
-          - $ref: '#/components/schemas/NetworkSettingsList'
-          - description: The network settings.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
+      maxLength: 128
+    SecurityGroupIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
     TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
       maxLength: 256
       format: password
+    VpcId:
+      type: string
+      pattern: ^vpc-[0-9a-z]*$
+      minLength: 1
+      maxLength: 255
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey

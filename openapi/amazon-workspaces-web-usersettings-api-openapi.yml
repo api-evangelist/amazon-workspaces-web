@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: Amazon WorkSpaces Web BrowserSettings UserSettings API
+  title: Amazon WorkSpaces Web BrowserSettings User Settings API
   description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -514,20 +514,14 @@ paths:
       - UserSettings
 components:
   parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -538,8 +532,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -550,18 +556,63 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
+    DisconnectTimeoutInMinutes:
+      type: integer
+      minimum: 1
+      maximum: 600
+    ConflictException: {}
     PaginationToken:
       type: string
       pattern: ^\S+$
       minLength: 1
       maxLength: 2048
+    UserSettingsSummary:
+      type: object
+      properties:
+        copyAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can copy text from the streaming session to the local device.
+        disconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/DisconnectTimeoutInMinutes'
+          - description: The amount of time that a streaming session remains active after users disconnect.
+        downloadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can download files from the streaming session to the local device.
+        idleDisconnectTimeoutInMinutes:
+          allOf:
+          - $ref: '#/components/schemas/IdleDisconnectTimeoutInMinutes'
+          - description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
+        pasteAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can paste text from the local device to the streaming session.
+        printAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can print to the local device.
+        uploadAllowed:
+          allOf:
+          - $ref: '#/components/schemas/EnabledType'
+          - description: Specifies whether the user can upload files from the local device to the streaming session.
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
+      description: The summary of user settings.
+    ThrottlingException: {}
+    CreateUserSettingsResponse:
+      type: object
+      required:
+      - userSettingsArn
+      properties:
+        userSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
     Tag:
       type: object
       required:
@@ -577,7 +628,27 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    AccessDeniedException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    DeleteUserSettingsResponse:
+      type: object
+      properties: {}
+    ListUserSettingsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'The pagination token used to retrieve the next page of results for this operation. '
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettingsList'
+          - description: The user settings.
+    ServiceQuotaExceededException: {}
     UserSettings:
       type: object
       required:
@@ -620,112 +691,16 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings.
       description: 'A user settings resource that can be associated with a web portal. Once associated with a web portal, user settings control how users can transfer data between a streaming session and the their local devices. '
-    ListUserSettingsResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'The pagination token used to retrieve the next page of results for this operation. '
-        userSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserSettingsList'
-          - description: The user settings.
-    ThrottlingException: {}
-    ConflictException: {}
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    EnabledType:
-      type: string
-      enum:
-      - Disabled
-      - Enabled
-    DeleteUserSettingsResponse:
-      type: object
-      properties: {}
-    ServiceQuotaExceededException: {}
-    InternalServerException: {}
-    UserSettingsSummary:
-      type: object
-      properties:
-        copyAllowed:
-          allOf:
-          - $ref: '#/components/schemas/EnabledType'
-          - description: Specifies whether the user can copy text from the streaming session to the local device.
-        disconnectTimeoutInMinutes:
-          allOf:
-          - $ref: '#/components/schemas/DisconnectTimeoutInMinutes'
-          - description: The amount of time that a streaming session remains active after users disconnect.
-        downloadAllowed:
-          allOf:
-          - $ref: '#/components/schemas/EnabledType'
-          - description: Specifies whether the user can download files from the streaming session to the local device.
-        idleDisconnectTimeoutInMinutes:
-          allOf:
-          - $ref: '#/components/schemas/IdleDisconnectTimeoutInMinutes'
-          - description: The amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect timeout interval begins.
-        pasteAllowed:
-          allOf:
-          - $ref: '#/components/schemas/EnabledType'
-          - description: Specifies whether the user can paste text from the local device to the streaming session.
-        printAllowed:
-          allOf:
-          - $ref: '#/components/schemas/EnabledType'
-          - description: Specifies whether the user can print to the local device.
-        uploadAllowed:
-          allOf:
-          - $ref: '#/components/schemas/EnabledType'
-          - description: Specifies whether the user can upload files from the local device to the streaming session.
-        userSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user settings.
-      description: The summary of user settings.
+    ResourceNotFoundException: {}
+    UserSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserSettingsSummary'
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    ResourceNotFoundException: {}
-    GetUserSettingsResponse:
-      type: object
-      properties:
-        userSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserSettings'
-          - description: The user settings.
-    CreateUserSettingsResponse:
-      type: object
-      required:
-      - userSettingsArn
-      properties:
-        userSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user settings.
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    UserSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/UserSettingsSummary'
-    ValidationException: {}
-    DisconnectTimeoutInMinutes:
-      type: integer
-      minimum: 1
-      maximum: 600
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
     IdleDisconnectTimeoutInMinutes:
       type: integer
       minimum: 0
@@ -739,6 +714,31 @@ components:
           allOf:
           - $ref: '#/components/schemas/UserSettings'
           - description: The user settings.
+    EnabledType:
+      type: string
+      enum:
+      - Disabled
+      - Enabled
+    AccessDeniedException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    ValidationException: {}
+    GetUserSettingsResponse:
+      type: object
+      properties:
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettings'
+          - description: The user settings.
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey
