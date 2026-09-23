@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-07-08'
   x-release: v4
-  title: Amazon WorkSpaces Web Browser Settings API
-  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  title: Amazon WorkSpaces Web Ip Access Settings API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -112,9 +113,9 @@ servers:
 security:
 - hmac: []
 tags:
-- name: BrowserSettings
+- name: Ip Access Settings
 paths:
-  /browserSettings:
+  /ipAccessSettings:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -124,15 +125,15 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
-      operationId: CreateBrowserSettings
-      description: 'Creates a browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
+      operationId: CreateIpAccessSettings
+      description: Creates an IP access settings resource that can be associated with a web portal.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateBrowserSettingsResponse'
+                $ref: '#/components/schemas/CreateIpAccessSettingsResponse'
         '480':
           description: InternalServerException
           content:
@@ -140,36 +141,30 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerException'
         '481':
-          description: ResourceNotFoundException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceNotFoundException'
-        '482':
           description: AccessDeniedException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/AccessDeniedException'
-        '483':
+        '482':
           description: ThrottlingException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ThrottlingException'
-        '484':
+        '483':
           description: ServiceQuotaExceededException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ServiceQuotaExceededException'
-        '485':
+        '484':
           description: ValidationException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationException'
-        '486':
+        '485':
           description: ConflictException
           content:
             application/json:
@@ -183,31 +178,45 @@ paths:
             schema:
               type: object
               required:
-              - browserPolicy
+              - ipRules
               properties:
                 additionalEncryptionContext:
-                  description: Additional encryption context of the browser settings.
+                  description: Additional encryption context of the IP access settings.
                   type: object
                   additionalProperties:
                     $ref: '#/components/schemas/StringType'
-                browserPolicy:
-                  description: A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions.
-                  type: string
-                  pattern: \{[\S\s]*\}\s*
-                  minLength: 2
-                  maxLength: 131072
-                  format: password
                 clientToken:
-                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request.</p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK. </p>
+                  description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token returns the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
                   type: string
                   minLength: 1
                   maxLength: 512
                 customerManagedKey:
-                  description: The custom managed key of the browser settings.
+                  description: The custom managed key of the IP access settings.
                   type: string
                   pattern: ^arn:[\w+=\/,.@-]+:kms:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:key\/[a-zA-Z0-9-]+$
                   minLength: 20
                   maxLength: 2048
+                description:
+                  description: The description of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 256
+                  format: password
+                displayName:
+                  description: The display name of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+                ipRules:
+                  description: The IP rules of the IP access settings.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/IpRule'
+                  minItems: 1
+                  maxItems: 100
                 tags:
                   description: The tags to add to the browser settings resource. A tag is a key-value pair.
                   type: array
@@ -215,19 +224,19 @@ paths:
                     $ref: '#/components/schemas/Tag'
                   minItems: 0
                   maxItems: 200
-      summary: Amazon WorkSpaces Web Create Browser Settings
+      summary: Amazon WorkSpaces Web Create Ip Access Settings
       tags:
-      - BrowserSettings
+      - Ip Access Settings
     get:
-      operationId: ListBrowserSettings
-      description: Retrieves a list of browser settings.
+      operationId: ListIpAccessSettings
+      description: Retrieves a list of IP access settings.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ListBrowserSettingsResponse'
+                $ref: '#/components/schemas/ListIpAccessSettingsResponse'
         '480':
           description: InternalServerException
           content:
@@ -269,10 +278,10 @@ paths:
           pattern: ^\S+$
           minLength: 1
           maxLength: 2048
-      summary: Amazon WorkSpaces Web List Browser Settings
+      summary: Amazon WorkSpaces Web List Ip Access Settings
       tags:
-      - BrowserSettings
-  /browserSettings/{browserSettingsArn}:
+      - Ip Access Settings
+  /ipAccessSettings/{ipAccessSettingsArn}:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -282,15 +291,15 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     delete:
-      operationId: DeleteBrowserSettings
-      description: Deletes browser settings.
+      operationId: DeleteIpAccessSettings
+      description: Deletes IP access settings.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteBrowserSettingsResponse'
+                $ref: '#/components/schemas/DeleteIpAccessSettingsResponse'
         '480':
           description: InternalServerException
           content:
@@ -322,28 +331,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/ConflictException'
       parameters:
-      - name: browserSettingsArn
+      - name: ipAccessSettingsArn
         in: path
         required: true
-        description: The ARN of the browser settings.
+        description: The ARN of the IP access settings.
         schema:
           type: string
           pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
           minLength: 20
           maxLength: 2048
-      summary: Amazon WorkSpaces Web Delete Browser Settings
+      summary: Amazon WorkSpaces Web Delete Ip Access Settings
       tags:
-      - BrowserSettings
+      - Ip Access Settings
     get:
-      operationId: GetBrowserSettings
-      description: Gets browser settings.
+      operationId: GetIpAccessSettings
+      description: Gets the IP access settings.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetBrowserSettingsResponse'
+                $ref: '#/components/schemas/GetIpAccessSettingsResponse'
         '480':
           description: InternalServerException
           content:
@@ -375,28 +384,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/ValidationException'
       parameters:
-      - name: browserSettingsArn
+      - name: ipAccessSettingsArn
         in: path
         required: true
-        description: The ARN of the browser settings.
+        description: The ARN of the IP access settings.
         schema:
           type: string
           pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
           minLength: 20
           maxLength: 2048
-      summary: Amazon WorkSpaces Web Get Browser Settings
+      summary: Amazon WorkSpaces Web Get Ip Access Settings
       tags:
-      - BrowserSettings
+      - Ip Access Settings
     patch:
-      operationId: UpdateBrowserSettings
-      description: Updates browser settings.
+      operationId: UpdateIpAccessSettings
+      description: Updates IP access settings.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateBrowserSettingsResponse'
+                $ref: '#/components/schemas/UpdateIpAccessSettingsResponse'
         '480':
           description: InternalServerException
           content:
@@ -428,10 +437,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/ValidationException'
       parameters:
-      - name: browserSettingsArn
+      - name: ipAccessSettingsArn
         in: path
         required: true
-        description: The ARN of the browser settings.
+        description: The ARN of the IP access settings.
         schema:
           type: string
           pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
@@ -444,25 +453,232 @@ paths:
             schema:
               type: object
               properties:
-                browserPolicy:
-                  description: 'A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions. '
-                  type: string
-                  pattern: \{[\S\s]*\}\s*
-                  minLength: 2
-                  maxLength: 131072
-                  format: password
                 clientToken:
                   description: <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Idempotency ensures that an API request completes only once. With an idempotent request, if the original request completes successfully, subsequent retries with the same client token return the result from the original successful request. </p> <p>If you do not specify a client token, one is automatically generated by the AWS SDK.</p>
                   type: string
                   minLength: 1
                   maxLength: 512
-      summary: Amazon WorkSpaces Web Update Browser Settings
+                description:
+                  description: The description of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 256
+                  format: password
+                displayName:
+                  description: The display name of the IP access settings.
+                  type: string
+                  pattern: ^.+$
+                  minLength: 1
+                  maxLength: 64
+                  format: password
+                ipRules:
+                  description: The updated IP rules of the IP access settings.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/IpRule'
+                  minItems: 1
+                  maxItems: 100
+      summary: Amazon WorkSpaces Web Update Ip Access Settings
       tags:
-      - BrowserSettings
+      - Ip Access Settings
 components:
+  schemas:
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    IpRange:
+      type: string
+      pattern: ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/([0-9]|[12][0-9]|3[0-2])|)$
+      description: A single IP address or an IP address range in CIDR notation
+      format: password
+    IpAccessSettingsSummary:
+      type: object
+      properties:
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date timestamp of the IP access settings.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP access settings.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: The display name of the IP access settings.
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of IP access settings.
+      description: The summary of IP access settings.
+    ThrottlingException: {}
+    ServiceQuotaExceededException: {}
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    GetIpAccessSettingsResponse:
+      type: object
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettings'
+          - description: The IP access settings.
+    ValidationException: {}
+    IpRule:
+      type: object
+      required:
+      - ipRange
+      properties:
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP rule.
+        ipRange:
+          allOf:
+          - $ref: '#/components/schemas/IpRange'
+          - description: The IP range of the IP rule.
+      description: The IP rules of the IP access settings.
+    Description:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 256
+      format: password
+    IpAccessSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpAccessSettingsSummary'
+    UpdateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettings
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettings'
+          - description: The IP access settings.
+    IpRuleList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpRule'
+      minItems: 1
+      maxItems: 100
+    ResourceNotFoundException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    IpAccessSettings:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this IP access settings resource is associated with.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The creation date timestamp of the IP access settings.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP access settings.
+        displayName:
+          allOf:
+          - $ref: '#/components/schemas/DisplayName'
+          - description: ' The display name of the IP access settings.'
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+        ipRules:
+          allOf:
+          - $ref: '#/components/schemas/IpRuleList'
+          - description: The IP rules of the IP access settings.
+      description: 'The IP access settings resource that can be associated with a web portal. '
+    CreateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      properties:
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+    InternalServerException: {}
+    ListIpAccessSettingsResponse:
+      type: object
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettingsList'
+          - description: The IP access settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    AccessDeniedException: {}
+    Timestamp:
+      type: string
+      format: date-time
+    DisplayName:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 64
+      format: password
+    DeleteIpAccessSettingsResponse:
+      type: object
+      properties: {}
   parameters:
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -479,14 +695,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -497,141 +707,12 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-  schemas:
-    ConflictException: {}
-    StringType:
-      type: string
-      pattern: ^[\s\S]*$
-      minLength: 0
-      maxLength: 131072
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    ThrottlingException: {}
-    BrowserSettingsSummary:
-      type: object
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-      description: The summary for browser settings.
-    DeleteBrowserSettingsResponse:
-      type: object
-      properties: {}
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
-    CreateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettingsArn
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    GetBrowserSettingsResponse:
-      type: object
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    ServiceQuotaExceededException: {}
-    ResourceNotFoundException: {}
-    UpdateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettings
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    BrowserSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BrowserSettingsSummary'
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    BrowserSettings:
-      type: object
-      required:
-      - browserSettingsArn
-      properties:
-        associatedPortalArns:
-          allOf:
-          - $ref: '#/components/schemas/ArnList'
-          - description: A list of web portal ARNs that this browser settings is associated with.
-        browserPolicy:
-          allOf:
-          - $ref: '#/components/schemas/BrowserPolicy'
-          - description: A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions.
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-      description: 'The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
-    ListBrowserSettingsResponse:
-      type: object
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettingsList'
-          - description: The browser settings.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-    AccessDeniedException: {}
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    ValidationException: {}
-    BrowserPolicy:
-      type: string
-      pattern: \{[\S\s]*\}\s*
-      minLength: 2
-      maxLength: 131072
-      format: password
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey

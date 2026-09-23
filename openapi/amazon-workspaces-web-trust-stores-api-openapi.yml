@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-07-08'
   x-release: v4
-  title: Amazon WorkSpaces Web BrowserSettings Trust Stores API
-  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
+  title: Amazon WorkSpaces Web Trust Stores API
+  description: WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/workspaces-web-2020-07-08.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -112,7 +113,7 @@ servers:
 security:
 - hmac: []
 tags:
-- name: TrustStores
+- name: Trust Stores
 paths:
   /trustStores:
     parameters:
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateTrustStore
-      description: 'Creates a trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
+      description: Creates a trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store.
       responses:
         '200':
           description: Success
@@ -198,7 +199,7 @@ paths:
                   maxItems: 200
       summary: Amazon WorkSpaces Web Create Trust Store
       tags:
-      - TrustStores
+      - Trust Stores
     get:
       operationId: ListTrustStores
       description: Retrieves a list of trust stores.
@@ -252,7 +253,7 @@ paths:
           maxLength: 2048
       summary: Amazon WorkSpaces Web List Trust Stores
       tags:
-      - TrustStores
+      - Trust Stores
   /trustStores/{trustStoreArn}:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
@@ -314,7 +315,7 @@ paths:
           maxLength: 2048
       summary: Amazon WorkSpaces Web Delete Trust Store
       tags:
-      - TrustStores
+      - Trust Stores
     get:
       operationId: GetTrustStore
       description: Gets the trust store.
@@ -367,7 +368,7 @@ paths:
           maxLength: 2048
       summary: Amazon WorkSpaces Web Get Trust Store
       tags:
-      - TrustStores
+      - Trust Stores
     patch:
       operationId: UpdateTrustStore
       description: Updates the trust store.
@@ -448,7 +449,7 @@ paths:
                   maxLength: 512
       summary: Amazon WorkSpaces Web Update Trust Store
       tags:
-      - TrustStores
+      - Trust Stores
   /trustStores/{trustStoreArn}/certificate#thumbprint:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
@@ -519,7 +520,7 @@ paths:
           maxLength: 2048
       summary: Amazon WorkSpaces Web Get Trust Store Certificate
       tags:
-      - TrustStores
+      - Trust Stores
   /trustStores/{trustStoreArn}/certificates:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
@@ -597,58 +598,38 @@ paths:
           maxLength: 2048
       summary: Amazon WorkSpaces Web List Trust Store Certificates
       tags:
-      - TrustStores
+      - Trust Stores
 components:
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    ConflictException: {}
-    PaginationToken:
+    TagValue:
       type: string
-      pattern: ^\S+$
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    DeleteTrustStoreResponse:
+      type: object
+      properties: {}
+    CertificateThumbprint:
+      type: string
+      pattern: ^[A-Fa-f0-9]{64}$
+      minLength: 64
+      maxLength: 64
+    ThrottlingException: {}
+    TrustStoreSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/TrustStoreSummary'
+    ServiceQuotaExceededException: {}
+    ConflictException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 1
-      maxLength: 2048
+      maxLength: 128
+      format: password
+    CertificateAuthorityBody:
+      type: string
     CreateTrustStoreResponse:
       type: object
       required:
@@ -658,7 +639,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the trust store.
-    ThrottlingException: {}
     CertificateSummary:
       type: object
       properties:
@@ -683,132 +663,13 @@ components:
           - $ref: '#/components/schemas/CertificateThumbprint'
           - description: A hexadecimal identifier for the certificate.
       description: The summary of the certificate.
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    CertificateThumbprint:
-      type: string
-      pattern: ^[A-Fa-f0-9]{64}$
-      minLength: 64
-      maxLength: 64
-    ServiceQuotaExceededException: {}
-    TrustStore:
+    GetTrustStoreResponse:
       type: object
       properties:
-        associatedPortalArns:
+        trustStore:
           allOf:
-          - $ref: '#/components/schemas/ArnList'
-          - description: A list of web portal ARNs that this trust store is associated with.
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-      description: 'A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
-    DeleteTrustStoreResponse:
-      type: object
-      properties: {}
-    ListTrustStoreCertificatesResponse:
-      type: object
-      properties:
-        certificateList:
-          allOf:
-          - $ref: '#/components/schemas/CertificateSummaryList'
-          - description: The certificate list.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.&gt;
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-    ListTrustStoresResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-        trustStores:
-          allOf:
-          - $ref: '#/components/schemas/TrustStoreSummaryList'
-          - description: The trust stores.
-    UpdateTrustStoreResponse:
-      type: object
-      required:
-      - trustStoreArn
-      properties:
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-    TrustStoreSummary:
-      type: object
-      properties:
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-      description: The summary of the trust store.
-    ResourceNotFoundException: {}
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    GetTrustStoreCertificateResponse:
-      type: object
-      properties:
-        certificate:
-          allOf:
-          - $ref: '#/components/schemas/Certificate'
-          - description: The certificate of the trust store certificate.
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store certificate.
-    CertificateSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CertificateSummary'
-    Timestamp:
-      type: string
-      format: date-time
-    AccessDeniedException: {}
-    CertificatePrincipal:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 256
-    CertificateAuthorityBody:
-      type: string
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    TrustStoreSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/TrustStoreSummary'
-    ValidationException: {}
+          - $ref: '#/components/schemas/TrustStore'
+          - description: The trust store.
     Certificate:
       type: object
       properties:
@@ -837,20 +698,160 @@ components:
           - $ref: '#/components/schemas/CertificateThumbprint'
           - description: A hexadecimal identifier for the certificate.
       description: The certificate.
-    GetTrustStoreResponse:
+    ValidationException: {}
+    UpdateTrustStoreResponse:
+      type: object
+      required:
+      - trustStoreArn
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    GetTrustStoreCertificateResponse:
       type: object
       properties:
-        trustStore:
+        certificate:
           allOf:
-          - $ref: '#/components/schemas/TrustStore'
-          - description: The trust store.
-    TagValue:
+          - $ref: '#/components/schemas/Certificate'
+          - description: The certificate of the trust store certificate.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store certificate.
+    CertificatePrincipal:
       type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
+      pattern: ^\S+$
+      minLength: 1
       maxLength: 256
-      format: password
+    ResourceNotFoundException: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
     InternalServerException: {}
+    ListTrustStoreCertificatesResponse:
+      type: object
+      properties:
+        certificateList:
+          allOf:
+          - $ref: '#/components/schemas/CertificateSummaryList'
+          - description: The certificate list.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.&gt;
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    AccessDeniedException: {}
+    ListTrustStoresResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+        trustStores:
+          allOf:
+          - $ref: '#/components/schemas/TrustStoreSummaryList'
+          - description: The trust stores.
+    CertificateSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateSummary'
+    TrustStoreSummary:
+      type: object
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+      description: The summary of the trust store.
+    Timestamp:
+      type: string
+      format: date-time
+    TrustStore:
+      type: object
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this trust store is associated with.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+      description: 'A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
