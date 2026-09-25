@@ -10,35 +10,35 @@ artifacts:
     method: derived
     evidence: declared in the artifact
   collections/amazon-workspaces-web-browsersettings-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-browsersettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-browsersettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-browsersettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-identityproviders-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-identityproviders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-identityproviders-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-identityproviders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-ipaccesssettings-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-ipaccesssettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-ipaccesssettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-ipaccesssettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-networksettings-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-networksettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-networksettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-networksettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-portalidp-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-portalidp-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-portalidp-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-portalidp-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-portals-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-workspaces-web-portals-api
@@ -52,23 +52,23 @@ artifacts:
     method: derived
     evidence: openapi/amazon-workspaces-web-tags-api
   collections/amazon-workspaces-web-truststores-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-truststores-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-truststores-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-truststores-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-useraccessloggingsettings-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-useraccessloggingsettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-useraccessloggingsettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-useraccessloggingsettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-usersettings-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-usersettings-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-workspaces-web-usersettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-usersettings-api
+    method: unknown
+    evidence: no authorship recorded
   examples/workspaces-web-associate-browser-settings-response-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -309,6 +309,9 @@ artifacts:
   finops/amazon-workspaces-web-finops.yml:
     method: generated
     evidence: declared in the artifact
+  front-door-ai/2026-09-17.yml:
+    method: unknown
+    evidence: no authorship recorded
   json-ld/amazon-workspaces-web-context.jsonld:
     method: unknown
     evidence: no authorship recorded
@@ -1482,55 +1485,7 @@ artifacts:
   json-structure/workspaces-web-vpc-id-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-06T210741.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-07T135032.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T093022.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T111628.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-11T211707.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-12T193225.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-17T064519.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T080027.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T082702.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T114122.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T165047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T191845.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T205517.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-21T110057.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T064859.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T171257.yml:
+  kin/checks-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-08-25T125852.yml:
@@ -1617,22 +1572,140 @@ artifacts:
   kin/score-2026-09-05T072335.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T144739.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T195450.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T211839.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T011047.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T211804.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T224210.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T200636.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T213054.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T214843.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T232836.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T204815.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T222408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T062655.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T080032.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T204651.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T221936.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-13T214537.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T064754.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T210656.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T225847.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T211329.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T230249.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T210549.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T225339.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T211151.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T233623.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T205255.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T231945.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T165737.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T193153.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T205903.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T232958.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T211425.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T233935.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-22T213221.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-23T000603.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T064009.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T090406.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T161608.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-workspaces-web-openapi-original.yaml:
     method: harvested
-    evidence: fetched from the provider as-is; byte-identical to the source
-  openapi/amazon-workspaces-web-browsersettings-api-openapi.yml:
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/amazon-workspaces-web-browser-settings-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-identityproviders-api-openapi.yml:
+  openapi/amazon-workspaces-web-identity-providers-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-ipaccesssettings-api-openapi.yml:
+  openapi/amazon-workspaces-web-ip-access-settings-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-networksettings-api-openapi.yml:
+  openapi/amazon-workspaces-web-network-settings-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-portalidp-api-openapi.yml:
+  openapi/amazon-workspaces-web-portal-idp-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/amazon-workspaces-web-portals-api-openapi.yml:
@@ -1641,33 +1714,33 @@ artifacts:
   openapi/amazon-workspaces-web-tags-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-truststores-api-openapi.yml:
+  openapi/amazon-workspaces-web-trust-stores-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-useraccessloggingsettings-api-openapi.yml:
+  openapi/amazon-workspaces-web-user-access-logging-settings-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-workspaces-web-usersettings-api-openapi.yml:
+  openapi/amazon-workspaces-web-user-settings-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/amazon-workspaces-web-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   postman/amazon-workspaces-web-browsersettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-browsersettings-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-identityproviders-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-identityproviders-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-ipaccesssettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-ipaccesssettings-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-networksettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-networksettings-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-portalidp-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-portalidp-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-portals-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-workspaces-web-portals-api
@@ -1675,14 +1748,14 @@ artifacts:
     method: derived
     evidence: openapi/amazon-workspaces-web-tags-api
   postman/amazon-workspaces-web-truststores-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-truststores-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-useraccessloggingsettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-useraccessloggingsettings-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-workspaces-web-usersettings-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-workspaces-web-usersettings-api
+    method: unknown
+    evidence: no authorship recorded
   rate-limits/amazon-workspaces-web-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
