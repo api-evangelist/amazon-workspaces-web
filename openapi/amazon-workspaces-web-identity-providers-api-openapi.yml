@@ -429,26 +429,8 @@ paths:
       - Identity Providers
 components:
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -465,21 +447,39 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
   schemas:
-    ThrottlingException: {}
-    ServiceQuotaExceededException: {}
-    StringType:
-      type: string
-      pattern: ^[\s\S]*$
-      minLength: 0
-      maxLength: 131072
     ConflictException: {}
+    ServiceQuotaExceededException: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    AccessDeniedException: {}
     IdentityProviderName:
       type: string
       pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
@@ -508,24 +508,6 @@ components:
           - $ref: '#/components/schemas/IdentityProviderType'
           - description: The identity provider type.
       description: The identity provider.
-    ValidationException: {}
-    ResourceNotFoundException: {}
-    DeleteIdentityProviderResponse:
-      type: object
-      properties: {}
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    InternalServerException: {}
-    GetIdentityProviderResponse:
-      type: object
-      properties:
-        identityProvider:
-          allOf:
-          - $ref: '#/components/schemas/IdentityProvider'
-          - description: The identity provider.
     UpdateIdentityProviderResponse:
       type: object
       required:
@@ -535,20 +517,17 @@ components:
           allOf:
           - $ref: '#/components/schemas/IdentityProvider'
           - description: The identity provider.
-    IdentityProviderDetails:
+    ThrottlingException: {}
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    DeleteIdentityProviderResponse:
       type: object
-      additionalProperties:
-        $ref: '#/components/schemas/StringType'
-    AccessDeniedException: {}
-    CreateIdentityProviderResponse:
-      type: object
-      required:
-      - identityProviderArn
-      properties:
-        identityProviderArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the identity provider.
+      properties: {}
+    InternalServerException: {}
+    ResourceNotFoundException: {}
     IdentityProviderType:
       type: string
       enum:
@@ -558,6 +537,27 @@ components:
       - LoginWithAmazon
       - SignInWithApple
       - OIDC
+    IdentityProviderDetails:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/StringType'
+    ValidationException: {}
+    GetIdentityProviderResponse:
+      type: object
+      properties:
+        identityProvider:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProvider'
+          - description: The identity provider.
+    CreateIdentityProviderResponse:
+      type: object
+      required:
+      - identityProviderArn
+      properties:
+        identityProviderArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the identity provider.
   securitySchemes:
     hmac:
       type: apiKey

@@ -473,56 +473,12 @@ paths:
       - Network Settings
 components:
   schemas:
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    SubnetIdList:
+    SecurityGroupIdList:
       type: array
       items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 2
-      maxItems: 3
-    NetworkSettingsSummary:
-      type: object
-      properties:
-        networkSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the network settings.
-        vpcId:
-          allOf:
-          - $ref: '#/components/schemas/VpcId'
-          - description: The VPC ID of the network settings.
-      description: The summary of network settings.
-    ThrottlingException: {}
-    GetNetworkSettingsResponse:
-      type: object
-      properties:
-        networkSettings:
-          allOf:
-          - $ref: '#/components/schemas/NetworkSettings'
-          - description: The network settings.
-    ServiceQuotaExceededException: {}
-    ConflictException: {}
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    ValidationException: {}
-    CreateNetworkSettingsResponse:
-      type: object
-      required:
-      - networkSettingsArn
-      properties:
-        networkSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the network settings.
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
     ListNetworkSettingsResponse:
       type: object
       properties:
@@ -539,36 +495,71 @@ components:
       pattern: ^vpc-[0-9a-z]*$
       minLength: 1
       maxLength: 255
-    DeleteNetworkSettingsResponse:
+    ConflictException: {}
+    ServiceQuotaExceededException: {}
+    Tag:
       type: object
-      properties: {}
-    SecurityGroupIdList:
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    NetworkSettingsList:
       type: array
       items:
-        $ref: '#/components/schemas/SecurityGroupId'
-      minItems: 1
-      maxItems: 5
-    ResourceNotFoundException: {}
+        $ref: '#/components/schemas/NetworkSettingsSummary'
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    NetworkSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/NetworkSettingsSummary'
     SubnetId:
       type: string
       pattern: ^subnet-([0-9a-f]{8}|[0-9a-f]{17})$
       minLength: 1
       maxLength: 32
-    InternalServerException: {}
+    AccessDeniedException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    CreateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettingsArn
+      properties:
+        networkSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings.
+    UpdateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettings
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettings'
+          - description: The network settings.
+    ThrottlingException: {}
+    DeleteNetworkSettingsResponse:
+      type: object
+      properties: {}
     NetworkSettings:
       type: object
       required:
@@ -595,61 +586,52 @@ components:
           - $ref: '#/components/schemas/VpcId'
           - description: The VPC that streaming instances will connect to.
       description: 'A network settings resource that can be associated with a web portal. Once associated with a web portal, network settings define how streaming instances will connect with your specified VPC. '
-    Tag:
+    InternalServerException: {}
+    ResourceNotFoundException: {}
+    NetworkSettingsSummary:
       type: object
-      required:
-      - Key
-      - Value
       properties:
-        Key:
+        networkSettingsArn:
           allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings.
+        vpcId:
           allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
-    UpdateNetworkSettingsResponse:
-      type: object
-      required:
-      - networkSettings
-      properties:
-        networkSettings:
-          allOf:
-          - $ref: '#/components/schemas/NetworkSettings'
-          - description: The network settings.
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    AccessDeniedException: {}
+          - $ref: '#/components/schemas/VpcId'
+          - description: The VPC ID of the network settings.
+      description: The summary of network settings.
     SecurityGroupId:
       type: string
       pattern: ^[\w+\-]+$
       minLength: 1
       maxLength: 128
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    SubnetIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 2
+      maxItems: 3
+    ValidationException: {}
+    GetNetworkSettingsResponse:
+      type: object
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettings'
+          - description: The network settings.
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -666,8 +648,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

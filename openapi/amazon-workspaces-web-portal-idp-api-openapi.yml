@@ -178,9 +178,38 @@ paths:
       tags:
       - Portal Idp
 components:
+  schemas:
+    SamlMetadata:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 204800
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    AccessDeniedException: {}
+    GetPortalServiceProviderMetadataResponse:
+      type: object
+      required:
+      - portalArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        serviceProviderSamlMetadata:
+          allOf:
+          - $ref: '#/components/schemas/SamlMetadata'
+          - description: The service provider SAML metadata.
+    ValidationException: {}
+    InternalServerException: {}
+    ResourceNotFoundException: {}
+    ThrottlingException: {}
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -197,20 +226,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -221,35 +238,18 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    AccessDeniedException: {}
-    InternalServerException: {}
-    SamlMetadata:
-      type: string
-      pattern: ^.+$
-      minLength: 1
-      maxLength: 204800
-    ValidationException: {}
-    ThrottlingException: {}
-    GetPortalServiceProviderMetadataResponse:
-      type: object
-      required:
-      - portalArn
-      properties:
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-        serviceProviderSamlMetadata:
-          allOf:
-          - $ref: '#/components/schemas/SamlMetadata'
-          - description: The service provider SAML metadata.
-    ResourceNotFoundException: {}
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
