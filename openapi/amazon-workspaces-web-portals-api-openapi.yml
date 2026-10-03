@@ -1373,38 +1373,91 @@ paths:
       - Portals
 components:
   schemas:
-    DisassociateTrustStoreResponse:
-      type: object
-      properties: {}
-    Timestamp:
-      type: string
-      format: date-time
     DisassociateBrowserSettingsResponse:
       type: object
       properties: {}
-    PortalEndpoint:
-      type: string
-      pattern: ^[a-zA-Z0-9]?((?!-)([A-Za-z0-9-]*[A-Za-z0-9])\.)+[a-zA-Z0-9]+$
-      minLength: 1
-      maxLength: 253
-    ConflictException: {}
-    ServiceQuotaExceededException: {}
-    IdentityProviderSummary:
+    GetPortalResponse:
       type: object
       properties:
-        identityProviderArn:
+        portal:
+          allOf:
+          - $ref: '#/components/schemas/Portal'
+          - description: The web portal.
+    ConflictException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    IdentityProviderName:
+      type: string
+      pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
+      minLength: 1
+      maxLength: 32
+      format: password
+    PortalList:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortalSummary'
+    StatusReason:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    UpdatePortalResponse:
+      type: object
+      properties:
+        portal:
+          allOf:
+          - $ref: '#/components/schemas/Portal'
+          - description: The web portal.
+    ListIdentityProvidersResponse:
+      type: object
+      properties:
+        identityProviders:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderList'
+          - description: The identity providers.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    DisplayName:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 64
+      format: password
+    PortalStatus:
+      type: string
+      enum:
+      - Incomplete
+      - Pending
+      - Active
+    AssociateUserSettingsResponse:
+      type: object
+      required:
+      - portalArn
+      - userSettingsArn
+      properties:
+        portalArn:
           allOf:
           - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the identity provider.
-        identityProviderName:
+          - description: The ARN of the web portal.
+        userSettingsArn:
           allOf:
-          - $ref: '#/components/schemas/IdentityProviderName'
-          - description: The identity provider name.
-        identityProviderType:
-          allOf:
-          - $ref: '#/components/schemas/IdentityProviderType'
-          - description: The identity provider type.
-      description: The summary of the identity provider.
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user settings.
     Tag:
       type: object
       required:
@@ -1420,113 +1473,15 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
+    DisassociateIpAccessSettingsResponse:
+      type: object
+      properties: {}
     TagKey:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 1
       maxLength: 128
       format: password
-    ListPortalsResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'The pagination token used to retrieve the next page of results for this operation. '
-        portals:
-          allOf:
-          - $ref: '#/components/schemas/PortalList'
-          - description: The portals in the list.
-    DeletePortalResponse:
-      type: object
-      properties: {}
-    AssociateTrustStoreResponse:
-      type: object
-      required:
-      - portalArn
-      - trustStoreArn
-      properties:
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    BrowserType:
-      type: string
-      enum:
-      - Chrome
-    AccessDeniedException: {}
-    IdentityProviderName:
-      type: string
-      pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
-      minLength: 1
-      maxLength: 32
-      format: password
-    UpdatePortalResponse:
-      type: object
-      properties:
-        portal:
-          allOf:
-          - $ref: '#/components/schemas/Portal'
-          - description: The web portal.
-    AuthenticationType:
-      type: string
-      enum:
-      - Standard
-      - IAM_Identity_Center
-    PortalStatus:
-      type: string
-      enum:
-      - Incomplete
-      - Pending
-      - Active
-    AssociateNetworkSettingsResponse:
-      type: object
-      required:
-      - networkSettingsArn
-      - portalArn
-      properties:
-        networkSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the network settings.
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-    StatusReason:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    AssociateUserSettingsResponse:
-      type: object
-      required:
-      - portalArn
-      - userSettingsArn
-      properties:
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-        userSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user settings.
-    ThrottlingException: {}
     PortalSummary:
       type: object
       properties:
@@ -1587,11 +1542,172 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings that is associated with the web portal.
       description: The summary of the portal.
-    StringType:
+    ValidationException: {}
+    AssociateBrowserSettingsResponse:
+      type: object
+      required:
+      - browserSettingsArn
+      - portalArn
+      properties:
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    TagValue:
       type: string
-      pattern: ^[\s\S]*$
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
-      maxLength: 131072
+      maxLength: 256
+      format: password
+    AssociateTrustStoreResponse:
+      type: object
+      required:
+      - portalArn
+      - trustStoreArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    AccessDeniedException: {}
+    InternalServerException: {}
+    DisassociateUserAccessLoggingSettingsResponse:
+      type: object
+      properties: {}
+    DeletePortalResponse:
+      type: object
+      properties: {}
+    CreatePortalResponse:
+      type: object
+      required:
+      - portalArn
+      - portalEndpoint
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        portalEndpoint:
+          allOf:
+          - $ref: '#/components/schemas/PortalEndpoint'
+          - description: The endpoint URL of the web portal that users access in order to start streaming sessions.
+    BrowserType:
+      type: string
+      enum:
+      - Chrome
+    ListPortalsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'The pagination token used to retrieve the next page of results for this operation. '
+        portals:
+          allOf:
+          - $ref: '#/components/schemas/PortalList'
+          - description: The portals in the list.
+    IdentityProviderSummary:
+      type: object
+      properties:
+        identityProviderArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the identity provider.
+        identityProviderName:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderName'
+          - description: The identity provider name.
+        identityProviderType:
+          allOf:
+          - $ref: '#/components/schemas/IdentityProviderType'
+          - description: The identity provider type.
+      description: The summary of the identity provider.
+    AuthenticationType:
+      type: string
+      enum:
+      - Standard
+      - IAM_Identity_Center
+    Timestamp:
+      type: string
+      format: date-time
+    DisassociateTrustStoreResponse:
+      type: object
+      properties: {}
+    DisassociateNetworkSettingsResponse:
+      type: object
+      properties: {}
+    ResourceNotFoundException: {}
+    AssociateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettingsArn
+      - portalArn
+      properties:
+        networkSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the network settings.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    AssociateIpAccessSettingsResponse:
+      type: object
+      required:
+      - ipAccessSettingsArn
+      - portalArn
+      properties:
+        ipAccessSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+    IdentityProviderList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IdentityProviderSummary'
+    ThrottlingException: {}
+    AssociateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - portalArn
+      - userAccessLoggingSettingsArn
+      properties:
+        portalArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the web portal.
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings.
+    DisassociateUserSettingsResponse:
+      type: object
+      properties: {}
+    RendererType:
+      type: string
+      enum:
+      - AppStream
+    IdentityProviderType:
+      type: string
+      enum:
+      - SAML
+      - Facebook
+      - Google
+      - LoginWithAmazon
+      - SignInWithApple
+      - OIDC
     Portal:
       type: object
       properties:
@@ -1656,155 +1772,15 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings that is associated with the web portal.
       description: The web portal.
-    ListIdentityProvidersResponse:
-      type: object
-      properties:
-        identityProviders:
-          allOf:
-          - $ref: '#/components/schemas/IdentityProviderList'
-          - description: The identity providers.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-    IdentityProviderList:
-      type: array
-      items:
-        $ref: '#/components/schemas/IdentityProviderSummary'
-    InternalServerException: {}
-    DisassociateIpAccessSettingsResponse:
-      type: object
-      properties: {}
-    ResourceNotFoundException: {}
-    DisassociateUserAccessLoggingSettingsResponse:
-      type: object
-      properties: {}
-    CreatePortalResponse:
-      type: object
-      required:
-      - portalArn
-      - portalEndpoint
-      properties:
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-        portalEndpoint:
-          allOf:
-          - $ref: '#/components/schemas/PortalEndpoint'
-          - description: The endpoint URL of the web portal that users access in order to start streaming sessions.
-    AssociateIpAccessSettingsResponse:
-      type: object
-      required:
-      - ipAccessSettingsArn
-      - portalArn
-      properties:
-        ipAccessSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the IP access settings resource.
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-    PortalList:
-      type: array
-      items:
-        $ref: '#/components/schemas/PortalSummary'
-    DisassociateUserSettingsResponse:
-      type: object
-      properties: {}
-    AssociateUserAccessLoggingSettingsResponse:
-      type: object
-      required:
-      - portalArn
-      - userAccessLoggingSettingsArn
-      properties:
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-        userAccessLoggingSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user access logging settings.
-    GetPortalResponse:
-      type: object
-      properties:
-        portal:
-          allOf:
-          - $ref: '#/components/schemas/Portal'
-          - description: The web portal.
-    AssociateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettingsArn
-      - portalArn
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-        portalArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the web portal.
-    TagValue:
+    PortalEndpoint:
       type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    RendererType:
-      type: string
-      enum:
-      - AppStream
-    IdentityProviderType:
-      type: string
-      enum:
-      - SAML
-      - Facebook
-      - Google
-      - LoginWithAmazon
-      - SignInWithApple
-      - OIDC
-    DisplayName:
-      type: string
-      pattern: ^.+$
+      pattern: ^[a-zA-Z0-9]?((?!-)([A-Za-z0-9-]*[A-Za-z0-9])\.)+[a-zA-Z0-9]+$
       minLength: 1
-      maxLength: 64
-      format: password
-    ValidationException: {}
-    DisassociateNetworkSettingsResponse:
-      type: object
-      properties: {}
+      maxLength: 253
+    ServiceQuotaExceededException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -1815,8 +1791,32 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

@@ -461,13 +461,80 @@ paths:
       tags:
       - Browser Settings
 components:
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    ListBrowserSettingsResponse:
+      type: object
+      properties:
+        browserSettings:
+          allOf:
+          - $ref: '#/components/schemas/BrowserSettingsList'
+          - description: The browser settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
     BrowserSettingsList:
       type: array
       items:
         $ref: '#/components/schemas/BrowserSettingsSummary'
-    ConflictException: {}
-    ServiceQuotaExceededException: {}
     Tag:
       type: object
       required:
@@ -483,26 +550,22 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
+    BrowserPolicy:
+      type: string
+      pattern: \{[\S\s]*\}\s*
+      minLength: 2
+      maxLength: 131072
+      format: password
     TagKey:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 1
       maxLength: 128
       format: password
-    DeleteBrowserSettingsResponse:
-      type: object
-      properties: {}
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    AccessDeniedException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
     BrowserSettings:
       type: object
       required:
@@ -521,36 +584,16 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the browser settings.
       description: 'The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
-    ThrottlingException: {}
-    GetBrowserSettingsResponse:
+    ValidationException: {}
+    DeleteBrowserSettingsResponse:
       type: object
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    BrowserPolicy:
+      properties: {}
+    TagValue:
       type: string
-      pattern: \{[\S\s]*\}\s*
-      minLength: 2
-      maxLength: 131072
-      format: password
-    StringType:
-      type: string
-      pattern: ^[\s\S]*$
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
-      maxLength: 131072
-    UpdateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettings
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    InternalServerException: {}
-    ResourceNotFoundException: {}
+      maxLength: 256
+      format: password
     CreateBrowserSettingsResponse:
       type: object
       required:
@@ -560,16 +603,15 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the browser settings.
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
+    GetBrowserSettingsResponse:
+      type: object
+      properties:
+        browserSettings:
+          allOf:
+          - $ref: '#/components/schemas/BrowserSettings'
+          - description: The browser settings.
+    AccessDeniedException: {}
+    InternalServerException: {}
     BrowserSettingsSummary:
       type: object
       properties:
@@ -578,61 +620,19 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the browser settings.
       description: The summary for browser settings.
-    ValidationException: {}
-    ListBrowserSettingsResponse:
+    ResourceNotFoundException: {}
+    ThrottlingException: {}
+    UpdateBrowserSettingsResponse:
       type: object
+      required:
+      - browserSettings
       properties:
         browserSettings:
           allOf:
-          - $ref: '#/components/schemas/BrowserSettingsList'
+          - $ref: '#/components/schemas/BrowserSettings'
           - description: The browser settings.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
+    ServiceQuotaExceededException: {}
+    ConflictException: {}
   securitySchemes:
     hmac:
       type: apiKey
