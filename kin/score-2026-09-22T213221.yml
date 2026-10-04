@@ -1,22 +1,20 @@
-# Kin Score artifact — amazon-workspaces-web — 2026-08-25T154045
+# Kin Score artifact — amazon-workspaces-web — 2026-09-22T213221
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: amazon-workspaces-web
-  schema_version: 0.14.0
-  scored_at: '2026-08-25'
-  run_ts: 2026-08-25T154045
-  composite: 51.8
-  band: developing
+  schema_version: 0.22.0
+  scored_at: '2026-09-22'
+  run_ts: 2026-09-22T213221
+  composite: 55.8
+  band: strong
   facets:
-    discoverability: 64.8
+    discoverability: 59.3
     contract_quality: 72.8
-    governance: 28.8
-    operational_transparency: 26.3
-    developer_ergonomics: 50.0
-    commercial_clarity: 51.3
     contract_governance: 28.8
-    access_clarity: 51.3
+    operational_transparency: 26.3
+    developer_ergonomics: 65.5
+    access_clarity: 61.8
   agent_readiness:
     score: 32.0
     band: agent-ready
