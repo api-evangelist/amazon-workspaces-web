@@ -1,0 +1,43 @@
+slug: amazon-workspaces-web
+provider: Amazon WorkSpaces Web
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Identity Providers
+  spec_file: amazon-workspaces-web-identity-providers-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: POST /identityProviders  CreateIdentityProvider; schemas IdentityProviderType, IdentityProviderDetails
+  reason: Operations create/update/delete identity provider configurations (SAML/OIDC federation) used
+    to authenticate users into the web portal — identity and access management, a cross-industry IT security
+    capability for this infrastructure vendor.
+- tag: Network Settings
+  spec_file: amazon-workspaces-web-network-settings-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: CreateNetworkSettings ... schemas VpcId, SubnetIdList, SecurityGroupIdList
+  reason: Configuration of VPC, subnets and security groups for the managed service is cloud network infrastructure
+    management.
+- tag: Portal Idp
+  spec_file: amazon-workspaces-web-portal-idp-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /portalIdp/{portalArn}  GetPortalServiceProviderMetadata ... schema SamlMetadata
+  reason: Retrieving SAML service-provider metadata supports federated single sign-on setup, i.e. identity
+    and access management; thin surface (one operation) so moderate confidence.

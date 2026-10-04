@@ -292,6 +292,9 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-workspaces-web-capability-edges.yml
+  name: Amazon WorkSpaces Web Business Capability Map
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-workspaces-web/overview
 - type: AgenticAccess
