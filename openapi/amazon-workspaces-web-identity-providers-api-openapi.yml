@@ -428,19 +428,53 @@ paths:
       tags:
       - Identity Providers
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
     ConflictException: {}
-    IdentityProviderName:
-      type: string
-      pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
-      minLength: 1
-      maxLength: 32
-      format: password
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
     StringType:
       type: string
       pattern: ^[\s\S]*$
@@ -455,6 +489,45 @@ components:
           allOf:
           - $ref: '#/components/schemas/IdentityProvider'
           - description: The identity provider.
+    IdentityProviderType:
+      type: string
+      enum:
+      - SAML
+      - Facebook
+      - Google
+      - LoginWithAmazon
+      - SignInWithApple
+      - OIDC
+    ValidationException: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
+    DeleteIdentityProviderResponse:
+      type: object
+      properties: {}
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    CreateIdentityProviderResponse:
+      type: object
+      required:
+      - identityProviderArn
+      properties:
+        identityProviderArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the identity provider.
+    IdentityProviderDetails:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/StringType'
+    IdentityProviderName:
+      type: string
+      pattern: ^[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+$
+      minLength: 1
+      maxLength: 32
+      format: password
     IdentityProvider:
       type: object
       required:
@@ -477,37 +550,7 @@ components:
           - $ref: '#/components/schemas/IdentityProviderType'
           - description: The identity provider type.
       description: The identity provider.
-    ValidationException: {}
-    CreateIdentityProviderResponse:
-      type: object
-      required:
-      - identityProviderArn
-      properties:
-        identityProviderArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the identity provider.
     AccessDeniedException: {}
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    DeleteIdentityProviderResponse:
-      type: object
-      properties: {}
-    ThrottlingException: {}
-    IdentityProviderType:
-      type: string
-      enum:
-      - SAML
-      - Facebook
-      - Google
-      - LoginWithAmazon
-      - SignInWithApple
-      - OIDC
-    ServiceQuotaExceededException: {}
-    IdentityProviderDetails:
-      type: object
-      additionalProperties:
-        $ref: '#/components/schemas/StringType'
     GetIdentityProviderResponse:
       type: object
       properties:
@@ -515,49 +558,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/IdentityProvider'
           - description: The identity provider.
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

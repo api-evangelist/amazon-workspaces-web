@@ -473,12 +473,22 @@ paths:
       - Network Settings
 components:
   schemas:
-    ConflictException: {}
-    PaginationToken:
+    VpcId:
       type: string
-      pattern: ^\S+$
+      pattern: ^vpc-[0-9a-z]*$
       minLength: 1
-      maxLength: 2048
+      maxLength: 255
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    NetworkSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NetworkSettingsSummary'
+    ConflictException: {}
     GetNetworkSettingsResponse:
       type: object
       properties:
@@ -486,31 +496,45 @@ components:
           allOf:
           - $ref: '#/components/schemas/NetworkSettings'
           - description: The network settings.
-    VpcId:
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    ServiceQuotaExceededException: {}
+    UpdateNetworkSettingsResponse:
+      type: object
+      required:
+      - networkSettings
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettings'
+          - description: The network settings.
+    SubnetIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 2
+      maxItems: 3
+    InternalServerException: {}
+    ValidationException: {}
+    SubnetId:
       type: string
-      pattern: ^vpc-[0-9a-z]*$
+      pattern: ^subnet-([0-9a-f]{8}|[0-9a-f]{17})$
       minLength: 1
-      maxLength: 255
+      maxLength: 32
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
     NetworkSettingsSummary:
       type: object
       properties:
@@ -523,38 +547,7 @@ components:
           - $ref: '#/components/schemas/VpcId'
           - description: The VPC ID of the network settings.
       description: The summary of network settings.
-    ListNetworkSettingsResponse:
-      type: object
-      properties:
-        networkSettings:
-          allOf:
-          - $ref: '#/components/schemas/NetworkSettingsList'
-          - description: The network settings.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    NetworkSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/NetworkSettingsSummary'
-    ValidationException: {}
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
+    AccessDeniedException: {}
     NetworkSettings:
       type: object
       required:
@@ -581,21 +574,6 @@ components:
           - $ref: '#/components/schemas/VpcId'
           - description: The VPC that streaming instances will connect to.
       description: 'A network settings resource that can be associated with a web portal. Once associated with a web portal, network settings define how streaming instances will connect with your specified VPC. '
-    AccessDeniedException: {}
-    InternalServerException: {}
-    SubnetIdList:
-      type: array
-      items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 2
-      maxItems: 3
-    SecurityGroupIdList:
-      type: array
-      items:
-        $ref: '#/components/schemas/SecurityGroupId'
-      minItems: 1
-      maxItems: 5
-    ResourceNotFoundException: {}
     SecurityGroupId:
       type: string
       pattern: ^[\w+\-]+$
@@ -610,46 +588,56 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the network settings.
-    UpdateNetworkSettingsResponse:
-      type: object
-      required:
-      - networkSettings
-      properties:
-        networkSettings:
-          allOf:
-          - $ref: '#/components/schemas/NetworkSettings'
-          - description: The network settings.
-    SubnetId:
-      type: string
-      pattern: ^subnet-([0-9a-f]{8}|[0-9a-f]{17})$
-      minLength: 1
-      maxLength: 32
-    ThrottlingException: {}
     DeleteNetworkSettingsResponse:
       type: object
       properties: {}
-    ServiceQuotaExceededException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    ListNetworkSettingsResponse:
+      type: object
+      properties:
+        networkSettings:
+          allOf:
+          - $ref: '#/components/schemas/NetworkSettingsList'
+          - description: The network settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    SecurityGroupIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -660,14 +648,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

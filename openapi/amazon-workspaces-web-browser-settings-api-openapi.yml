@@ -461,55 +461,52 @@ paths:
       tags:
       - Browser Settings
 components:
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    PaginationToken:
+    TagValue:
       type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    CreateBrowserSettingsResponse:
+      type: object
+      required:
+      - browserSettingsArn
+      properties:
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+    BrowserSettings:
+      type: object
+      required:
+      - browserSettingsArn
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this browser settings is associated with.
+        browserPolicy:
+          allOf:
+          - $ref: '#/components/schemas/BrowserPolicy'
+          - description: A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions.
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+      description: 'The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
+    ConflictException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
     ListBrowserSettingsResponse:
       type: object
       properties:
@@ -521,20 +518,53 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: The pagination token used to retrieve the next page of results for this operation.
+    ValidationException: {}
+    DeleteBrowserSettingsResponse:
+      type: object
+      properties: {}
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    StringType:
+    BrowserSettingsSummary:
+      type: object
+      properties:
+        browserSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the browser settings.
+      description: The summary for browser settings.
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    PaginationToken:
       type: string
-      pattern: ^[\s\S]*$
-      minLength: 0
-      maxLength: 131072
-    BrowserSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BrowserSettingsSummary'
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    UpdateBrowserSettingsResponse:
+      type: object
+      required:
+      - browserSettings
+      properties:
+        browserSettings:
+          allOf:
+          - $ref: '#/components/schemas/BrowserSettings'
+          - description: The browser settings.
+    AccessDeniedException: {}
+    GetBrowserSettingsResponse:
+      type: object
+      properties:
+        browserSettings:
+          allOf:
+          - $ref: '#/components/schemas/BrowserSettings'
+          - description: The browser settings.
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
     Tag:
       type: object
       required:
@@ -556,83 +586,53 @@ components:
       minLength: 2
       maxLength: 131072
       format: password
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    ArnList:
+    BrowserSettingsList:
       type: array
       items:
-        $ref: '#/components/schemas/ARN'
-    BrowserSettings:
-      type: object
-      required:
-      - browserSettingsArn
-      properties:
-        associatedPortalArns:
-          allOf:
-          - $ref: '#/components/schemas/ArnList'
-          - description: A list of web portal ARNs that this browser settings is associated with.
-        browserPolicy:
-          allOf:
-          - $ref: '#/components/schemas/BrowserPolicy'
-          - description: A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions.
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-      description: 'The browser settings resource that can be associated with a web portal. Once associated with a web portal, browser settings control how the browser will behave once a user starts a streaming session for the web portal. '
-    ValidationException: {}
-    DeleteBrowserSettingsResponse:
-      type: object
-      properties: {}
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    CreateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettingsArn
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-    GetBrowserSettingsResponse:
-      type: object
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    AccessDeniedException: {}
-    InternalServerException: {}
-    BrowserSettingsSummary:
-      type: object
-      properties:
-        browserSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the browser settings.
-      description: The summary for browser settings.
-    ResourceNotFoundException: {}
-    ThrottlingException: {}
-    UpdateBrowserSettingsResponse:
-      type: object
-      required:
-      - browserSettings
-      properties:
-        browserSettings:
-          allOf:
-          - $ref: '#/components/schemas/BrowserSettings'
-          - description: The browser settings.
-    ServiceQuotaExceededException: {}
-    ConflictException: {}
+        $ref: '#/components/schemas/BrowserSettingsSummary'
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

@@ -601,25 +601,17 @@ paths:
       - Trust Stores
 components:
   schemas:
-    ConflictException: {}
-    PaginationToken:
+    TagValue:
       type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    CreateTrustStoreResponse:
-      type: object
-      required:
-      - trustStoreArn
-      properties:
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-    CertificateSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CertificateSummary'
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    CertificateThumbprint:
+      type: string
+      pattern: ^[A-Fa-f0-9]{64}$
+      minLength: 64
+      maxLength: 64
     UpdateTrustStoreResponse:
       type: object
       required:
@@ -629,60 +621,21 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the trust store.
-    CertificatePrincipal:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 256
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
     DeleteTrustStoreResponse:
       type: object
       properties: {}
-    TrustStoreSummaryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/TrustStoreSummary'
-    CertificateThumbprint:
-      type: string
-      pattern: ^[A-Fa-f0-9]{64}$
-      minLength: 64
-      maxLength: 64
-    ListTrustStoresResponse:
+    ConflictException: {}
+    GetTrustStoreCertificateResponse:
       type: object
       properties:
-        nextToken:
+        certificate:
           allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-        trustStores:
+          - $ref: '#/components/schemas/Certificate'
+          - description: The certificate of the trust store certificate.
+        trustStoreArn:
           allOf:
-          - $ref: '#/components/schemas/TrustStoreSummaryList'
-          - description: The trust stores.
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store certificate.
     ArnList:
       type: array
       items:
@@ -715,65 +668,19 @@ components:
           - $ref: '#/components/schemas/CertificateThumbprint'
           - description: A hexadecimal identifier for the certificate.
       description: The certificate.
-    ValidationException: {}
-    TrustStore:
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
+    ListTrustStoresResponse:
       type: object
       properties:
-        associatedPortalArns:
-          allOf:
-          - $ref: '#/components/schemas/ArnList'
-          - description: A list of web portal ARNs that this trust store is associated with.
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-      description: 'A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    ListTrustStoreCertificatesResponse:
-      type: object
-      properties:
-        certificateList:
-          allOf:
-          - $ref: '#/components/schemas/CertificateSummaryList'
-          - description: The certificate list.
         nextToken:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.&gt;
-        trustStoreArn:
+          - description: The pagination token used to retrieve the next page of results for this operation.
+        trustStores:
           allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store.
-    GetTrustStoreCertificateResponse:
-      type: object
-      properties:
-        certificate:
-          allOf:
-          - $ref: '#/components/schemas/Certificate'
-          - description: The certificate of the trust store certificate.
-        trustStoreArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the trust store certificate.
-    CertificateAuthorityBody:
-      type: string
-    AccessDeniedException: {}
-    InternalServerException: {}
-    GetTrustStoreResponse:
-      type: object
-      properties:
-        trustStore:
-          allOf:
-          - $ref: '#/components/schemas/TrustStore'
-          - description: The trust store.
-    Timestamp:
-      type: string
-      format: date-time
+          - $ref: '#/components/schemas/TrustStoreSummaryList'
+          - description: The trust stores.
     CertificateSummary:
       type: object
       properties:
@@ -798,9 +705,102 @@ components:
           - $ref: '#/components/schemas/CertificateThumbprint'
           - description: A hexadecimal identifier for the certificate.
       description: The summary of the certificate.
-    ResourceNotFoundException: {}
+    GetTrustStoreResponse:
+      type: object
+      properties:
+        trustStore:
+          allOf:
+          - $ref: '#/components/schemas/TrustStore'
+          - description: The trust store.
+    ValidationException: {}
+    TrustStore:
+      type: object
+      properties:
+        associatedPortalArns:
+          allOf:
+          - $ref: '#/components/schemas/ArnList'
+          - description: A list of web portal ARNs that this trust store is associated with.
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+      description: 'A trust store that can be associated with a web portal. A trust store contains certificate authority (CA) certificates. Once associated with a web portal, the browser in a streaming session will recognize certificates that have been issued using any of the CAs in the trust store. If your organization has internal websites that use certificates issued by private CAs, you should add the private CA certificate to the trust store. '
+    CertificateAuthorityBody:
+      type: string
+    TrustStoreSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/TrustStoreSummary'
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
     ThrottlingException: {}
-    ServiceQuotaExceededException: {}
+    ResourceNotFoundException: {}
+    CertificateSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CertificateSummary'
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    CertificatePrincipal:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 256
+    AccessDeniedException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    CreateTrustStoreResponse:
+      type: object
+      required:
+      - trustStoreArn
+      properties:
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
+    Timestamp:
+      type: string
+      format: date-time
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    ListTrustStoreCertificatesResponse:
+      type: object
+      properties:
+        certificateList:
+          allOf:
+          - $ref: '#/components/schemas/CertificateSummaryList'
+          - description: The certificate list.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.&gt;
+        trustStoreArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the trust store.
     TrustStoreSummary:
       type: object
       properties:
@@ -810,26 +810,14 @@ components:
           - description: The ARN of the trust store.
       description: The summary of the trust store.
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -840,14 +828,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

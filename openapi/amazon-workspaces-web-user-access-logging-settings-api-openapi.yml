@@ -443,12 +443,57 @@ paths:
       - User Access Logging Settings
 components:
   schemas:
-    ConflictException: {}
-    PaginationToken:
+    UserAccessLoggingSettingsSummary:
+      type: object
+      properties:
+        kinesisStreamArn:
+          allOf:
+          - $ref: '#/components/schemas/KinesisStreamArn'
+          - description: The ARN of the Kinesis stream.
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings.
+      description: The summary of user access logging settings.
+    TagValue:
       type: string
-      pattern: ^\S+$
-      minLength: 1
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    KinesisStreamArn:
+      type: string
+      pattern: arn:[\w+=/,.@-]+:kinesis:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:stream/.+
+      description: Kinesis stream ARN to which log events are published.
+      minLength: 20
       maxLength: 2048
+    GetUserAccessLoggingSettingsResponse:
+      type: object
+      properties:
+        userAccessLoggingSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserAccessLoggingSettings'
+          - description: The user access logging settings.
+    CreateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - userAccessLoggingSettingsArn
+      properties:
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings.
+    ConflictException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    UserAccessLoggingSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
+    ServiceQuotaExceededException: {}
+    InternalServerException: {}
     UserAccessLoggingSettings:
       type: object
       required:
@@ -467,32 +512,19 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
       description: A user access logging settings resource that can be associated with a web portal.
+    ValidationException: {}
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    DeleteUserAccessLoggingSettingsResponse:
-      type: object
-      properties: {}
-    KinesisStreamArn:
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    PaginationToken:
       type: string
-      pattern: arn:[\w+=/,.@-]+:kinesis:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:stream/.+
-      description: Kinesis stream ARN to which log events are published.
-      minLength: 20
+      pattern: ^\S+$
+      minLength: 1
       maxLength: 2048
-    UserAccessLoggingSettingsSummary:
-      type: object
-      properties:
-        kinesisStreamArn:
-          allOf:
-          - $ref: '#/components/schemas/KinesisStreamArn'
-          - description: The ARN of the Kinesis stream.
-        userAccessLoggingSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user access logging settings.
-      description: The summary of user access logging settings.
     UpdateUserAccessLoggingSettingsResponse:
       type: object
       required:
@@ -501,6 +533,24 @@ components:
         userAccessLoggingSettings:
           allOf:
           - $ref: '#/components/schemas/UserAccessLoggingSettings'
+          - description: The user access logging settings.
+    AccessDeniedException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    ListUserAccessLoggingSettingsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+        userAccessLoggingSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserAccessLoggingSettingsList'
           - description: The user access logging settings.
     Tag:
       type: object
@@ -517,80 +567,18 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    CreateUserAccessLoggingSettingsResponse:
+    DeleteUserAccessLoggingSettingsResponse:
       type: object
-      required:
-      - userAccessLoggingSettingsArn
-      properties:
-        userAccessLoggingSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user access logging settings.
-    ValidationException: {}
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    ListUserAccessLoggingSettingsResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-        userAccessLoggingSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserAccessLoggingSettingsList'
-          - description: The user access logging settings.
-    UserAccessLoggingSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
-    AccessDeniedException: {}
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    ThrottlingException: {}
-    GetUserAccessLoggingSettingsResponse:
-      type: object
-      properties:
-        userAccessLoggingSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserAccessLoggingSettings'
-          - description: The user access logging settings.
-    ServiceQuotaExceededException: {}
+      properties: {}
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -601,14 +589,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

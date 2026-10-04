@@ -191,14 +191,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -215,14 +209,19 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
   schemas:
-    AccessDeniedException: {}
     GetPortalServiceProviderMetadataResponse:
       type: object
       required:
@@ -236,20 +235,21 @@ components:
           allOf:
           - $ref: '#/components/schemas/SamlMetadata'
           - description: The service provider SAML metadata.
-    InternalServerException: {}
-    ThrottlingException: {}
+    ValidationException: {}
     ARN:
       type: string
       pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
       minLength: 20
       maxLength: 2048
-    ValidationException: {}
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
     SamlMetadata:
       type: string
       pattern: ^.+$
       minLength: 1
       maxLength: 204800
-    ResourceNotFoundException: {}
+    AccessDeniedException: {}
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey
