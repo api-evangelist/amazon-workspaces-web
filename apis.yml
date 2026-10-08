@@ -292,6 +292,12 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-workspaces-web-context.jsonld
 common:
+- type: Plans
+  url: plans/amazon-workspaces-web-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-workspaces-web-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-workspaces-web-finops.yml
 - type: CapabilityMap
   url: capabilities/amazon-workspaces-web-capability-edges.yml
   name: Amazon WorkSpaces Web Business Capability Map
