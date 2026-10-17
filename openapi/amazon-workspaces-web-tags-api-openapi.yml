@@ -331,25 +331,6 @@ paths:
       - Tags
 components:
   schemas:
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    InternalServerException: {}
-    ValidationException: {}
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 0
-      maxItems: 200
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
-    TagResourceResponse:
-      type: object
-      properties: {}
     ListTagsForResourceResponse:
       type: object
       properties:
@@ -357,16 +338,29 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagList'
           - description: The tags of the resource.
-    AccessDeniedException: {}
     UntagResourceResponse:
       type: object
       properties: {}
-    TagKey:
+    ThrottlingException: {}
+    TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
+      minLength: 0
+      maxLength: 256
       format: password
+    TooManyTagsException: {}
+    TagResourceResponse:
+      type: object
+      properties: {}
+    InternalServerException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 0
+      maxItems: 200
+    AccessDeniedException: {}
+    ResourceNotFoundException: {}
     Tag:
       type: object
       required:
@@ -382,7 +376,13 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    TooManyTagsException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    ValidationException: {}
   parameters:
     X-Amz-Signature:
       name: X-Amz-Signature
@@ -390,26 +390,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -422,6 +410,18 @@ components:
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

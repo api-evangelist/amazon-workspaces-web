@@ -515,32 +515,16 @@ paths:
       - User Settings
 components:
   schemas:
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    UpdateUserSettingsResponse:
-      type: object
-      required:
-      - userSettings
-      properties:
-        userSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserSettings'
-          - description: The user settings.
-    DeleteUserSettingsResponse:
-      type: object
-      properties: {}
+    DisconnectTimeoutInMinutes:
+      type: integer
+      minimum: 1
+      maximum: 600
     ConflictException: {}
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    ServiceQuotaExceededException: {}
-    InternalServerException: {}
-    ValidationException: {}
+    EnabledType:
+      type: string
+      enum:
+      - Disabled
+      - Enabled
     CreateUserSettingsResponse:
       type: object
       required:
@@ -550,44 +534,10 @@ components:
           allOf:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings.
-    DisconnectTimeoutInMinutes:
-      type: integer
-      minimum: 1
-      maximum: 600
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
     ThrottlingException: {}
-    ResourceNotFoundException: {}
-    IdleDisconnectTimeoutInMinutes:
-      type: integer
-      minimum: 0
-      maximum: 60
-    GetUserSettingsResponse:
+    DeleteUserSettingsResponse:
       type: object
-      properties:
-        userSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserSettings'
-          - description: The user settings.
-    ListUserSettingsResponse:
-      type: object
-      properties:
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'The pagination token used to retrieve the next page of results for this operation. '
-        userSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserSettingsList'
-          - description: The user settings.
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
+      properties: {}
     UserSettingsSummary:
       type: object
       properties:
@@ -624,7 +574,26 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings.
       description: The summary of user settings.
-    AccessDeniedException: {}
+    UpdateUserSettingsResponse:
+      type: object
+      required:
+      - userSettings
+      properties:
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettings'
+          - description: The user settings.
+    ServiceQuotaExceededException: {}
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    IdleDisconnectTimeoutInMinutes:
+      type: integer
+      minimum: 0
+      maximum: 60
     UserSettings:
       type: object
       required:
@@ -667,12 +636,29 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user settings.
       description: 'A user settings resource that can be associated with a web portal. Once associated with a web portal, user settings control how users can transfer data between a streaming session and the their local devices. '
-    TagKey:
+    PaginationToken:
       type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      pattern: ^\S+$
       minLength: 1
-      maxLength: 128
-      format: password
+      maxLength: 2048
+    InternalServerException: {}
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    GetUserSettingsResponse:
+      type: object
+      properties:
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettings'
+          - description: The user settings.
+    AccessDeniedException: {}
+    UserSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserSettingsSummary'
+    ResourceNotFoundException: {}
     Tag:
       type: object
       required:
@@ -688,15 +674,29 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value of the tag
       description: The tag.
-    EnabledType:
+    ListUserSettingsResponse:
+      type: object
+      properties:
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'The pagination token used to retrieve the next page of results for this operation. '
+        userSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserSettingsList'
+          - description: The user settings.
+    ValidationException: {}
+    TagKey:
       type: string
-      enum:
-      - Disabled
-      - Enabled
-    UserSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/UserSettingsSummary'
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
   parameters:
     X-Amz-Signature:
       name: X-Amz-Signature
@@ -704,26 +704,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -736,6 +724,18 @@ components:
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

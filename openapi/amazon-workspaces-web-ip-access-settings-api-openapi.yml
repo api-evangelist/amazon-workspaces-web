@@ -484,48 +484,20 @@ paths:
       - Ip Access Settings
 components:
   schemas:
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    IpRule:
+    CreateIpAccessSettingsResponse:
       type: object
       required:
-      - ipRange
+      - ipAccessSettingsArn
       properties:
-        description:
+        ipAccessSettingsArn:
           allOf:
-          - $ref: '#/components/schemas/Description'
-          - description: The description of the IP rule.
-        ipRange:
-          allOf:
-          - $ref: '#/components/schemas/IpRange'
-          - description: The IP range of the IP rule.
-      description: The IP rules of the IP access settings.
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the IP access settings resource.
     ConflictException: {}
-    Description:
-      type: string
-      pattern: ^.+$
-      minLength: 1
-      maxLength: 256
-      format: password
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    ServiceQuotaExceededException: {}
     IpAccessSettingsList:
       type: array
       items:
         $ref: '#/components/schemas/IpAccessSettingsSummary'
-    InternalServerException: {}
-    StringType:
-      type: string
-      pattern: ^[\s\S]*$
-      minLength: 0
-      maxLength: 131072
     IpAccessSettings:
       type: object
       required:
@@ -556,88 +528,20 @@ components:
           - $ref: '#/components/schemas/IpRuleList'
           - description: The IP rules of the IP access settings.
       description: 'The IP access settings resource that can be associated with a web portal. '
-    ListIpAccessSettingsResponse:
-      type: object
-      properties:
-        ipAccessSettings:
-          allOf:
-          - $ref: '#/components/schemas/IpAccessSettingsList'
-          - description: The IP access settings.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The pagination token used to retrieve the next page of results for this operation.
-    DisplayName:
-      type: string
-      pattern: ^.+$
-      minLength: 1
-      maxLength: 64
-      format: password
-    ValidationException: {}
-    IpRange:
-      type: string
-      pattern: ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/([0-9]|[12][0-9]|3[0-2])|)$
-      description: A single IP address or an IP address range in CIDR notation
-      format: password
-    ARN:
-      type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
-      minLength: 20
-      maxLength: 2048
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
-    PaginationToken:
-      type: string
-      pattern: ^\S+$
-      minLength: 1
-      maxLength: 2048
-    CreateIpAccessSettingsResponse:
+    IpRule:
       type: object
       required:
-      - ipAccessSettingsArn
+      - ipRange
       properties:
-        ipAccessSettingsArn:
+        description:
           allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the IP access settings resource.
-    GetIpAccessSettingsResponse:
-      type: object
-      properties:
-        ipAccessSettings:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the IP rule.
+        ipRange:
           allOf:
-          - $ref: '#/components/schemas/IpAccessSettings'
-          - description: The IP access settings.
-    AccessDeniedException: {}
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-      format: password
-    Timestamp:
-      type: string
-      format: date-time
-    IpRuleList:
-      type: array
-      items:
-        $ref: '#/components/schemas/IpRule'
-      minItems: 1
-      maxItems: 100
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
+          - $ref: '#/components/schemas/IpRange'
+          - description: The IP range of the IP rule.
+      description: The IP rules of the IP access settings.
     UpdateIpAccessSettingsResponse:
       type: object
       required:
@@ -647,6 +551,24 @@ components:
           allOf:
           - $ref: '#/components/schemas/IpAccessSettings'
           - description: The IP access settings.
+    ThrottlingException: {}
+    GetIpAccessSettingsResponse:
+      type: object
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettings'
+          - description: The IP access settings.
+    ServiceQuotaExceededException: {}
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
+    DeleteIpAccessSettingsResponse:
+      type: object
+      properties: {}
     IpAccessSettingsSummary:
       type: object
       properties:
@@ -667,9 +589,87 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of IP access settings.
       description: The summary of IP access settings.
-    DeleteIpAccessSettingsResponse:
+    ListIpAccessSettingsResponse:
       type: object
-      properties: {}
+      properties:
+        ipAccessSettings:
+          allOf:
+          - $ref: '#/components/schemas/IpAccessSettingsList'
+          - description: The IP access settings.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The pagination token used to retrieve the next page of results for this operation.
+    PaginationToken:
+      type: string
+      pattern: ^\S+$
+      minLength: 1
+      maxLength: 2048
+    InternalServerException: {}
+    DisplayName:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 64
+      format: password
+    Timestamp:
+      type: string
+      format: date-time
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    Description:
+      type: string
+      pattern: ^.+$
+      minLength: 1
+      maxLength: 256
+      format: password
+    AccessDeniedException: {}
+    IpRuleList:
+      type: array
+      items:
+        $ref: '#/components/schemas/IpRule'
+      minItems: 1
+      maxItems: 100
+    IpRange:
+      type: string
+      pattern: ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/([0-9]|[12][0-9]|3[0-2])|)$
+      description: A single IP address or an IP address range in CIDR notation
+      format: password
+    ResourceNotFoundException: {}
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    ValidationException: {}
+    StringType:
+      type: string
+      pattern: ^[\s\S]*$
+      minLength: 0
+      maxLength: 131072
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+      format: password
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
   parameters:
     X-Amz-Signature:
       name: X-Amz-Signature
@@ -677,26 +677,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -709,6 +697,18 @@ components:
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string

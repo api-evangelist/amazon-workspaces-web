@@ -442,7 +442,61 @@ paths:
       tags:
       - User Access Logging Settings
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    UpdateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - userAccessLoggingSettings
+      properties:
+        userAccessLoggingSettings:
+          allOf:
+          - $ref: '#/components/schemas/UserAccessLoggingSettings'
+          - description: The user access logging settings.
+    ConflictException: {}
+    ThrottlingException: {}
     UserAccessLoggingSettingsSummary:
       type: object
       properties:
@@ -455,45 +509,6 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
       description: The summary of user access logging settings.
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-      format: password
-    KinesisStreamArn:
-      type: string
-      pattern: arn:[\w+=/,.@-]+:kinesis:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:stream/.+
-      description: Kinesis stream ARN to which log events are published.
-      minLength: 20
-      maxLength: 2048
-    GetUserAccessLoggingSettingsResponse:
-      type: object
-      properties:
-        userAccessLoggingSettings:
-          allOf:
-          - $ref: '#/components/schemas/UserAccessLoggingSettings'
-          - description: The user access logging settings.
-    CreateUserAccessLoggingSettingsResponse:
-      type: object
-      required:
-      - userAccessLoggingSettingsArn
-      properties:
-        userAccessLoggingSettingsArn:
-          allOf:
-          - $ref: '#/components/schemas/ARN'
-          - description: The ARN of the user access logging settings.
-    ConflictException: {}
-    ArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ARN'
-    UserAccessLoggingSettingsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
-    ServiceQuotaExceededException: {}
-    InternalServerException: {}
     UserAccessLoggingSettings:
       type: object
       required:
@@ -512,29 +527,69 @@ components:
           - $ref: '#/components/schemas/ARN'
           - description: The ARN of the user access logging settings.
       description: A user access logging settings resource that can be associated with a web portal.
-    ValidationException: {}
-    ARN:
+    ServiceQuotaExceededException: {}
+    KinesisStreamArn:
       type: string
-      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      pattern: arn:[\w+=/,.@-]+:kinesis:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:stream/.+
+      description: Kinesis stream ARN to which log events are published.
       minLength: 20
       maxLength: 2048
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+      format: password
     PaginationToken:
       type: string
       pattern: ^\S+$
       minLength: 1
       maxLength: 2048
-    UpdateUserAccessLoggingSettingsResponse:
+    InternalServerException: {}
+    GetUserAccessLoggingSettingsResponse:
       type: object
-      required:
-      - userAccessLoggingSettings
       properties:
         userAccessLoggingSettings:
           allOf:
           - $ref: '#/components/schemas/UserAccessLoggingSettings'
           - description: The user access logging settings.
+    CreateUserAccessLoggingSettingsResponse:
+      type: object
+      required:
+      - userAccessLoggingSettingsArn
+      properties:
+        userAccessLoggingSettingsArn:
+          allOf:
+          - $ref: '#/components/schemas/ARN'
+          - description: The ARN of the user access logging settings.
+    ArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ARN'
+    DeleteUserAccessLoggingSettingsResponse:
+      type: object
+      properties: {}
+    UserAccessLoggingSettingsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/UserAccessLoggingSettingsSummary'
     AccessDeniedException: {}
+    Tag:
+      type: object
+      required:
+      - Key
+      - Value
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key of the tag.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value of the tag
+      description: The tag.
+    ValidationException: {}
     TagKey:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
@@ -552,67 +607,12 @@ components:
           allOf:
           - $ref: '#/components/schemas/UserAccessLoggingSettingsList'
           - description: The user access logging settings.
-    Tag:
-      type: object
-      required:
-      - Key
-      - Value
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key of the tag.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value of the tag
-      description: The tag.
-    DeleteUserAccessLoggingSettingsResponse:
-      type: object
-      properties: {}
-  parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+    ResourceNotFoundException: {}
+    ARN:
+      type: string
+      pattern: ^arn:[\w+=\/,.@-]+:[a-zA-Z0-9\-]+:[a-zA-Z0-9\-]*:[a-zA-Z0-9]{1,12}:[a-zA-Z]+(\/[a-fA-F0-9\-]{36})+$
+      minLength: 20
+      maxLength: 2048
   securitySchemes:
     hmac:
       type: apiKey
