@@ -1,4 +1,4 @@
-# Amazon WorkSpaces Web (amazon-workspaces-web)
+# Amazon WorkSpaces Web
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,136 +66,267 @@
 
 Amazon WorkSpaces Web is a purpose-built, low-cost, fully managed service that enables secure browser access to internal websites and SaaS applications. It provides persistent browser sessions with built-in security controls, preventing users from downloading content to local devices while maintaining a seamless browsing experience. The service offers 58 API operations for managing portals, user settings, browser policies, network settings, trust stores, and IP access controls.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/amazon-workspaces-web/refs/heads/main/apis.yml)
+**Areas:** AWS · End User Computing · Secure Browser · Virtual Desktop · Zero Trust
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon WorkSpaces Web on APIs.io
 
-## Tags:
+Everything profiled for Amazon WorkSpaces Web is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-workspaces-web/](https://apis.io/providers/amazon-workspaces-web/)** — or go straight to one of the APIs or properties below.
 
- - AWS, End User Computing, Secure Browser, Virtual Desktop, Zero Trust
+### APIs (14)
 
-## Timestamps
+- [Amazon WorkSpaces Web Portals API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-portals-api/) — The Portals API from Amazon WorkSpaces Web — 15 operation(s) for portals.
+- [Amazon WorkSpaces Web Tags API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-tags-api/) — The Tags API from Amazon WorkSpaces Web — 2 operation(s) for tags.
+- [Amazon WorkSpaces Web Browser Settings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-browser-settings-api/) — The Browser Settings API from Amazon WorkSpaces Web — 2 operation(s) for browser settings.
+- [Amazon WorkSpaces Web Identity Providers API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-identity-providers-api/) — The Identity Providers API from Amazon WorkSpaces Web — 2 operation(s) for identity providers.
+- [Amazon WorkSpaces Web Ip Access Settings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-ip-access-settings-api/) — The Ip Access Settings API from Amazon WorkSpaces Web — 2 operation(s) for ip access settings.
+- [Amazon WorkSpaces Web Network Settings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-network-settings-api/) — The Network Settings API from Amazon WorkSpaces Web — 2 operation(s) for network settings.
+- [Amazon WorkSpaces Web Portal Idp API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-portal-idp-api/) — The Portal Idp API from Amazon WorkSpaces Web — 1 operation(s) for portal idp.
+- [Amazon WorkSpaces Web Trust Stores API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-trust-stores-api/) — The Trust Stores API from Amazon WorkSpaces Web — 4 operation(s) for trust stores.
+- [Amazon WorkSpaces Web User Access Logging Settings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-user-access-logging-settings-api/) — The User Access Logging Settings API from Amazon WorkSpaces Web — 2 operation(s) for user access logging settings.
+- [Amazon WorkSpaces Web User Settings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-user-settings-api/) — The User Settings API from Amazon WorkSpaces Web — 2 operation(s) for user settings.
+- [Amazon WorkSpaces Web Workspaces Web Dataprotectionsettings API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-dataprotectionsettings-api/) — The Workspaces Web Dataprotectionsettings API from Amazon WorkSpaces Web — 3 operation(s) for workspaces web dataprotectionsettings.
+- [Amazon WorkSpaces Web Workspaces Web Operations API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-operations-api/) — The Workspaces Web Operations API from Amazon WorkSpaces Web — 3 operation(s) for workspaces web operations.
+- [Amazon WorkSpaces Web Workspaces Web Sessionloggers API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-sessionloggers-api/) — The Workspaces Web Sessionloggers API from Amazon WorkSpaces Web — 2 operation(s) for workspaces web sessionloggers.
+- [Amazon WorkSpaces Web Workspaces Web Sessions API](https://apis.io/apis/amazon-workspaces-web/amazon-workspaces-web-sessions-api/) — The Workspaces Web Sessions API from Amazon WorkSpaces Web — 2 operation(s) for workspaces web sessions.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon WorkSpaces Web API
-The Amazon WorkSpaces Web API provides programmatic access to create and manage web portals, network settings, user access logging, user settings, browser settings, and trust store configurations for secure browser deployments. 58 operations covering portals, user settings, browser policies, network settings, trust stores, and IP access controls.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/workspaces/web/](https://aws.amazon.com/workspaces/web/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Amazon Workspaces Web Agentic Access](https://apis.io/agentic-access/amazon-workspaces-web/amazon-workspaces-web-agentic-access/)
 
- - AWS, End User Computing, Secure Browser, Zero Trust
+#### JSON Schema (195)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/)
-- [APIReference](https://docs.aws.amazon.com/workspaces-web/latest/APIReference/)
-- [GettingStarted](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/getting-started.html)
-- [Pricing](https://aws.amazon.com/workspaces/web/pricing/)
-- [FAQ](https://aws.amazon.com/workspaces/web/faqs/)
-- [OpenAPI](openapi/amazon-workspaces-web-openapi-original.yaml)
-- [JSONSchema](json-schema/workspaces-web-portal-schema.json)
-- [JSONLD](json-ld/amazon-workspaces-web-context.jsonld)
+- [AccessDeniedException](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-access-denied-exception/)
+- [ARN](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-arn/)
+- [ArnList](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-arn-list/)
+- [AssociateBrowserSettingsRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-browser-settings-request/)
+- [AssociateBrowserSettingsResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-browser-settings-response/)
+- [AssociateIpAccessSettingsRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-ip-access-settings-request/)
+- [AssociateIpAccessSettingsResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-ip-access-settings-response/)
+- [AssociateNetworkSettingsRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-network-settings-request/)
+- [AssociateNetworkSettingsResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-network-settings-response/)
+- [AssociateTrustStoreRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-trust-store-request/)
+- [AssociateTrustStoreResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-trust-store-response/)
+- [AssociateUserAccessLoggingSettingsRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-user-access-logging-settings-request/)
+- [AssociateUserAccessLoggingSettingsResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-user-access-logging-settings-response/)
+- [AssociateUserSettingsRequest](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-user-settings-request/)
+- [AssociateUserSettingsResponse](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-associate-user-settings-response/)
+- [AuthenticationType](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-authentication-type/)
+- [BrowserPolicy](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-browser-policy/)
+- [BrowserSettings](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-browser-settings/)
+- [BrowserSettingsList](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-browser-settings-list/)
+- [BrowserSettingsSummary](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-browser-settings-summary/)
+- [BrowserType](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-browser-type/)
+- [Certificate](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-certificate/)
+- [CertificateAuthorityBody](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-certificate-authority-body/)
+- [CertificateList](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-certificate-list/)
+- [CertificatePrincipal](https://apis.io/schemas/amazon-workspaces-web/workspaces-web-certificate-principal/)
+- …and 170 more published on APIs.io
 
-## Common Properties
+#### JSON Structure (195)
 
-- [Portal](https://aws.amazon.com/)
+Data models expressed in JSON Structure.
+
+- [Workspaces Web Access Denied Exception Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-access-denied-exception-structure/)
+- [Workspaces Web Arn List Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-arn-list-structure/)
+- [Workspaces Web Arn Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-arn-structure/)
+- [Workspaces Web Associate Browser Settings Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-browser-settings-request-structure/)
+- [Workspaces Web Associate Browser Settings Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-browser-settings-response-structure/)
+- [Workspaces Web Associate Ip Access Settings Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-ip-access-settings-request-structure/)
+- [Workspaces Web Associate Ip Access Settings Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-ip-access-settings-response-structure/)
+- [Workspaces Web Associate Network Settings Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-network-settings-request-structure/)
+- [Workspaces Web Associate Network Settings Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-network-settings-response-structure/)
+- [Workspaces Web Associate Trust Store Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-trust-store-request-structure/)
+- [Workspaces Web Associate Trust Store Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-trust-store-response-structure/)
+- [Workspaces Web Associate User Access Logging Settings Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-user-access-logging-settings-request-structure/)
+- [Workspaces Web Associate User Access Logging Settings Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-user-access-logging-settings-response-structure/)
+- [Workspaces Web Associate User Settings Request Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-user-settings-request-structure/)
+- [Workspaces Web Associate User Settings Response Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-associate-user-settings-response-structure/)
+- [Workspaces Web Authentication Type Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-authentication-type-structure/)
+- [Workspaces Web Browser Policy Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-browser-policy-structure/)
+- [Workspaces Web Browser Settings List Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-browser-settings-list-structure/)
+- [Workspaces Web Browser Settings Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-browser-settings-structure/)
+- [Workspaces Web Browser Settings Summary Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-browser-settings-summary-structure/)
+- [Workspaces Web Browser Type Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-browser-type-structure/)
+- [Workspaces Web Certificate Authority Body Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-certificate-authority-body-structure/)
+- [Workspaces Web Certificate List Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-certificate-list-structure/)
+- [Workspaces Web Certificate Principal Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-certificate-principal-structure/)
+- [Workspaces Web Certificate Structure](https://apis.io/json-structure/amazon-workspaces-web/workspaces-web-certificate-structure/)
+- …and 170 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Workspaces Web Context](https://apis.io/jsonld/amazon-workspaces-web/amazon-workspaces-web-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Workspaces Web Vocabulary](https://apis.io/vocabularies/amazon-workspaces-web/amazon-workspaces-web-vocabulary/)
+
+#### Examples (79)
+
+Example requests and responses.
+
+- [Workspaces Web Associate Browser Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-browser-settings-response-example/)
+- [Workspaces Web Associate Ip Access Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-ip-access-settings-response-example/)
+- [Workspaces Web Associate Network Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-network-settings-response-example/)
+- [Workspaces Web Associate Trust Store Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-trust-store-response-example/)
+- [Workspaces Web Associate User Access Logging Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-user-access-logging-settings-response-example/)
+- [Workspaces Web Associate User Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-associate-user-settings-response-example/)
+- [Workspaces Web Browser Settings Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-browser-settings-example/)
+- [Workspaces Web Browser Settings Summary Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-browser-settings-summary-example/)
+- [Workspaces Web Certificate Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-certificate-example/)
+- [Workspaces Web Certificate Summary Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-certificate-summary-example/)
+- [Workspaces Web Create Browser Settings Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-browser-settings-request-example/)
+- [Workspaces Web Create Browser Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-browser-settings-response-example/)
+- [Workspaces Web Create Identity Provider Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-identity-provider-request-example/)
+- [Workspaces Web Create Identity Provider Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-identity-provider-response-example/)
+- [Workspaces Web Create Ip Access Settings Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-ip-access-settings-request-example/)
+- [Workspaces Web Create Ip Access Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-ip-access-settings-response-example/)
+- [Workspaces Web Create Network Settings Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-network-settings-request-example/)
+- [Workspaces Web Create Network Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-network-settings-response-example/)
+- [Workspaces Web Create Portal Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-portal-request-example/)
+- [Workspaces Web Create Portal Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-portal-response-example/)
+- [Workspaces Web Create Trust Store Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-trust-store-request-example/)
+- [Workspaces Web Create Trust Store Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-trust-store-response-example/)
+- [Workspaces Web Create User Access Logging Settings Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-user-access-logging-settings-request-example/)
+- [Workspaces Web Create User Access Logging Settings Response Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-user-access-logging-settings-response-example/)
+- [Workspaces Web Create User Settings Request Example](https://apis.io/examples/amazon-workspaces-web/workspaces-web-create-user-settings-request-example/)
+- …and 54 more published on APIs.io
+
+#### Collections (20)
+
+Postman and Open Collection request collections.
+
+- [Amazon WorkSpaces Web BrowserSettings API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-browsersettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings IdentityProviders API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-identityproviders-api/)
+- [Amazon WorkSpaces Web BrowserSettings IpAccessSettings API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-ipaccesssettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings NetworkSettings API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-networksettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings PortalIdp API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-portalidp-api/)
+- [Amazon WorkSpaces Web BrowserSettings Portals API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-portals-api/)
+- [Amazon WorkSpaces Web BrowserSettings Tags API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-tags-api/)
+- [Amazon WorkSpaces Web BrowserSettings TrustStores API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-truststores-api/)
+- [Amazon WorkSpaces Web BrowserSettings UserAccessLoggingSettings API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-useraccessloggingsettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings UserSettings API](https://apis.io/collections/amazon-workspaces-web/open-amazon-workspaces-web-usersettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-browsersettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings IdentityProviders API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-identityproviders-api/)
+- [Amazon WorkSpaces Web BrowserSettings IpAccessSettings API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-ipaccesssettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings NetworkSettings API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-networksettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings PortalIdp API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-portalidp-api/)
+- [Amazon WorkSpaces Web BrowserSettings Portals API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-portals-api/)
+- [Amazon WorkSpaces Web BrowserSettings Tags API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-tags-api/)
+- [Amazon WorkSpaces Web BrowserSettings TrustStores API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-truststores-api/)
+- [Amazon WorkSpaces Web BrowserSettings UserAccessLoggingSettings API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-useraccessloggingsettings-api/)
+- [Amazon WorkSpaces Web BrowserSettings UserSettings API](https://apis.io/collections/amazon-workspaces-web/postman-amazon-workspaces-web-usersettings-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon WorkSpaces Web — jsonschema rules](https://apis.io/rules/amazon-workspaces-web/amazon-workspaces-web-jsonschema-spectral-rules/)
+- [Amazon WorkSpaces Web API Rules](https://apis.io/rules/amazon-workspaces-web/amazon-workspaces-web-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Workspaces Web Authentication](https://apis.io/security/amazon-workspaces-web/amazon-workspaces-web-authentication/)
+- [Amazon Workspaces Web Domain Security](https://apis.io/security/amazon-workspaces-web/amazon-workspaces-web-domain-security/)
+- [Amazon Workspaces Web Trust Center](https://apis.io/security/amazon-workspaces-web/amazon-workspaces-web-trust-center/)
+- [Amazon Workspaces Web Vulnerability Disclosure](https://apis.io/security/amazon-workspaces-web/amazon-workspaces-web-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Workspaces Web Plans Pricing](https://apis.io/plans/amazon-workspaces-web/amazon-workspaces-web-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Workspaces Web Rate Limits](https://apis.io/rate-limits/amazon-workspaces-web/amazon-workspaces-web-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Workspaces Web Finops](https://apis.io/finops/amazon-workspaces-web/amazon-workspaces-web-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/workspaces/web/)
 - [Documentation](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/)
-- [Console](https://console.aws.amazon.com/workspaces-web/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
-- [SignUp](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [GitHubOrganization](https://github.com/aws)
+- [Blog](https://aws.amazon.com/blogs/desktop-and-application-streaming/feed/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Secure Browser Portals | Purpose-built browser portals that provide secure access to internal websites and SaaS applications without VPN requirements. |
-| Data Loss Prevention Controls | Built-in controls to prevent users from downloading, uploading, printing, or copying content to local devices. |
-| Browser Policy Management | Configurable browser policies to control features like clipboard access, printing, and file transfers. |
-| Network Isolation | VPC-based network settings to isolate browser sessions within enterprise network boundaries. |
-| Trust Store Management | SSL certificate trust stores for validating internal website certificates in secure browser sessions. |
-| IP Access Controls | IP-based access rules to restrict portal access to specific corporate IP ranges or geographic locations. |
-| User Access Logging | Detailed session logging for audit and compliance purposes with Kinesis data stream integration. |
-| Identity Integration | SAML-based identity provider integration for single sign-on to secure browser portal sessions. |
+**Kin Score 56.6** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 66.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 65.5 |
+| Access clarity | 53.9 |
 
-| Name | Description |
-|------|-------------|
-| Secure Third-Party Access | Provide contractors and third-party vendors secure access to internal tools without requiring VPN or device enrollment. |
-| BYOD Security | Enable bring-your-own-device policies while maintaining security controls over corporate application access. |
-| Compliance-Driven Browsing | Enforce data handling compliance requirements through browser-level controls for regulated industries. |
-| SaaS Application Security | Provide secure, controlled access to SaaS applications with session recording and data exfiltration prevention. |
-| Developer Sandbox Environments | Create isolated browser environments for development and testing of internal web applications. |
+**Agent readiness 31.6** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS IAM Identity Center | Single sign-on integration for WorkSpaces Web portal authentication. |
-| Amazon Kinesis | User access logging integration to stream session data for analysis. |
-| AWS KMS | Encryption key management for browser settings and data at rest. |
-| Amazon VPC | VPC integration for network isolation of browser sessions. |
-| AWS Certificate Manager | Certificate management for trust store and SSL configurations. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-workspaces-web/](https://apis.io/providers/amazon-workspaces-web/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Amazon WorkSpaces Web OpenAPI](openapi/amazon-workspaces-web-openapi-original.yaml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon WorkSpaces Web: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-195 JSON Schema files extracted from the OpenAPI specification.
-
-### JSON Structure
-
-195 JSON Structure files converted from JSON Schema definitions.
-
-### JSON-LD
-
-- [Amazon WorkSpaces Web Context](json-ld/amazon-workspaces-web-context.jsonld)
-
-### Examples
-
-79 example JSON files generated from JSON Schema definitions.
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [Amazon WorkSpaces Web API](capabilities/shared/workspaces-web.yaml) — 6 operations for portal, user settings, browser settings, network, and trust store management
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Secure Browser Management](capabilities/secure-browser-management.yaml) | Amazon WorkSpaces Web | 6 | IT Administrator, Security Engineer |
-
-## Vocabulary
-
-- [Amazon WorkSpaces Web Vocabulary](vocabulary/amazon-workspaces-web-vocabulary.yaml) — Unified taxonomy mapping 7 resources, 7 actions, 1 workflow, and 2 personas across operational (OpenAPI) and capability (Naftiko) dimensions
-
-## Rules
-
-- [Amazon WorkSpaces Web Spectral Rules](rules/amazon-workspaces-web-spectral-rules.yml) — 18 rules across 9 categories enforcing Amazon WorkSpaces Web API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-workspaces-web/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
