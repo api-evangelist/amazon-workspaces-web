@@ -1,0 +1,226 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/workspaces/secure-browser/pricing/
+sources:
+- https://aws.amazon.com/workspaces/secure-browser/pricing/
+- https://aws.amazon.com/workspaces/web/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T141238
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+  managed_tier: Standard.regular
+published: true
+note: Pricing is per monthly active user (MAU) by instance type and region; free trial covers up to 30
+  users for 3 months per AWS account.
+plan_count: 12
+currency: USD
+plans:
+- name: Standard.regular (US East, N. Virginia)
+  price_text: $7
+  price: 7
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours included in the monthly active user fee
+  overage: $0.035 per additional streaming hour (over 200)
+- name: Standard.regular (Europe London / Frankfurt / Asia Pacific Singapore / Mumbai)
+  price_text: $8
+  price: 8
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.04
+- name: Standard.regular (Asia Pacific Sydney)
+  price_text: $7.50
+  price: 7.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.038
+- name: Standard.regular (Asia Pacific Tokyo)
+  price_text: $8.50
+  price: 8.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.043
+- name: Standard.large (US East, N. Virginia)
+  price_text: $20
+  price: 20
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.10
+- name: Standard.large (Europe London / Frankfurt / Singapore / Mumbai)
+  price_text: $23
+  price: 23
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.12
+- name: Standard.large (Asia Pacific Sydney)
+  price_text: $21.50
+  price: 21.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.11
+- name: Standard.large (Asia Pacific Tokyo)
+  price_text: $24.50
+  price: 24.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.13
+- name: Standard.xlarge (US East, N. Virginia)
+  price_text: $35
+  price: 35
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.18
+- name: Standard.xlarge (Europe London / Frankfurt / Singapore / Mumbai)
+  price_text: $40
+  price: 40
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.20
+- name: Standard.xlarge (Asia Pacific Sydney)
+  price_text: $37.50
+  price: 37.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.19
+- name: Standard.xlarge (Asia Pacific Tokyo)
+  price_text: $42.50
+  price: 42.5
+  currency: USD
+  period: month
+  unit: monthly active user
+  included_quota: up to 200 streaming hours
+  overage: $0.22
+rate_limit_statements:
+- Each user has up to 200 streaming hours included in the monthly active user fee.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Standard.regular (US East, N. Virginia)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.regular (Europe London / Frankfurt / Asia Pacific Singapore / Mumbai)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.regular (Asia Pacific Sydney)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.regular (Asia Pacific Tokyo)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.large (US East, N. Virginia)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.large (Europe London / Frankfurt / Singapore / Mumbai)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.large (Asia Pacific Sydney)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.large (Asia Pacific Tokyo)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.xlarge (US East, N. Virginia)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.xlarge (Europe London / Frankfurt / Singapore / Mumbai)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.xlarge (Asia Pacific Sydney)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard.xlarge (Asia Pacific Tokyo)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
