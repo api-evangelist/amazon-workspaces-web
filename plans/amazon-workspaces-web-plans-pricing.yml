@@ -121,7 +121,7 @@ plans:
 rate_limit_statements:
 - Each user has up to 200 streaming hours included in the monthly active user fee.
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - seat
