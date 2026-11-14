@@ -5,12 +5,27 @@ artifacts:
   agentic-access/amazon-workspaces-web-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-workspaces-web-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-workspaces-web-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-workspaces-web-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-workspaces-web-changelog.yml:
+    method: searched
+    evidence: declared in the artifact
+  cli/amazon-workspaces-web-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-workspaces-web-browsersettings-api.opencollection.json:
     method: unknown
     evidence: no authorship recorded
@@ -71,6 +86,24 @@ artifacts:
   collections/amazon-workspaces-web-usersettings-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  conformance/amazon-workspaces-web-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-workspaces-web-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-workspaces-web-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-workspaces-web-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-workspaces-web-error-codes.yml:
+    method: searched
+    evidence: declared in the artifact
+  errors/amazon-workspaces-web-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/workspaces-web-associate-browser-settings-response-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -314,6 +347,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-workspaces-web-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -321,6 +357,219 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-ld/amazon-workspaces-web-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-browser-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-browser-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-data-protection-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-data-protection-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-ip-access-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-ip-access-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-network-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-network-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-session-logger-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-session-logger-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-trust-store-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-trust-store-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-user-access-logging-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-user-access-logging-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-user-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-associate-user-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-browser-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-data-protection-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-identity-provider-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-identity-provider-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-ip-access-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-network-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-session-logger-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-trust-store-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-user-access-logging-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-create-user-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-delete-identity-provider-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-expire-session-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-expire-session-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-get-portal-service-provider-metadata-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-get-portal-service-provider-metadata-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-get-session-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-get-session-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-get-trust-store-certificate-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-browser-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-browser-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-data-protection-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-data-protection-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-identity-providers-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-identity-providers-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-ip-access-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-ip-access-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-network-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-network-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-session-loggers-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-session-loggers-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-sessions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-sessions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-tags-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-tags-for-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-trust-store-certificates-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-trust-store-certificates-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-trust-stores-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-trust-stores-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-user-access-logging-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-user-access-logging-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-user-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-list-user-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-tag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-untag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-browser-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-data-protection-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-identity-provider-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-ip-access-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-network-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-session-logger-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-trust-store-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-user-access-logging-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-workspaces-web-update-user-settings-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/workspaces-web-access-denied-exception-schema.json:
@@ -1496,7 +1745,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -1565,10 +1814,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-workspaces-web-openapi-original.yaml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-workspaces-web-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-workspaces-web-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-workspaces-web-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-workspaces-web-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-workspaces-web-browser-settings-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -1611,6 +1871,12 @@ artifacts:
   openapi/amazon-workspaces-web-user-settings-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-workspaces-web-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-workspaces-web-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-workspaces-web-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -1650,7 +1916,13 @@ artifacts:
   rate-limits/amazon-workspaces-web-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
+  regulatory/amazon-workspaces-web-regulatory-posture.yml:
+    method: unknown
+    evidence: no authorship recorded
   rules/amazon-workspaces-web-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-workspaces-web-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-workspaces-web-spectral-rules.yml:
@@ -1669,8 +1941,27 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/workspaces-web-2020-07-08.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/workspaces-web/service/2020-07-08/workspaces-web-2020-07-08.json
+      (sha256 77098e3a28a2, fetched 2026-11-11T21:16:27+00:00)
+  terms/amazon-workspaces-web-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-workspaces-web-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-workspaces-web-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-workspaces-web-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-workspaces-web-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-workspaces-web-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-workspaces-web-well-known.yml:
     method: unknown
     evidence: no authorship recorded

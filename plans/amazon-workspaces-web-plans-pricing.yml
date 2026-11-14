@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/workspaces/secure-browser/pricing/
+name: Amazon WorkSpaces Web API Plans
 sources:
 - https://aws.amazon.com/workspaces/secure-browser/pricing/
 - https://aws.amazon.com/workspaces/web/pricing/
@@ -121,7 +122,7 @@ plans:
 rate_limit_statements:
 - Each user has up to 200 streaming hours included in the monthly active user fee.
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - seat
